@@ -16,9 +16,9 @@ TagManager:
   - Water
   - UI
   - Interaction
-  - 
-  - 
-  - 
+  - Backgorund
+  - Middle
+  - Foreground
   - 
   - 
   - 
@@ -50,6 +50,9 @@ TagManager:
     locked: 0
   - name: DebugOverlay
     uniqueID: 575361943
+    locked: 0
+  - name: Middle
+    uniqueID: 4079451043
     locked: 0
   m_RenderingLayers:
   - Default
