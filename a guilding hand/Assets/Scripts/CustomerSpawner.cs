@@ -50,6 +50,7 @@ public class CustomerSpawner : MonoBehaviour
     }
 
     //// Coroutine to destroy the object after a delay
+    ///
     //IEnumerator DestroyAfterDelay(GameObject spawnedObject, float delay)
     //{
     //    // Wait for the specified amount of time

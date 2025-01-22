@@ -635,7 +635,7 @@ MonoBehaviour:
   spawner: {fileID: 0}
   itemstimetospawn: 0
   currenttimetospawn: 0
-  isRandomize: 0
+  isRandomize: 1
 --- !u!4 &2136629424
 Transform:
   m_ObjectHideFlags: 0
