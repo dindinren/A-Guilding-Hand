@@ -45,22 +45,22 @@ public class CustomerSpawner : MonoBehaviour
             Debug.Log("Customer Spawned!");
 
             // Start a coroutine to destroy the object after 1 second
-            StartCoroutine(DestroyAfterDelay(lastSpawnedObject, 3f));
+            //StartCoroutine(DestroyAfterDelay(lastSpawnedObject, 3f));
         }
     }
 
-    // Coroutine to destroy the object after a delay
-    IEnumerator DestroyAfterDelay(GameObject spawnedObject, float delay)
-    {
-        // Wait for the specified amount of time
-        yield return new WaitForSeconds(delay);
+    //// Coroutine to destroy the object after a delay
+    //IEnumerator DestroyAfterDelay(GameObject spawnedObject, float delay)
+    //{
+    //    // Wait for the specified amount of time
+    //    yield return new WaitForSeconds(delay);
 
-        // Destroy the spawned object after the delay
-        Destroy(spawnedObject);
+    //    // Destroy the spawned object after the delay
+    //    Destroy(spawnedObject);
 
-        // Allow the user to click again after the object is destroyed
-        lastSpawnedObject = null;
-    }
+    //    // Allow the user to click again after the object is destroyed
+    //    lastSpawnedObject = null;
+    //}
 
     void Update()
     {

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ichiban IW_0: 2708335136502311021
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

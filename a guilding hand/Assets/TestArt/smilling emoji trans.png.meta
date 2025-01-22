@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a565e6d9169ac7a4c84de3eba163116a
+guid: 9cfbb5d555f931a4090e0e6a222228f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3859115924738712892
-    second: distarught emoji trans_0
+      213: -7321648123982930726
+    second: smilling emoji trans_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: distarught emoji trans_0
+      name: smilling emoji trans_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4
-        width: 359
-        height: 355
+        x: 7
+        y: 1
+        width: 486
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c35aa11bc755e8530800000000000000
-      internalID: 3859115924738712892
+      spriteID: adc979fa2d7446a90800000000000000
+      internalID: -7321648123982930726
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      smilling emoji trans_0: -7321648123982930726
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

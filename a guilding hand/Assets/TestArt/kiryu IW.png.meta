@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kiryu IW_0: -7988623339385325108
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

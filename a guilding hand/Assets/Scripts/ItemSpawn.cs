@@ -34,11 +34,11 @@ public class ItemSpawn : MonoBehaviour
         }
     }
 
-    // You can create a method to reset the spawn process if needed.
-    // For example, if you want to reset the spawn flag after some time:
-    public void ResetSpawn()
-    {
-        canSpawn = true;
-        lastSpawnedItem = null;
-    }
+    //// You can create a method to reset the spawn process if needed.
+    //// For example, if you want to reset the spawn flag after some time:
+    //public void ResetSpawn()
+    //{
+    //    canSpawn = true;
+    //    lastSpawnedItem = null;
+    //}
 }

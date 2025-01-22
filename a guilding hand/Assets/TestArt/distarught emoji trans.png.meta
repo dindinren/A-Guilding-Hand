@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d6e48e275021c654c8add0db6238bdd4
+guid: a565e6d9169ac7a4c84de3eba163116a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4588225567674944683
-    second: rainbow flag emoji_0
+      213: 3859115924738712892
+    second: distarught emoji trans_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rainbow flag emoji_0
+      name: distarught emoji trans_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 54
-        width: 482
-        height: 404
+        x: 0
+        y: 4
+        width: 359
+        height: 355
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bac41a628d6acaf30800000000000000
-      internalID: 4588225567674944683
+      spriteID: c35aa11bc755e8530800000000000000
+      internalID: 3859115924738712892
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      distarught emoji trans_0: 3859115924738712892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
