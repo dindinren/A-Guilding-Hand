@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1731179100680845481}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3088579, y: -0.07295632, z: 0}
+  m_LocalPosition: {x: 1.3088579, y: -0.07295632, z: 7.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -147,3 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a601bbd7c6cdebb4a90f84b714d8ee5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestForm: {fileID: 8590324833485800243, guid: ad1942ae444d9ff4eaab655a054ce1a1, type: 3}
+  AdvenInfo: {fileID: 2488265158270659616, guid: 8a381d49d7d16aa47b41a8111d08afae, type: 3}
+  Item: {fileID: 5391150184112932518, guid: 5d74b5e49a121ea4abfb18ad7e0a4806, type: 3}

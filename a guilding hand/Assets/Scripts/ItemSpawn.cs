@@ -14,7 +14,8 @@ public class ItemSpawn : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // Spawn the item and set the flag to false to prevent further spawns
-        Instantiate(SpawnItem, transform.position, transform.rotation);
+        var obj = Instantiate(SpawnItem, transform.position, transform.rotation);
+        obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, -5);
         lastSpawnedItem = SpawnItem;  // Assign the spawned item to prevent further spawns
         canSpawn = false;  // Disable further spawning until reset
         Debug.Log("Item Spawned!");
@@ -34,6 +35,11 @@ public class ItemSpawn : MonoBehaviour
         }
     }
 
+    private void OnMouseDown()
+    {
+        // Only spawn an object if there isn't already a spawned object
+        Debug.Log("ItemSpawn MouseDown");
+    }
     //// You can create a method to reset the spawn process if needed.
     //// For example, if you want to reset the spawn flag after some time:
     //public void ResetSpawn()

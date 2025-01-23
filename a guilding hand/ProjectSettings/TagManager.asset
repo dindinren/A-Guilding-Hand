@@ -8,6 +8,9 @@ TagManager:
   - SwipeObstacle
   - FlapObstacle
   - AudioManager
+  - QuestItem
+  - AdventureInfo
+  - QuestForm
   - Item
   layers:
   - Default
