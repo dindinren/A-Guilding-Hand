@@ -1,21 +1,22 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class Raycast2DExample : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float rayDistance = 5f;  // Distance of the ray
+    public LayerMask layerMask;    // Layer mask to filter collisions
 
-    private void OnMouseDown()
-    {
-        Debug.Log("item clicked!");
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        // Cast a ray starting from the object's position in the right direction
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, rayDistance, layerMask);
+
+        // Draw the ray in the Scene view for visualization
+        Debug.DrawRay(transform.position, Vector2.right * rayDistance, Color.red);
+
+        // Check if the ray hit something
+        if (hit.collider != null)
+        {
+            Debug.Log("Hit object: " + hit.collider.name);
+        }
     }
 }
