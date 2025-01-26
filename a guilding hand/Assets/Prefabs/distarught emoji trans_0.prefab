@@ -148,5 +148,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestForm: {fileID: 8590324833485800243, guid: ad1942ae444d9ff4eaab655a054ce1a1, type: 3}
-  AdvenInfo: {fileID: 2488265158270659616, guid: 8a381d49d7d16aa47b41a8111d08afae, type: 3}
-  Item: {fileID: 5391150184112932518, guid: 5d74b5e49a121ea4abfb18ad7e0a4806, type: 3}
+  AdvenInfo: {fileID: 5391150184112932518, guid: 5d74b5e49a121ea4abfb18ad7e0a4806, type: 3}
+  Item: {fileID: 2488265158270659616, guid: 8a381d49d7d16aa47b41a8111d08afae, type: 3}
