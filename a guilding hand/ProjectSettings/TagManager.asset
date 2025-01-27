@@ -12,6 +12,7 @@ TagManager:
   - AdventureInfo
   - QuestForm
   - Item
+  - DropArea
   layers:
   - Default
   - TransparentFX
