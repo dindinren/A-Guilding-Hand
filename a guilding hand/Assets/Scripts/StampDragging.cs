@@ -27,11 +27,23 @@ public class DragDrop2D : MonoBehaviour
         var rayOrigin = Camera.main.transform.position;
         var rayDirection = MouseWorldPosition() - Camera.main.transform.position;
         RaycastHit2D hitInfo;
+
+        //if the object enters the drop area
         if (hitInfo = Physics2D.Raycast(rayOrigin, rayDirection))
         {
             if (hitInfo.transform.tag == destinationTag)
             {
                 transform.position = hitInfo.transform.position + new Vector3(0, 0, -0.01f);
+
+                //here will compaare which stamp is in the drop area
+                if (gameObject.CompareTag("correct") || (gameObject.CompareTag("incorrect")) )
+                {
+                    //now to implement to wait a few secs then spawn in the correct/incorrect mark
+
+                    Destroy(gameObject);
+                    Debug.Log(" stamp destroyed!");
+                }
+                
             }
         }
         collider2d.enabled = true;

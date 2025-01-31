@@ -13,6 +13,8 @@ TagManager:
   - QuestForm
   - Item
   - DropArea
+  - correct
+  - incorrect
   layers:
   - Default
   - TransparentFX
