@@ -11,18 +11,16 @@ public class testscript : MonoBehaviour
     {
         
     }
-
-    private void FixedUpdate()
-    {
-        //Debug.Log(Input.mousePosition);
-        // Cast a ray starting from the object's position in the right direction
-        // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        // GetComponent<Collider>().
-    }
-
     private void OnMouseDown()
     {
         Debug.Log("item clicked!");
+
+        if (GameObject.FindGameObjectWithTag("Item"))
+        {
+            Destroy(gameObject);
+        }
+
+        //spawn the items on the right
         var obj = GameObject.FindGameObjectsWithTag("QuestForm")[0];
         var obj2 = GameObject.FindGameObjectWithTag("QuestItem");
         var obj3 = GameObject.FindGameObjectWithTag("AdventureInfo");

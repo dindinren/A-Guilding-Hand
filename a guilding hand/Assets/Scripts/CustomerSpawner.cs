@@ -9,9 +9,11 @@ public class CustomerSpawner : MonoBehaviour
 
     public GameObject spawner;
 
-    //time for the items to spawn
+    // Time for the items to spawn
     public float itemstimetospawn;
     public float currenttimetospawn;
+
+    public float delay = 1f;
 
     // Flag to randomize the object selection
     public bool isRandomize;
@@ -21,22 +23,30 @@ public class CustomerSpawner : MonoBehaviour
 
     void Start()
     {
-        // You can initialize things here if necessary
+        // Start the coroutine to spawn the object after the delay
+        StartCoroutine(SpawnObjectAfterDelay());
     }
 
-    private void OnMouseDown()
+    IEnumerator SpawnObjectAfterDelay()
     {
-        // Only spawn an object if there isn't already a spawned object
+        // Wait for the specified delay
+        yield return new WaitForSeconds(delay);
+
+        // Spawn the object if no object has been spawned yet
         if (lastSpawnedObject == null)
         {
             SpawnObject();
         }
+
     }
+
 
     void SpawnObject()
     {
+        // Determine the index of the object to spawn
         int index = isRandomize ? Random.Range(0, CustomersToSpawn.Count) : 0;
 
+        // Check if there are objects in the list
         if (CustomersToSpawn.Count > 0)
         {
             // Instantiate the object at the current position and rotation of this object
@@ -44,27 +54,72 @@ public class CustomerSpawner : MonoBehaviour
 
             Debug.Log("Customer Spawned!");
 
-            // Start a coroutine to destroy the object after 1 second
-            //StartCoroutine(DestroyAfterDelay(lastSpawnedObject, 3f));
+
+            // Start a coroutine to destroy the object after 3 seconds (optional)
+            // StartCoroutine(DestroyAfterDelay(lastSpawnedObject, 3f));
         }
     }
 
-    //// Coroutine to destroy the object after a delay
-    ///
-    //IEnumerator DestroyAfterDelay(GameObject spawnedObject, float delay)
+    //// Optional: Coroutine to destroy the object after a delay
+    //IEnumerator DestroyAfterDelay(GameObject obj, float delay)
     //{
-    //    // Wait for the specified amount of time
     //    yield return new WaitForSeconds(delay);
+    //    Destroy(obj);
+    //}
+}
 
-    //    // Destroy the spawned object after the delay
-    //    Destroy(spawnedObject);
 
-    //    // Allow the user to click again after the object is destroyed
-    //    lastSpawnedObject = null;
+
+
+
+
+
+
+
+
+
+
+
+
+    ////when clicked down (test)
+    //private void OnMouseDown()
+    //{
+    //    // Only spawn an object if there isn't already a spawned object
+    //    if (lastSpawnedObject == null)
+    //    {
+    //        SpawnObject();
+    //    }
     //}
 
-    void Update()
-    {
-        // Any logic you need per frame can go here
-    }
-}
+    //void SpawnObject()
+    //{
+    //    int index = isRandomize ? Random.Range(0, CustomersToSpawn.Count) : 0;
+
+    //    if (CustomersToSpawn.Count > 0)
+    //    {
+    //        // Instantiate the object at the current position and rotation of this object
+    //        lastSpawnedObject = Instantiate(CustomersToSpawn[index], transform.position, CustomersToSpawn[index].transform.rotation);
+
+    //        Debug.Log("Customer Spawned!");
+
+    //        // Start a coroutine to destroy the object after 1 second
+    //        // this one can after all done with the items then destroy itself
+    //        //StartCoroutine(DestroyAfterDelay(lastSpawnedObject, 3f));
+    //    }
+    //}
+
+    ////// Coroutine to destroy the object after a delay
+    /////
+    ////IEnumerator DestroyAfterDelay(GameObject spawnedObject, float delay)
+    ////{
+    ////    // Wait for the specified amount of time
+    ////    yield return new WaitForSeconds(delay);
+
+    ////    // Destroy the spawned object after the delay
+    ////    Destroy(spawnedObject);
+
+    ////    // Allow the user to click again after the object is destroyed
+    ////    lastSpawnedObject = null;
+    ////}
+
+   

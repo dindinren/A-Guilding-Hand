@@ -1,14 +1,17 @@
 using UnityEngine;
+using System.Collections;
 
 public class DragDrop2D : MonoBehaviour
 {
     Vector3 offset;
     Collider2D collider2d;
     public string destinationTag = "DropArea";
+    private Vector3 originalPosition; // Store the original position of the object
 
     void Awake()
     {
         collider2d = GetComponent<Collider2D>();
+        originalPosition = transform.position; // Store the initial position
     }
 
     void OnMouseDown()
@@ -28,25 +31,46 @@ public class DragDrop2D : MonoBehaviour
         var rayDirection = MouseWorldPosition() - Camera.main.transform.position;
         RaycastHit2D hitInfo;
 
-        //if the object enters the drop area
+        // Check if the object is dropped in the drop area
         if (hitInfo = Physics2D.Raycast(rayOrigin, rayDirection))
         {
-            if (hitInfo.transform.tag == destinationTag)
+            if (hitInfo.transform.CompareTag(destinationTag))
             {
+                // Snap the object to the drop area
                 transform.position = hitInfo.transform.position + new Vector3(0, 0, -0.01f);
 
-                //here will compaare which stamp is in the drop area
-                if (gameObject.CompareTag("correct") || (gameObject.CompareTag("incorrect")) )
-                {
-                    //now to implement to wait a few secs then spawn in the correct/incorrect mark
-
-                    Destroy(gameObject);
-                    Debug.Log(" stamp destroyed!");
-                }
-                
+                // Destroy the object after 1 second
+                StartCoroutine(DestroyAfterDelay(1f)); // Wait for 1 second before destroying
+                Debug.Log("Object dropped in the drop area. It will be destroyed in 1 second.");
+            }
+            else
+            {
+                // Return to the original position if not dropped in the drop area
+                ReturnToOriginalPosition();
             }
         }
+        else
+        {
+            // Return to the original position if no valid drop area is hit
+            ReturnToOriginalPosition();
+        }
+
         collider2d.enabled = true;
+    }
+
+    // Coroutine to destroy the object after a delay
+    IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
+        Debug.Log("Object destroyed!");
+    }
+
+    // Method to return the object to its original position
+    void ReturnToOriginalPosition()
+    {
+        transform.position = originalPosition;
+        Debug.Log("Returned to original position.");
     }
 
     Vector3 MouseWorldPosition()

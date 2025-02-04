@@ -3,48 +3,39 @@ using System.Collections;
 
 public class ItemSpawn : MonoBehaviour
 {
-    public GameObject SpawnItem;
+    public GameObject SpawnItem; // The item to spawn
 
-    private GameObject lastSpawnedItem;
+    private GameObject lastSpawnedItem; // Reference to the last spawned item
     private bool canSpawn = true; // Flag to control if the item can be spawned
+
+    void Start()
+    {
+        // Start the coroutine to spawn the item after 2 seconds
+        StartCoroutine(SpawnAfterDelay(2f));
+    }
 
     IEnumerator SpawnAfterDelay(float delay)
     {
         // Wait for the specified amount of time
         yield return new WaitForSeconds(delay);
 
-        // Spawn the item and set the flag to false to prevent further spawns
-        var obj = Instantiate(SpawnItem, transform.position, transform.rotation);
-        obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, -5);
-        lastSpawnedItem = SpawnItem;  // Assign the spawned item to prevent further spawns
-        canSpawn = false;  // Disable further spawning until reset
-        Debug.Log("Item Spawned!");
-    }
+        // Check if spawning is allowed
+        if (canSpawn)
+        {
+            // Spawn the item and set its position
+            lastSpawnedItem = Instantiate(SpawnItem, transform.position, transform.rotation);
+            lastSpawnedItem.transform.position = new Vector3(lastSpawnedItem.transform.position.x, lastSpawnedItem.transform.position.y, -5);
 
-    void Start()
-    {
-        // You can add logic here to reset the flag if needed (for example, after some time or event)
+            // Disable further spawning
+            canSpawn = false;
+
+            Debug.Log("Item object spawned!");
+        }
     }
 
     void Update()
     {
-        // Check for mouse click only if spawning is allowed
-        if (Input.GetMouseButtonDown(0) && canSpawn)
-        {
-            StartCoroutine(SpawnAfterDelay(2f));
-        }
+        // No need for logic in Update for this use case
     }
 
-    private void OnMouseDown()
-    {
-        // Only spawn an object if there isn't already a spawned object
-        Debug.Log("ItemSpawn MouseDown");
-    }
-    //// You can create a method to reset the spawn process if needed.
-    //// For example, if you want to reset the spawn flag after some time:
-    //public void ResetSpawn()
-    //{
-    //    canSpawn = true;
-    //    lastSpawnedItem = null;
-    //}
 }
