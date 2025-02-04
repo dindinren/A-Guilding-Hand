@@ -40,8 +40,8 @@ public class DragDrop2D : MonoBehaviour
                 transform.position = hitInfo.transform.position + new Vector3(0, 0, -0.01f);
 
                 // Destroy the object after 1 second
-                StartCoroutine(DestroyAfterDelay(1f)); // Wait for 1 second before destroying
-                Debug.Log("Object dropped in the drop area. It will be destroyed in 1 second.");
+                StartCoroutine(DestroyAndRespawnAfterDelay(1f)); // Wait for 1 second before destroying and respawning
+                Debug.Log("Object dropped in the drop area. It will be destroyed and respawned.");
             }
             else
             {
@@ -58,13 +58,36 @@ public class DragDrop2D : MonoBehaviour
         collider2d.enabled = true;
     }
 
-    // Coroutine to destroy the object after a delay
-    IEnumerator DestroyAfterDelay(float delay)
+    // Coroutine to destroy the object and respawn it after a delay
+    IEnumerator DestroyAndRespawnAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+
+        // Destroy the current object
         Destroy(gameObject);
         Debug.Log("Object destroyed!");
+
+        // Respawn the object at its original position
+        RespawnObject();
     }
+
+    // Method to respawn the object at its original position
+void RespawnObject()
+{
+    // Instantiate a new object at the original position
+    GameObject newObject = Instantiate(gameObject, originalPosition, Quaternion.identity);
+
+    // Ensure the new object has the same script and properties
+    DragDrop2D newDragDrop = newObject.GetComponent<DragDrop2D>();
+    if (newDragDrop != null)
+    {
+        newDragDrop.originalPosition = originalPosition; // Set the original position for the new object
+        newDragDrop.collider2d.enabled = true; // Ensure the new object's collider is enabled
+    }
+
+    Debug.Log("Object respawned at original position!");
+}
+
 
     // Method to return the object to its original position
     void ReturnToOriginalPosition()
