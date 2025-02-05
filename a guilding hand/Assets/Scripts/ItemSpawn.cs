@@ -8,10 +8,18 @@ public class ItemSpawn : MonoBehaviour
     private GameObject lastSpawnedItem; // Reference to the last spawned item
     private bool canSpawn = true; // Flag to control if the item can be spawned
 
+    
     void Start()
     {
         // Start the coroutine to spawn the item after 2 seconds
         StartCoroutine(SpawnAfterDelay(2f));
+    }
+
+    public void itemSpawner()
+    {
+        canSpawn = true;
+        StartCoroutine(SpawnAfterDelay(2f));
+
     }
 
     IEnumerator SpawnAfterDelay(float delay)

@@ -7,7 +7,7 @@ public class CustomerSpawner : MonoBehaviour
     // List of customers to spawn
     public List<GameObject> CustomersToSpawn = new List<GameObject>();
 
-    public GameObject spawner;
+    //public GameObject spawner;
 
     // Time for the items to spawn
     public float itemstimetospawn;
@@ -21,11 +21,15 @@ public class CustomerSpawner : MonoBehaviour
     // Reference to the last spawned object
     private GameObject lastSpawnedObject;
 
+    public ItemSpawn itemspawn;
+
     void Start()
     {
         // Start the coroutine to spawn the object after the delay
         StartCoroutine(SpawnObjectAfterDelay());
     }
+
+
 
     IEnumerator SpawnObjectAfterDelay()
     {
@@ -40,7 +44,32 @@ public class CustomerSpawner : MonoBehaviour
 
     }
 
+    public void CustomerDelete()
+    {
+        StartCoroutine(GetReadytoDelete(4f));
+        
+    }
+    IEnumerator GetReadytoDelete(float delay)
+    {
+        yield return new WaitForSeconds(delay);
 
+        Destroy(lastSpawnedObject);
+
+        yield return new WaitForSeconds(delay);
+
+        SpawnObject();
+        itemspawn.itemSpawner();
+    }
+
+    //assigning values into the customer
+    //int customerAssignmentValues()
+    //{
+    //    int value = 0;
+    //    for (int i = 0; i < CustomersToSpawn.Count; ++i)
+    //    {
+    //        return CustomersToSpawn[i] = value;
+    //    }
+    //}
     void SpawnObject()
     {
         // Determine the index of the object to spawn
