@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destinationTag: DropArea
+  customerSpawner: {fileID: 0}
 --- !u!61 &881149918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -400,6 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destinationTag: DropArea
+  customerSpawner: {fileID: 2136629423}
 --- !u!61 &971165367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -958,7 +960,7 @@ GameObject:
   - component: {fileID: 2136629425}
   m_Layer: 8
   m_Name: CustomerSpawner
-  m_TagString: Untagged
+  m_TagString: CustomerSpawnerObject
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -983,6 +985,7 @@ MonoBehaviour:
   itemstimetospawn: 0
   currenttimetospawn: 0
   delay: 1
+  item: 0
   isRandomize: 1
 --- !u!4 &2136629424
 Transform:

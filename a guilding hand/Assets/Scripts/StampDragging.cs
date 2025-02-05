@@ -7,7 +7,6 @@ public class DragDrop2D : MonoBehaviour
     Collider2D collider2d;
     public string destinationTag = "DropArea";
     private Vector3 originalPosition; // Store the original position of the object
-
     void Awake()
     {
         collider2d = GetComponent<Collider2D>();
@@ -65,30 +64,42 @@ public class DragDrop2D : MonoBehaviour
 
         // Destroy the current object
         Destroy(gameObject);
+        GameObject[] obj = GameObject.FindGameObjectsWithTag("QuestItemObject");
+        foreach(GameObject ob in obj)
+        {
+            Destroy(ob);
+        }
+        GameObject[] obj2 = GameObject.FindGameObjectsWithTag("QuestFormObject");
+        foreach (GameObject ob2 in obj2)
+        {
+            Destroy(ob2);
+        }
+        GameObject[] obj3 = GameObject.FindGameObjectsWithTag("AdventureFormObject");
+        foreach (GameObject ob3 in obj3)
+        {
+            Destroy(ob3);
+        }
         Debug.Log("Object destroyed!");
-
         // Respawn the object at its original position
         RespawnObject();
     }
 
     // Method to respawn the object at its original position
-void RespawnObject()
-{
-    // Instantiate a new object at the original position
-    GameObject newObject = Instantiate(gameObject, originalPosition, Quaternion.identity);
-
-    // Ensure the new object has the same script and properties
-    DragDrop2D newDragDrop = newObject.GetComponent<DragDrop2D>();
-    if (newDragDrop != null)
+    void RespawnObject()
     {
-        newDragDrop.originalPosition = originalPosition; // Set the original position for the new object
-        newDragDrop.collider2d.enabled = true; // Ensure the new object's collider is enabled
+        // Instantiate a new object at the original position
+        GameObject newObject = Instantiate(gameObject, originalPosition, Quaternion.identity);
+
+        // Ensure the new object has the same script and properties
+        DragDrop2D newDragDrop = newObject.GetComponent<DragDrop2D>();
+        if (newDragDrop != null)
+        {
+            newDragDrop.originalPosition = originalPosition; // Set the original position for the new object
+            newDragDrop.collider2d.enabled = true; // Ensure the new object's collider is enabled
+        }
+
+        Debug.Log("Object respawned at original position!");
     }
-
-    Debug.Log("Object respawned at original position!");
-}
-
-
     // Method to return the object to its original position
     void ReturnToOriginalPosition()
     {
