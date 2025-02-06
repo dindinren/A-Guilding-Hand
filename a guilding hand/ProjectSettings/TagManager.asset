@@ -8,6 +8,12 @@ TagManager:
   - SwipeObstacle
   - FlapObstacle
   - AudioManager
+  - Target
+  - Indicator
+  - resetButton
+  - testingStick
+  - secondSprite
+  - Pipette
   layers:
   - Default
   - TransparentFX
