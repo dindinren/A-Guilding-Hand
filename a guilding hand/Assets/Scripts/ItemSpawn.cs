@@ -5,6 +5,8 @@ public class ItemSpawn : MonoBehaviour
 {
     public GameObject SpawnItem; // The item to spawn
 
+    public CustomerSpawner customerPic;
+
     private GameObject lastSpawnedItem; // Reference to the last spawned item
     private bool canSpawn = true; // Flag to control if the item can be spawned
 
@@ -33,17 +35,16 @@ public class ItemSpawn : MonoBehaviour
             // Spawn the item and set its position
             lastSpawnedItem = Instantiate(SpawnItem, transform.position, transform.rotation);
             lastSpawnedItem.transform.position = new Vector3(lastSpawnedItem.transform.position.x, lastSpawnedItem.transform.position.y, -5);
+            testscript script = lastSpawnedItem.GetComponent<testscript>();
+            if(script != null)
+            {
+                script.spawner = customerPic;
 
+            }
             // Disable further spawning
             canSpawn = false;
 
             Debug.Log("Item object spawned!");
         }
     }
-
-    void Update()
-    {
-        // No need for logic in Update for this use case
-    }
-
 }

@@ -4,24 +4,48 @@ using System.Collections.Generic;
 
 public class CustomerSpawner : MonoBehaviour
 {
+    //trying something here
+    //trying to create a dictionary to store the customers as values
+    
+    public Dictionary<GameObject, int> dict = new Dictionary<GameObject, int>();
+    void AssignCustomer()
+    {
+        for (int i = 0; i < CustomersToSpawn.Count; i++)
+        {
+            dict.Add(CustomersToSpawn[i], i);   
+        }
+    }
+ 
+   
+
+
+
+
+
+
+
+
     // List of customers to spawn
     public List<GameObject> CustomersToSpawn = new List<GameObject>();
-
-    //public GameObject spawner;
+    
+    public int index;
 
     // Time for the items to spawn
     public float itemstimetospawn;
     public float currenttimetospawn;
 
+    //timer
     public float delay = 1f;
 
     // Flag to randomize the object selection
     public bool isRandomize;
 
     // Reference to the last spawned object
-    private GameObject lastSpawnedObject;
+    public GameObject lastSpawnedObject;
 
+    // calling the ItemSpawn class to be used so that it can be respawned after the players stamp the Quest Form    
     public ItemSpawn itemspawn;
+
 
     void Start()
     {
@@ -44,16 +68,19 @@ public class CustomerSpawner : MonoBehaviour
 
     }
 
+    //to allow the StampDragging Script to call it
     public void CustomerDelete()
     {
-        StartCoroutine(GetReadytoDelete(4f));
-        
+        StartCoroutine(GetReadytoDelete(3f)); 
     }
+    //the customer will despawn and then respawn after a while
     IEnumerator GetReadytoDelete(float delay)
     {
         yield return new WaitForSeconds(delay);
 
         Destroy(lastSpawnedObject);
+        Debug.Log("Customer destroyed!");
+
 
         yield return new WaitForSeconds(delay);
 
@@ -61,94 +88,23 @@ public class CustomerSpawner : MonoBehaviour
         itemspawn.itemSpawner();
     }
 
-    //assigning values into the customer
-    //int customerAssignmentValues()
-    //{
-    //    int value = 0;
-    //    for (int i = 0; i < CustomersToSpawn.Count; ++i)
-    //    {
-    //        return CustomersToSpawn[i] = value;
-    //    }
-    //}
-    void SpawnObject()
+    
+    //Customer Spawning
+    public void SpawnObject()
     {
         // Determine the index of the object to spawn
-        int index = isRandomize ? Random.Range(0, CustomersToSpawn.Count) : 0;
+        index = isRandomize ? Random.Range(0, CustomersToSpawn.Count) : CustomersToSpawn.Count-1;
+
+
 
         // Check if there are objects in the list
         if (CustomersToSpawn.Count > 0)
         {
             // Instantiate the object at the current position and rotation of this object
             lastSpawnedObject = Instantiate(CustomersToSpawn[index], transform.position, CustomersToSpawn[index].transform.rotation);
-
-            Debug.Log("Customer Spawned!");
-
-
-            // Start a coroutine to destroy the object after 3 seconds (optional)
-            // StartCoroutine(DestroyAfterDelay(lastSpawnedObject, 3f));
+            Debug.Log("Customer {0} Spawned!" +CustomersToSpawn[index]);
         }
     }
-
-    //// Optional: Coroutine to destroy the object after a delay
-    //IEnumerator DestroyAfterDelay(GameObject obj, float delay)
-    //{
-    //    yield return new WaitForSeconds(delay);
-    //    Destroy(obj);
-    //}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ////when clicked down (test)
-    //private void OnMouseDown()
-    //{
-    //    // Only spawn an object if there isn't already a spawned object
-    //    if (lastSpawnedObject == null)
-    //    {
-    //        SpawnObject();
-    //    }
-    //}
-
-    //void SpawnObject()
-    //{
-    //    int index = isRandomize ? Random.Range(0, CustomersToSpawn.Count) : 0;
-
-    //    if (CustomersToSpawn.Count > 0)
-    //    {
-    //        // Instantiate the object at the current position and rotation of this object
-    //        lastSpawnedObject = Instantiate(CustomersToSpawn[index], transform.position, CustomersToSpawn[index].transform.rotation);
-
-    //        Debug.Log("Customer Spawned!");
-
-    //        // Start a coroutine to destroy the object after 1 second
-    //        // this one can after all done with the items then destroy itself
-    //        //StartCoroutine(DestroyAfterDelay(lastSpawnedObject, 3f));
-    //    }
-    //}
-
-    ////// Coroutine to destroy the object after a delay
-    /////
-    ////IEnumerator DestroyAfterDelay(GameObject spawnedObject, float delay)
-    ////{
-    ////    // Wait for the specified amount of time
-    ////    yield return new WaitForSeconds(delay);
-
-    ////    // Destroy the spawned object after the delay
-    ////    Destroy(spawnedObject);
-
-    ////    // Allow the user to click again after the object is destroyed
-    ////    lastSpawnedObject = null;
-    ////}
 
    

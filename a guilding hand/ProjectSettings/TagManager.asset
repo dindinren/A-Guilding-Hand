@@ -19,6 +19,7 @@ TagManager:
   - QuestFormObject
   - AdventureFormObject
   - CustomerSpawnerObject
+  - CustomerSmallPicSP
   layers:
   - Default
   - TransparentFX

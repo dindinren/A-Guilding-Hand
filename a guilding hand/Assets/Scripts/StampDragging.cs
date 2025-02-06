@@ -15,7 +15,8 @@ public class DragDrop2D : MonoBehaviour
 
     public CustomerSpawner customerspawner;
 
-     
+    public AdvenInfoVariables adveninfovar;
+
     private void Start()
     {
         tick.SetActive(false);
@@ -60,9 +61,10 @@ public class DragDrop2D : MonoBehaviour
             }
             else
             {
-                returncheck = true;
                 // Return to the original position if not dropped in the drop area
-                //ReturnToOriginalPosition();
+                returncheck = true;
+                
+                
             }
         }
         else
@@ -74,14 +76,16 @@ public class DragDrop2D : MonoBehaviour
         collider2d.enabled = true;
     }
 
-    // Coroutine to destroy the object and respawn it after a delay
+    // After stamping, the items will get ready to despawn while the stamp goes back to its original position
     IEnumerator DestroyAndRespawnAfterDelay(float delay)
     {
         tick.SetActive(true);
+
+        //animation to go back
         float elapsed = 0f;
         float duration = 1f;
         Vector2 startPos = transform.position;
-        
+
         while (elapsed < duration)
         {
             float t = elapsed / duration;
@@ -91,14 +95,13 @@ public class DragDrop2D : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-
+        
+        // the items will get ready to destroy
         yield return new WaitForSeconds(delay);
 
-        //// Destroy the current object
-        //Destroy(gameObject);
 
         GameObject[] obj = GameObject.FindGameObjectsWithTag("QuestItemObject");
-        foreach(GameObject ob in obj)
+        foreach (GameObject ob in obj)
         {
             Destroy(ob);
         }
@@ -116,28 +119,9 @@ public class DragDrop2D : MonoBehaviour
 
         tick.SetActive(false);
 
-        //// Respawn the object at its original position
-        //RespawnObject();
+        adveninfovar.PicIsDestroyed();
+        Debug.Log("the pic will be destroyed");
     }
-
-    //// Method to respawn the object at its original position
-    //void RespawnObject()
-    //{
-    //    // Instantiate a new object at the original position
-    //    GameObject newObject = Instantiate(gameObject, originalPosition, Quaternion.identity);
-
-    //    // Ensure the new object has the same script and properties
-    //    DragDrop2D newDragDrop = newObject.GetComponent<DragDrop2D>();
-    //    if (newDragDrop != null)
-    //    {
-    //        newDragDrop.originalPosition = originalPosition; // Set the original position for the new object
-    //        newDragDrop.collider2d.enabled = true; // Ensure the new object's collider is enabled
-    //    }
-
-    //    Debug.Log("Object respawned at original position!");
-    //}
-
-    // Method to return the object to its original position
 
     private void FixedUpdate()
     {

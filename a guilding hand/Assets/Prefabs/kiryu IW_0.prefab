@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003782677082551551}
   - component: {fileID: 1715591582510050128}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: kiryu IW_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3192504442912499235}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.950201, y: 1.0472759, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
