@@ -1,38 +1,31 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class AdvenInfoVariables :MonoBehaviour
 {
     public CustomerSpawner customerPic;
 
-    GameObject rawCustomerPic;
+    public GameObject rawCustomerPic;
 
-    public bool canRandomize = false;
+    public bool canRandomizeAdven = false;
+    public bool isItTheSame = false; 
 
-
-    //assign a number depending on the amount of customers there
-    public void AssignVariables()
-    {
-        int[] advenVar = new int[customerPic.CustomersToSpawn.Count];
-
-        for (int i = 0; i < advenVar.Length; i++)
-        {
-            advenVar[i] += i;
-        }
-        //random spawn
-        int index = Random.Range(0, advenVar.Length);
-    }
 
     //i want that once a customer spawn the card would also spawn that customers face
     public void Start()
     {
+        int selectedID = customerPic.index;
+
+        //random choose to spawn the same pic or diff pic
+        ProfilePicRandomise();
 
         Debug.Log("HELLO");
 
         //if no randomise, the pic will spawn as the same as the customer on the left
-        if (canRandomize == false)
+        if (canRandomizeAdven == false)
         {
             Debug.Log("the adven card info will spawn with the customer");
             if (customerPic != null)
@@ -44,11 +37,18 @@ public class AdvenInfoVariables :MonoBehaviour
                 Debug.Log("AHHHHHHHHH");
             }
 
+            if (customerPic.index == selectedID)
+            {
+                isItTheSame = true;
+                Debug.Log("PLEASE DFOES THIS WORKS???");
+            }
+
+
         }
         else
         {
-            int selectedID = Random.Range(0, customerPic.CustomersToSpawn.Count);
-            while(selectedID == customerPic.index)
+            selectedID = Random.Range(0, customerPic.CustomersToSpawn.Count);
+            while (selectedID == customerPic.index)
             {
                 selectedID = Random.Range(0, customerPic.CustomersToSpawn.Count);
             }
@@ -60,17 +60,24 @@ public class AdvenInfoVariables :MonoBehaviour
         }
     }
 
-    public void PicIsDestroyed()
+
+    //allow for randomly change the profile pic each time a customer spawn
+    public void ProfilePicRandomise()
     {
-        //StartCoroutine(DestroyPic(1f));
-        Destroy(rawCustomerPic);
+        int randomvalue = Random.Range(0, 2);
+
+        if(randomvalue == 0)
+        {
+            canRandomizeAdven = false;
+        }
+        else
+        {
+            canRandomizeAdven = true;
+        }
     }
 
-    IEnumerator DestroyPic(float delay)
+    public void PicIsDestroyed()
     {
-        yield return new WaitForSeconds(delay);
-
         Destroy(rawCustomerPic);
-
     }
 }

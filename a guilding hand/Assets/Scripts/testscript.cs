@@ -4,16 +4,11 @@ public class testscript : MonoBehaviour
 {
     
     public GameObject QuestForm;
-    public AdvenInfoVariables AdvenInfo;
     public GameObject Item;
 
+    public AdvenInfoVariables AdvenInfo;
     public CustomerSpawner spawner;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
     private void OnMouseDown()
     {
         Debug.Log("item clicked!");
@@ -40,11 +35,11 @@ public class testscript : MonoBehaviour
         
         correctStamp.adveninfovar = advenInfo;
         incorrectStamp.adveninfovar = advenInfo;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+        if(AdvenInfo.rawCustomerPic == spawner.lastSpawnedObject)
+        {
+            Debug.Log("PLEASE DFOES THIS WORKS???");
+        }
     }
 }

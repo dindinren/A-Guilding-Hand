@@ -6,6 +6,7 @@ public class CustomerSpawner : MonoBehaviour
 {
     //trying something here
     //trying to create a dictionary to store the customers as values
+    //i dun think this is being used somehow, pls delete as soon as possible
     
     public Dictionary<GameObject, int> dict = new Dictionary<GameObject, int>();
     void AssignCustomer()
@@ -94,8 +95,6 @@ public class CustomerSpawner : MonoBehaviour
     {
         // Determine the index of the object to spawn
         index = isRandomize ? Random.Range(0, CustomersToSpawn.Count) : CustomersToSpawn.Count-1;
-
-
 
         // Check if there are objects in the list
         if (CustomersToSpawn.Count > 0)

@@ -101,4 +101,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customerPic: {fileID: 0}
-  canRandomize: 0
+  canRandomizeAdven: 0

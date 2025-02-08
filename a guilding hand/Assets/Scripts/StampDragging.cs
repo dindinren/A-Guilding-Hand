@@ -14,13 +14,14 @@ public class DragDrop2D : MonoBehaviour
     private bool returncheck;
 
     public CustomerSpawner customerspawner;
-
     public AdvenInfoVariables adveninfovar;
+
 
     private void Start()
     {
         tick.SetActive(false);
     }
+
     void Awake()
     {
         collider2d = GetComponent<Collider2D>();
@@ -52,7 +53,24 @@ public class DragDrop2D : MonoBehaviour
             {
                 // Snap the object to the drop area
                 transform.position = hitInfo.transform.position + new Vector3(0, 0, -0.01f);
-       
+
+
+                 
+                //CHECKER
+                //TODO: implement the check with the checking item logic
+                //if the players use the correct stamp on the same customer spawn OR players use the incorrect stamp on different customer spawn
+                if ( (gameObject.CompareTag("correct") && adveninfovar.isItTheSame == true) || (gameObject.CompareTag("incorrect") && adveninfovar.isItTheSame == false) )
+                {
+                    //TODO: implement into a (invisible) score system
+                    Debug.Log("YES YOU ARE SMART :)");
+                }
+                else
+                {
+                    //TODO: implement into a (invisible) score system
+                    Debug.Log("NO YOU ARE WRONG YOU DUMMY");
+                }
+
+
                 // Destroy the object after 1 second
                 StartCoroutine(DestroyAndRespawnAfterDelay(1f)); // Wait for 1 second before destroying and respawning
                 Debug.Log("Object dropped in the drop area. It will be destroyed and respawned.");
@@ -63,8 +81,6 @@ public class DragDrop2D : MonoBehaviour
             {
                 // Return to the original position if not dropped in the drop area
                 returncheck = true;
-                
-                
             }
         }
         else
@@ -76,9 +92,12 @@ public class DragDrop2D : MonoBehaviour
         collider2d.enabled = true;
     }
 
+
+
     // After stamping, the items will get ready to despawn while the stamp goes back to its original position
     IEnumerator DestroyAndRespawnAfterDelay(float delay)
     {
+        //Show the tick 
         tick.SetActive(true);
 
         //animation to go back
