@@ -22,12 +22,14 @@ public class AdvenInfoVariables :MonoBehaviour
         //random choose to spawn the same pic or diff pic
         ProfilePicRandomise();
 
+
         Debug.Log("HELLO");
 
         //if no randomise, the pic will spawn as the same as the customer on the left
         if (canRandomizeAdven == false)
         {
             Debug.Log("the adven card info will spawn with the customer");
+
             if (customerPic != null)
             {
                 rawCustomerPic = Instantiate(customerPic.lastSpawnedObject, GameObject.FindGameObjectWithTag("CustomerSmallPicSP").transform);
@@ -43,7 +45,6 @@ public class AdvenInfoVariables :MonoBehaviour
                 Debug.Log("PLEASE DFOES THIS WORKS???");
             }
 
-
         }
         else
         {
@@ -57,6 +58,7 @@ public class AdvenInfoVariables :MonoBehaviour
             rawCustomerPic.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID("Foreground");
             rawCustomerPic.GetComponent<SpriteRenderer>().sortingOrder = 3;
             Debug.Log("this works");
+
         }
     }
 
@@ -76,6 +78,7 @@ public class AdvenInfoVariables :MonoBehaviour
         }
     }
 
+    //destroy the adven info pic 
     public void PicIsDestroyed()
     {
         Destroy(rawCustomerPic);

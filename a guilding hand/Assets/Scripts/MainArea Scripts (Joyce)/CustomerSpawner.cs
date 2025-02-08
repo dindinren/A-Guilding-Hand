@@ -4,28 +4,6 @@ using System.Collections.Generic;
 
 public class CustomerSpawner : MonoBehaviour
 {
-    //trying something here
-    //trying to create a dictionary to store the customers as values
-    //i dun think this is being used somehow, pls delete as soon as possible
-    
-    public Dictionary<GameObject, int> dict = new Dictionary<GameObject, int>();
-    void AssignCustomer()
-    {
-        for (int i = 0; i < CustomersToSpawn.Count; i++)
-        {
-            dict.Add(CustomersToSpawn[i], i);   
-        }
-    }
- 
-   
-
-
-
-
-
-
-
-
     // List of customers to spawn
     public List<GameObject> CustomersToSpawn = new List<GameObject>();
     
@@ -35,7 +13,7 @@ public class CustomerSpawner : MonoBehaviour
     public float itemstimetospawn;
     public float currenttimetospawn;
 
-    //timer
+    //timer to spawn
     public float delay = 1f;
 
     // Flag to randomize the object selection
@@ -55,7 +33,7 @@ public class CustomerSpawner : MonoBehaviour
     }
 
 
-
+    //wait a few seconds for the object to spawn
     IEnumerator SpawnObjectAfterDelay()
     {
         // Wait for the specified delay
@@ -72,28 +50,32 @@ public class CustomerSpawner : MonoBehaviour
     //to allow the StampDragging Script to call it
     public void CustomerDelete()
     {
+        //at most 3 seconds to not immediately despawn the customer along with the 3 items
         StartCoroutine(GetReadytoDelete(3f)); 
     }
+
     //the customer will despawn and then respawn after a while
     IEnumerator GetReadytoDelete(float delay)
     {
         yield return new WaitForSeconds(delay);
 
+        //destroy the customer
         Destroy(lastSpawnedObject);
         Debug.Log("Customer destroyed!");
 
 
         yield return new WaitForSeconds(delay);
 
+        //respawn the customer and item for the next loop
         SpawnObject();
         itemspawn.itemSpawner();
     }
 
-    
+   
     //Customer Spawning
     public void SpawnObject()
     {
-        // Determine the index of the object to spawn
+        // check if its randomise if yes select from the range of 0 to the end of the list if no just spawn the last customer from the list
         index = isRandomize ? Random.Range(0, CustomersToSpawn.Count) : CustomersToSpawn.Count-1;
 
         // Check if there are objects in the list
@@ -104,6 +86,7 @@ public class CustomerSpawner : MonoBehaviour
             Debug.Log("Customer {0} Spawned!" +CustomersToSpawn[index]);
         }
     }
+
 }
 
    

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class DragDrop2D : MonoBehaviour
 {
@@ -16,31 +17,38 @@ public class DragDrop2D : MonoBehaviour
     public CustomerSpawner customerspawner;
     public AdvenInfoVariables adveninfovar;
 
+    public ScoreManager scoremanager;
 
+
+    //dun let the tick/cross be seen at first
     private void Start()
     {
         tick.SetActive(false);
     }
 
+    
     void Awake()
     {
         collider2d = GetComponent<Collider2D>();
         originalPosition = transform.position; // Store the initial position
     }
 
+    //if clicked
     void OnMouseDown()
     {
         offset = transform.position - MouseWorldPosition();
     }
 
+    //if dragged
     void OnMouseDrag()
     {
         transform.position = MouseWorldPosition() + offset;
     }
 
-
+    //if let go of the mouse
     void OnMouseUp()
     {
+        //check the mouse position
         collider2d.enabled = false;
         var rayOrigin = Camera.main.transform.position;
         var rayDirection = MouseWorldPosition() - Camera.main.transform.position;
@@ -61,37 +69,40 @@ public class DragDrop2D : MonoBehaviour
                 //if the players use the correct stamp on the same customer spawn OR players use the incorrect stamp on different customer spawn
                 if ( (gameObject.CompareTag("correct") && adveninfovar.isItTheSame == true) || (gameObject.CompareTag("incorrect") && adveninfovar.isItTheSame == false) )
                 {
-                    //TODO: implement into a (invisible) score system
+                    scoremanager.AddPoints();
                     Debug.Log("YES YOU ARE SMART :)");
                 }
                 else
                 {
-                    //TODO: implement into a (invisible) score system
+                    scoremanager.MinusPoints();
                     Debug.Log("NO YOU ARE WRONG YOU DUMMY");
                 }
 
 
-                // Destroy the object after 1 second
-                StartCoroutine(DestroyAndRespawnAfterDelay(1f)); // Wait for 1 second before destroying and respawning
+                // Destroy the items after 1 second after a while it will respawn and the whole loop starts over again
+                StartCoroutine(DestroyAndRespawnAfterDelay(1f)); 
                 Debug.Log("Object dropped in the drop area. It will be destroyed and respawned.");
 
+                //then the customer goes bye bye
                 customerspawner.CustomerDelete();
             }
             else
             {
                 // Return to the original position if not dropped in the drop area
                 returncheck = true;
+                Debug.Log("Returned to original position.");
             }
         }
         else
         {
             // Return to the original position if no valid drop area is hit
             returncheck = true;
+            Debug.Log("Returned to original position.");
         }
 
+        //reenable the collider for people to drag the stamps again
         collider2d.enabled = true;
     }
-
 
 
     // After stamping, the items will get ready to despawn while the stamp goes back to its original position
@@ -136,8 +147,10 @@ public class DragDrop2D : MonoBehaviour
         }
         Debug.Log("Object destroyed!");
 
+        //the tick/cross also go bye bye
         tick.SetActive(false);
 
+        //along with the adven info profile pic
         adveninfovar.PicIsDestroyed();
         Debug.Log("the pic will be destroyed");
     }
@@ -149,6 +162,8 @@ public class DragDrop2D : MonoBehaviour
             ReturnToOriginalPosition();
         }
     }
+
+    //for the fixedupdate than anything | for the animation curve and make the stamp go back nicely
     void ReturnToOriginalPosition()
     {
         float elapsed = 0f;
@@ -163,13 +178,14 @@ public class DragDrop2D : MonoBehaviour
 
             elapsed += Time.deltaTime;
         }
-        Debug.Log("Returned to original position.");
     }
 
+    //getting the mouse pos for the game to recognise
     Vector3 MouseWorldPosition()
     {
         var mouseScreenPos = Input.mousePosition;
         mouseScreenPos.z = Camera.main.WorldToScreenPoint(transform.position).z;
         return Camera.main.ScreenToWorldPoint(mouseScreenPos);
     }
+
 }

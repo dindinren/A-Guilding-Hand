@@ -18,7 +18,6 @@ public class testscript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //spawn the items on the right
         var obj = GameObject.FindGameObjectsWithTag("QuestForm")[0];
         var obj2 = GameObject.FindGameObjectWithTag("QuestItem");
         var obj3 = GameObject.FindGameObjectWithTag("AdventureInfo");
@@ -28,18 +27,16 @@ public class testscript : MonoBehaviour
         var incorrectStamp = GameObject.FindGameObjectWithTag("incorrect").GetComponent<DragDrop2D>();
 
 
+        //spawn the 3 items on the righr
         Instantiate(QuestForm, obj.transform);
         Instantiate(Item, obj2.transform);
         AdvenInfoVariables advenInfo = Instantiate(AdvenInfo, obj3.transform);
+        //this is refering to the customerspawner class because the code is so spagethhi i cant spell sorry
         advenInfo.customerPic = spawner;
         
+        //refering to the stampDragging class so that the stamps can call to this class
         correctStamp.adveninfovar = advenInfo;
         incorrectStamp.adveninfovar = advenInfo;
 
-
-        if(AdvenInfo.rawCustomerPic == spawner.lastSpawnedObject)
-        {
-            Debug.Log("PLEASE DFOES THIS WORKS???");
-        }
     }
 }
