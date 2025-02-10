@@ -31,6 +31,7 @@ public class testscript : MonoBehaviour
         Instantiate(QuestForm, obj.transform);
         Instantiate(Item, obj2.transform);
         AdvenInfoVariables advenInfo = Instantiate(AdvenInfo, obj3.transform);
+
         //this is refering to the customerspawner class because the code is so spagethhi i cant spell sorry
         advenInfo.customerPic = spawner;
         

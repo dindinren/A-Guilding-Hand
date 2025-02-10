@@ -62,8 +62,7 @@ public class DragDrop2D : MonoBehaviour
                 // Snap the object to the drop area
                 transform.position = hitInfo.transform.position + new Vector3(0, 0, -0.01f);
 
-
-                 
+       
                 //CHECKER
                 //TODO: implement the check with the checking item logic
                 //if the players use the correct stamp on the same customer spawn OR players use the incorrect stamp on different customer spawn

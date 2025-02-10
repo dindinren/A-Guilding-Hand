@@ -20,6 +20,7 @@ TagManager:
   - AdventureFormObject
   - CustomerSpawnerObject
   - CustomerSmallPicSP
+  - Respawn2
   layers:
   - Default
   - TransparentFX

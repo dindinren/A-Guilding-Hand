@@ -14,7 +14,7 @@ public class CustomerSpawner : MonoBehaviour
     public float currenttimetospawn;
 
     //timer to spawn
-    public float delay = 1f;
+    public float delay = 1;
 
     // Flag to randomize the object selection
     public bool isRandomize;
@@ -24,6 +24,9 @@ public class CustomerSpawner : MonoBehaviour
 
     // calling the ItemSpawn class to be used so that it can be respawned after the players stamp the Quest Form    
     public ItemSpawn itemspawn;
+
+    //animation curve
+    public AnimationCurve curve;
 
 
     void Start()
@@ -45,6 +48,24 @@ public class CustomerSpawner : MonoBehaviour
             SpawnObject();
         }
 
+        //animation for customer to move toward  
+        float elapsed = 0f;
+        float duration = 1f;
+        GameObject respawn = GameObject.FindGameObjectWithTag("Respawn");
+        Vector2 endPos = respawn.transform.position;
+        Vector2 startPos = lastSpawnedObject.transform.position;
+
+        while (elapsed < duration)
+        {
+            float t = elapsed / duration;
+            float ease = curve.Evaluate(t);
+
+            lastSpawnedObject.transform.position = Vector2.Lerp(startPos, endPos, ease);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        Debug.Log("YOU MOVE NOW!");
     }
 
     //to allow the StampDragging Script to call it
@@ -57,21 +78,40 @@ public class CustomerSpawner : MonoBehaviour
     //the customer will despawn and then respawn after a while
     IEnumerator GetReadytoDelete(float delay)
     {
+
         yield return new WaitForSeconds(delay);
+
+        //animation for customer to go back   
+        float elapsed = 0f;
+        float duration = 1f;
+        GameObject respawn = GameObject.FindGameObjectWithTag("Respawn2");//cannot reuse "Respawn" because the endPos stores the current pos that the char is at rn
+        Vector2 endPos = respawn.transform.position;
+        Vector2 startPos = lastSpawnedObject.transform.position;
+
+        while (elapsed < duration)
+        {
+            float t = elapsed / duration;
+            float ease = curve.Evaluate(t);
+
+            lastSpawnedObject.transform.position = Vector2.Lerp(startPos, endPos, ease);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        Debug.Log("the customer has gone back");
+
+        yield return new WaitForSeconds(delay = 1f);
 
         //destroy the customer
         Destroy(lastSpawnedObject);
         Debug.Log("Customer destroyed!");
 
-
-        yield return new WaitForSeconds(delay);
-
         //respawn the customer and item for the next loop
-        SpawnObject();
         itemspawn.itemSpawner();
+        StartCoroutine(SpawnObjectAfterDelay());
+
     }
 
-   
     //Customer Spawning
     public void SpawnObject()
     {
@@ -86,7 +126,6 @@ public class CustomerSpawner : MonoBehaviour
             Debug.Log("Customer {0} Spawned!" +CustomersToSpawn[index]);
         }
     }
-
 }
 
    
