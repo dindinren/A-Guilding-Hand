@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class testscript : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class testscript : MonoBehaviour
     public AdvenInfoVariables AdvenInfo;
     public CustomerSpawner spawner;
 
+    public CusName AdvenName;
+
+    public Text testText1;
+    public Text testText2;
+
     private void OnMouseDown()
     {
         Debug.Log("item clicked!");
@@ -18,6 +24,7 @@ public class testscript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        //find tags
         var obj = GameObject.FindGameObjectsWithTag("QuestForm")[0];
         var obj2 = GameObject.FindGameObjectWithTag("QuestItem");
         var obj3 = GameObject.FindGameObjectWithTag("AdventureInfo");
@@ -32,6 +39,10 @@ public class testscript : MonoBehaviour
         Instantiate(Item, obj2.transform);
         AdvenInfoVariables advenInfo = Instantiate(AdvenInfo, obj3.transform);
 
+        //spawn the text
+        AdvenName.ChooseName();
+        Debug.Log("Choose Name");
+
         //this is refering to the customerspawner class because the code is so spagethhi i cant spell sorry
         advenInfo.customerPic = spawner;
         
@@ -39,5 +50,16 @@ public class testscript : MonoBehaviour
         correctStamp.adveninfovar = advenInfo;
         incorrectStamp.adveninfovar = advenInfo;
 
+    }
+
+    //since the item is a prefab = does not exist in the scene, the script can't call from said classes
+    //this is to find the object and get their components so the code can reference from them
+    public void Initialise()
+    {
+        //finding the text
+        testText1 = GameObject.Find("NameText1").GetComponent<Text>();
+        testText2 = GameObject.Find("NameText2").GetComponent<Text>();
+        //finding the canvas
+        AdvenName = GameObject.Find("Canvas").GetComponent<CusName>();
     }
 }

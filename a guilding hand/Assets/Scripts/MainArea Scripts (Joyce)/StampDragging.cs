@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Reflection;
 
 public class DragDrop2D : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class DragDrop2D : MonoBehaviour
     public AdvenInfoVariables adveninfovar;
 
     public ScoreManager scoremanager;
+
+    public CusName cusname;
 
 
     //dun let the tick/cross be seen at first
@@ -65,16 +68,34 @@ public class DragDrop2D : MonoBehaviour
        
                 //CHECKER
                 //TODO: implement the check with the checking item logic
-                //if the players use the correct stamp on the same customer spawn OR players use the incorrect stamp on different customer spawn
-                if ( (gameObject.CompareTag("correct") && adveninfovar.isItTheSame == true) || (gameObject.CompareTag("incorrect") && adveninfovar.isItTheSame == false) )
+                
+                //Check if player dragged 'Green' Stamp
+                if(gameObject.CompareTag("correct"))
                 {
-                    scoremanager.AddPoints();
-                    Debug.Log("YES YOU ARE SMART :)");
+                    //If correct
+                    //Check if name matches and pic matches
+                    if(adveninfovar.isItTheSame == true && cusname.areTheNameSame == true)
+                    {
+                        scoremanager.AddPoints();
+                    }
+                    else
+                    {
+                        scoremanager.MinusPoints();
+                    }
                 }
+                //Check if player dragged 'Red' Stamp
                 else
                 {
-                    scoremanager.MinusPoints();
-                    Debug.Log("NO YOU ARE WRONG YOU DUMMY");
+                    //If not correct
+                    //if either of the name or the pic does not match
+                    if (adveninfovar.isItTheSame == false || cusname.areTheNameSame == false)
+                    {
+                        scoremanager.AddPoints();//why add is because the player is right because they stamp with the incorrect and either of the things are not correct
+                    }
+                    else
+                    {
+                        scoremanager.MinusPoints();
+                    }
                 }
 
 
@@ -148,6 +169,9 @@ public class DragDrop2D : MonoBehaviour
 
         //the tick/cross also go bye bye
         tick.SetActive(false);
+
+        cusname.nameText.enabled = false;
+        cusname.nameText2.enabled = false;
 
         //along with the adven info profile pic
         adveninfovar.PicIsDestroyed();

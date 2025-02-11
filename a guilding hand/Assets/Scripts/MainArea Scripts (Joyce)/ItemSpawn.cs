@@ -35,11 +35,15 @@ public class ItemSpawn : MonoBehaviour
             // Spawn the item and set its position
             lastSpawnedItem = Instantiate(SpawnItem, transform.position, transform.rotation);
             lastSpawnedItem.transform.position = new Vector3(lastSpawnedItem.transform.position.x, lastSpawnedItem.transform.position.y, -5);
+
+            ///Set item to active (ASC)
+            //SpawnItem.SetActive(true);
+
             testscript script = lastSpawnedItem.GetComponent<testscript>();
             if(script != null)
             {
+                script.Initialise();
                 script.spawner = customerPic;
-
             }
             // Disable further spawning
             canSpawn = false;

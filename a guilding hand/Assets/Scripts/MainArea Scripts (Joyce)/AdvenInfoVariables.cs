@@ -66,7 +66,7 @@ public class AdvenInfoVariables :MonoBehaviour
     //allow for randomly change the profile pic each time a customer spawn
     public void ProfilePicRandomise()
     {
-        int randomvalue = Random.Range(0, 2);
+        int randomvalue = Random.Range(0, 1);
 
         if(randomvalue == 0)
         {
