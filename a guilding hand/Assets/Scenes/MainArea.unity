@@ -1236,11 +1236,11 @@ Transform:
   m_GameObject: {fileID: 1526626276}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.6, y: -2.19, z: 0}
+  m_LocalPosition: {x: 5.14, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2136629424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1617715023
 GameObject:
@@ -1740,12 +1740,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomersToSpawn:
-  - {fileID: 6649560132919516856, guid: 1a368f0e9bd53cc4b9b1e56b41898abe, type: 3}
-  - {fileID: 3192504442912499235, guid: c336ed888b0e02840929a1a6952180e8, type: 3}
-  - {fileID: 7601913681072676657, guid: ba46ab59234bf834484bbdc01f83f7f4, type: 3}
-  - {fileID: 8272412422243098870, guid: be1ef69d19d41834795de74020b14524, type: 3}
-  - {fileID: 3516005781168329089, guid: fc6f5cdd7d40bd3458d91ee5b263ca87, type: 3}
-  - {fileID: 29164511115675736, guid: 42fec89f94b911043a8aedfe5622c608, type: 3}
+  - {fileID: 6221538330857139336, guid: 80c251420cc78a24888003bd831df451, type: 3}
+  - {fileID: 2726667169504721545, guid: 6e6c91aa15b5bf245833a40bd6110389, type: 3}
+  - {fileID: 6221538330857139336, guid: 80c251420cc78a24888003bd831df451, type: 3}
+  - {fileID: 2726667169504721545, guid: 6e6c91aa15b5bf245833a40bd6110389, type: 3}
+  - {fileID: 6221538330857139336, guid: 80c251420cc78a24888003bd831df451, type: 3}
+  - {fileID: 2726667169504721545, guid: 6e6c91aa15b5bf245833a40bd6110389, type: 3}
   index: 0
   itemstimetospawn: 0
   currenttimetospawn: 0
@@ -1789,7 +1789,8 @@ Transform:
   m_LocalPosition: {x: -10.74, y: -2.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1526626277}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2136629425
@@ -1845,7 +1846,6 @@ SceneRoots:
   - {fileID: 1285630180}
   - {fileID: 1135349560}
   - {fileID: 2136629424}
-  - {fileID: 1526626277}
   - {fileID: 1765766999}
   - {fileID: 1453741652}
   - {fileID: 971165365}
