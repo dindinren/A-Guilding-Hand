@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MONSTER TAIL FAKE_0: -5370906285215177852
+      MONSTER TAIL FAKE_1: -732834791035103712
+      MONSTER TAIL FAKE_2: -4969416602805831218
+      MONSTER TAIL FAKE_3: -7850439876599105713
+      MONSTER TAIL FAKE_4: 1622661670154448374
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

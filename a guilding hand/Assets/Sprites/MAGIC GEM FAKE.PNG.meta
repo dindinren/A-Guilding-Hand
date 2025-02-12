@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MAGIC GEM FAKE_0: 30815617794802864
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

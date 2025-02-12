@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MAGIC GEM REAL_0: -3013526210534293396
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
