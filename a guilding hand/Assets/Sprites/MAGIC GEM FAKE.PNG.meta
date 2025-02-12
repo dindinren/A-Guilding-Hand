@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 780546b49c4080e43bc0c8610f4a6498
+guid: c0a2036bc87802e48874a58e6c58b90b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1895723485029003524
-    second: Item Broken_0
+      213: 30815617794802864
+    second: MAGIC GEM FAKE_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Item Broken_0
+      name: MAGIC GEM FAKE_0
       rect:
         serializedVersion: 2
-        x: 1266
-        y: 549
-        width: 301
-        height: 330
+        x: 82
+        y: 882
+        width: 1484
+        height: 1474
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 401f4853776fe4a10800000000000000
-      internalID: 1895723485029003524
+      spriteID: 0b4813024aa7d6000800000000000000
+      internalID: 30815617794802864
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Item Broken_0: 1895723485029003524
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

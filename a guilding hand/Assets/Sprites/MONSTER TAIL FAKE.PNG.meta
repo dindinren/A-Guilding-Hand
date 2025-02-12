@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 780546b49c4080e43bc0c8610f4a6498
+guid: 19a729b3ed8d85f4b9aa9f495409e5eb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1895723485029003524
-    second: Item Broken_0
+      213: -5370906285215177852
+    second: MONSTER TAIL FAKE_0
+  - first:
+      213: -732834791035103712
+    second: MONSTER TAIL FAKE_1
+  - first:
+      213: -4969416602805831218
+    second: MONSTER TAIL FAKE_2
+  - first:
+      213: -7850439876599105713
+    second: MONSTER TAIL FAKE_3
+  - first:
+      213: 1622661670154448374
+    second: MONSTER TAIL FAKE_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Item Broken_0
+      name: MONSTER TAIL FAKE_0
       rect:
         serializedVersion: 2
-        x: 1266
-        y: 549
-        width: 301
-        height: 330
+        x: 66
+        y: 394
+        width: 1553
+        height: 1751
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 401f4853776fe4a10800000000000000
-      internalID: 1895723485029003524
+      spriteID: 48326db9035b675b0800000000000000
+      internalID: -5370906285215177852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MONSTER TAIL FAKE_1
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 389
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0261e49e3a274d5f0800000000000000
+      internalID: -732834791035103712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MONSTER TAIL FAKE_2
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 391
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec974d8cde5190bb0800000000000000
+      internalID: -4969416602805831218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MONSTER TAIL FAKE_3
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 336
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47bfb09682ad0390800000000000000
+      internalID: -7850439876599105713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MONSTER TAIL FAKE_4
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 318
+        width: 35
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fda238113ad48610800000000000000
+      internalID: 1622661670154448374
       vertices: []
       indices: 
       edges: []
@@ -134,8 +234,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Item Broken_0: 1895723485029003524
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

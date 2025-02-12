@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 780546b49c4080e43bc0c8610f4a6498
+guid: 49ebf47423155b34eb53f0d36a49ba68
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1895723485029003524
-    second: Item Broken_0
+      213: -6254001464607975256
+    second: PH Test w Liquid_0
+  - first:
+      213: 5857080065964126169
+    second: PH Test w Liquid_1
+  - first:
+      213: -6762093314558805419
+    second: PH Test w Liquid_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Item Broken_0
+      name: PH Test w Liquid_0
       rect:
         serializedVersion: 2
-        x: 1266
-        y: 549
-        width: 301
-        height: 330
+        x: 1171
+        y: 105
+        width: 444
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 401f4853776fe4a10800000000000000
-      internalID: 1895723485029003524
+      spriteID: 8a8d4459dc25539a0800000000000000
+      internalID: -6254001464607975256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH Test w Liquid_1
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 274
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df20d0b947884150800000000000000
+      internalID: 5857080065964126169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH Test w Liquid_2
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 234
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55abdaf15f73822a0800000000000000
+      internalID: -6762093314558805419
       vertices: []
       indices: 
       edges: []
@@ -134,8 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Item Broken_0: 1895723485029003524
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
