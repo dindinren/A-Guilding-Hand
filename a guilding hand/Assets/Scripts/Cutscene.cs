@@ -7,4 +7,9 @@ public class Cutscene : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+
+    public void ToGame()
+    {
+        SceneManager.LoadScene("");
     }
+}
