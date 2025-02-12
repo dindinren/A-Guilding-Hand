@@ -21,6 +21,7 @@ public class DragDrop2D : MonoBehaviour
     public ScoreManager scoremanager;
 
     public CusName cusname;
+    public SpawnManager spawnManager;
 
 
     //dun let the tick/cross be seen at first
@@ -74,7 +75,7 @@ public class DragDrop2D : MonoBehaviour
                 {
                     //If correct
                     //Check if name matches and pic matches
-                    if(adveninfovar.isItTheSame == true && cusname.areTheNameSame == true)
+                    if(adveninfovar.isItTheSame == true && cusname.areTheNameSame == true && spawnManager.finalResult() == true)
                     {
                         scoremanager.AddPoints();
                     }
@@ -88,7 +89,7 @@ public class DragDrop2D : MonoBehaviour
                 {
                     //If not correct
                     //if either of the name or the pic does not match
-                    if (adveninfovar.isItTheSame == false || cusname.areTheNameSame == false)
+                    if (adveninfovar.isItTheSame == false || cusname.areTheNameSame == false || spawnManager.finalResult() == false)
                     {
                         scoremanager.AddPoints();//why add is because the player is right because they stamp with the incorrect and either of the things are not correct
                     }

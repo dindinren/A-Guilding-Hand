@@ -1794,6 +1794,7 @@ MonoBehaviour:
   adveninfovar: {fileID: 8243235805929510046, guid: 8a381d49d7d16aa47b41a8111d08afae, type: 3}
   scoremanager: {fileID: 935916003}
   cusname: {fileID: 935916004}
+  spawnManager: {fileID: 479936337}
 --- !u!61 &881149918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1972,8 +1973,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae54c53b9ce4704badede606797d404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 1172543570}
-  nameText2: {fileID: 588163257}
+  nameText: {fileID: 0}
+  nameText2: {fileID: 0}
   names:
   - David
   - John
@@ -2117,6 +2118,7 @@ MonoBehaviour:
   adveninfovar: {fileID: 8243235805929510046, guid: 8a381d49d7d16aa47b41a8111d08afae, type: 3}
   scoremanager: {fileID: 935916003}
   cusname: {fileID: 935916004}
+  spawnManager: {fileID: 479936337}
 --- !u!61 &971165367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3551,8 +3553,8 @@ MonoBehaviour:
   - {fileID: 8087007736587333983, guid: 692409437e2bf3b4b97f3fd0279dc723, type: 3}
   - {fileID: 8087007736587333983, guid: 692409437e2bf3b4b97f3fd0279dc723, type: 3}
   Sprite_Scale:
-  - {x: 1, y: 1, z: 1}
-  - {x: 1, y: 1, z: 1}
+  - {x: 0.2, y: 0.2, z: 0.2}
+  - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
@@ -5012,7 +5014,7 @@ MonoBehaviour:
   - {fileID: -3013526210534293396, guid: 21f242fc189464748844186ba50975c3, type: 3}
   - {fileID: 8087007736587333983, guid: 692409437e2bf3b4b97f3fd0279dc723, type: 3}
   Sprite_Scale:
-  - {x: 0.9, y: 0.9, z: 0.9}
+  - {x: 0.5, y: 0.5, z: 0.5}
   - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
 --- !u!212 &2013707892
@@ -5538,8 +5540,8 @@ MonoBehaviour:
   AdvenInfo: {fileID: 8243235805929510046, guid: 8a381d49d7d16aa47b41a8111d08afae, type: 3}
   spawner: {fileID: 0}
   AdvenName: {fileID: 935916004}
-  testText1: {fileID: 1172543570}
-  testText2: {fileID: 588163257}
+  testText1: {fileID: 0}
+  testText2: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
