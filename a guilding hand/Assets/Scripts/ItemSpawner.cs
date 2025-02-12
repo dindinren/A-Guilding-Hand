@@ -7,7 +7,8 @@ public class ItemSpawner : MonoBehaviour
     public Sprite[] Sprite_Pic;
     public Vector3[] Sprite_Scale;
 
-    public void UseSprite(int id) {
+    public void UseSprite(int id) 
+    {
         GetComponent<SpriteRenderer>().sprite = Sprite_Pic[id];
         this.transform.localScale = Sprite_Scale[id];
     }

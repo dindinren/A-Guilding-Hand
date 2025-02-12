@@ -21,6 +21,12 @@ TagManager:
   - CustomerSpawnerObject
   - CustomerSmallPicSP
   - Respawn2
+  - Target
+  - Pipette
+  - MainCamLocation
+  - QuestItemInitial
+  - InitialItemCam
+  - SpawnManager
   layers:
   - Default
   - TransparentFX

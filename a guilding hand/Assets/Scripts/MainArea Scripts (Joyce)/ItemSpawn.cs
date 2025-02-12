@@ -42,7 +42,7 @@ public class ItemSpawn : MonoBehaviour
             testscript script = lastSpawnedItem.GetComponent<testscript>();
             if(script != null)
             {
-                script.Initialise();
+                //script.Initialise();
                 script.spawner = customerPic;
             }
             // Disable further spawning

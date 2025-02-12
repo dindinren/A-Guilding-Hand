@@ -1,19 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class testscript : MonoBehaviour
 {
     
     public GameObject QuestForm;
     public GameObject Item;
+    public GameObject questItem;
+    public GameObject questItemSpawnManager;
 
     public AdvenInfoVariables AdvenInfo;
     public CustomerSpawner spawner;
 
     public CusName AdvenName;
 
-    public Text testText1;
-    public Text testText2;
+    private GameObject questFormInstance;
+    private AdvenInfoVariables advenInfo;
+
+    public TextMeshPro testText1;
+    public TextMeshPro testText2;
 
     private void OnMouseDown()
     {
@@ -24,10 +30,14 @@ public class testscript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        //finding the canvas
+        AdvenName = GameObject.Find("Canvas").GetComponent<CusName>();
+
         //find tags
         var obj = GameObject.FindGameObjectsWithTag("QuestForm")[0];
         var obj2 = GameObject.FindGameObjectWithTag("QuestItem");
         var obj3 = GameObject.FindGameObjectWithTag("AdventureInfo");
+        questItemSpawnManager = GameObject.FindGameObjectWithTag("SpawnManager");
 
         //pls be noted the DragDrop2D class is the StampDragging Script : Im so sorry for messing it up :((
         var correctStamp = GameObject.FindGameObjectWithTag("correct").GetComponent<DragDrop2D>();
@@ -35,11 +45,18 @@ public class testscript : MonoBehaviour
 
 
         //spawn the 3 items on the righr
-        Instantiate(QuestForm, obj.transform);
+        questFormInstance = Instantiate(QuestForm, obj.transform);
         Instantiate(Item, obj2.transform);
-        AdvenInfoVariables advenInfo = Instantiate(AdvenInfo, obj3.transform);
+        questItemSpawnManager.GetComponent<SpawnManager>().SetUpQuestItem();
+        Instantiate(questItem, obj2.transform);
+
+        advenInfo = Instantiate(AdvenInfo, obj3.transform);
+
 
         //spawn the text
+        Initialise();
+        AdvenName.setText(testText1);
+        AdvenName.setText2(testText2);
         AdvenName.ChooseName();
         Debug.Log("Choose Name");
 
@@ -57,9 +74,7 @@ public class testscript : MonoBehaviour
     public void Initialise()
     {
         //finding the text
-        testText1 = GameObject.Find("NameText1").GetComponent<Text>();
-        testText2 = GameObject.Find("NameText2").GetComponent<Text>();
-        //finding the canvas
-        AdvenName = GameObject.Find("Canvas").GetComponent<CusName>();
+        testText1 = questFormInstance.GetComponentInChildren<TextMeshPro>();
+        testText2 = advenInfo.GetComponentInChildren<TextMeshPro>();
     }
 }

@@ -165,6 +165,12 @@ public class DragDrop2D : MonoBehaviour
         {
             Destroy(ob3);
         }
+
+        GameObject[] obj4 = GameObject.FindGameObjectsWithTag("QuestItemInitial");
+        foreach (GameObject ob4 in obj4)
+        {
+            Destroy(ob4);
+        }
         Debug.Log("Object destroyed!");
 
         //the tick/cross also go bye bye

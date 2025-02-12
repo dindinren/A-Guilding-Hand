@@ -3,13 +3,15 @@ using UnityEngine.Rendering;
 
 public class SpawnManager : MonoBehaviour
 {
-    
+
+    public ItemSpawner superInitialTarget;
     public ItemSpawner initialTarget;
     public ItemSpawner Target;
     public ItemSpawner damagedTarget;
     public ItemSpawner targetpH;
 
 
+    public int superInitialTargetID;
     private int initialTargetID;
     private int targetID;
     private int damagedTargetID;
@@ -19,9 +21,50 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        initialTargetID = Random.Range(0, 3);
-        initialTarget.UseSprite(initialTargetID);
+        //SetUpQuestItem();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         
+    }
+
+    public bool Result()
+    {
+        if (damagedTargetID % 2 != 0)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public bool ResultpH()
+    {
+        if (targetpHID % 2 != 0)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public bool finalResult()
+    {
+        if (Result() == true && ResultpH () == true)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void SetUpQuestItem()
+    {
+        superInitialTargetID = Random.Range(0, 3);
+        superInitialTarget.UseSprite(superInitialTargetID);
+        initialTargetID = superInitialTargetID;
+        initialTarget.UseSprite(initialTargetID);
+
+
         if (initialTargetID == 0)
         {
             targetID = 0;
@@ -91,38 +134,5 @@ public class SpawnManager : MonoBehaviour
                 targetpH.UseSprite(targetpHID);
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public bool Result()
-    {
-        if (damagedTargetID % 2 != 0)
-        {
-            return false;
-        }
-        return true;
-    }
-
-    public bool ResultpH()
-    {
-        if (targetpHID % 2 != 0)
-        {
-            return false;
-        }
-        return true;
-    }
-
-    public bool finalResult()
-    {
-        if (Result() == true && ResultpH () == true)
-        {
-            return true;
-        }
-        return false;
     }
 }

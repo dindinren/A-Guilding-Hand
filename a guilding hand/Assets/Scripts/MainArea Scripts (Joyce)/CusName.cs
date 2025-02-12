@@ -3,11 +3,12 @@ using Unity.IO.Archive;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CusName : MonoBehaviour
 {
-    public Text nameText;
-    public Text nameText2;
+    public TextMeshPro nameText;
+    public TextMeshPro nameText2;
 
     public string[] names = new string[]
     {
@@ -22,15 +23,15 @@ public class CusName : MonoBehaviour
 
     //Spawning the text
     //this is for the first text
-    public void setText(string setText)
+    public void setText(TextMeshPro setText)
     {
-        nameText.text = setText;
+        nameText = setText;
         //Debug.Log("x");
     }
     //this is for the second text
-    public void setText2(string setText2)
+    public void setText2(TextMeshPro setText2)
     {
-        nameText2.text = setText2;
+        nameText2 = setText2;
     }
 
     //this is to check whether to randomise the names or not
@@ -52,8 +53,8 @@ public class CusName : MonoBehaviour
     public void ChooseName()
     {
         //set the text renderer to be shown 
-        nameText.gameObject.GetComponent<Text>().enabled = true;
-        nameText2.gameObject.GetComponent<Text>().enabled = true;
+        //nameText.gameObject.GetComponent<Text>().enabled = true;
+        //nameText2.gameObject.GetComponent<Text>().enabled = true;
         Debug.Log("ChooseName Ran");
 
         //spin the wheel and find whether the names are the same
@@ -67,8 +68,8 @@ public class CusName : MonoBehaviour
             name1 = names[index];
             name2 = names[index];
 
-            setText(name1);
-            setText2(name2);
+            nameText.text = name1;
+            nameText2.text = name2;
 
             areTheNameSame = true;
             Debug.Log("Name Same");
@@ -90,10 +91,10 @@ public class CusName : MonoBehaviour
             name2 = names[index2];
             Debug.Log("index" + index2);
 
-            setText(name1);
+            nameText.text = name1;
             Debug.Log("the name is:" + name1);
 
-            setText2(name2);
+            nameText2.text = name2;
             Debug.Log("the name is: " + name2);
 
             areTheNameSame = false;
