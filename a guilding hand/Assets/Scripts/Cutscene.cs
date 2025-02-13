@@ -10,6 +10,6 @@ public class Cutscene : MonoBehaviour
 
     public void ToGame()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("MainArea");
     }
 }
