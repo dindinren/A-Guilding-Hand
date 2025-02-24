@@ -763,7 +763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &403189053
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2134,7 +2134,7 @@ MonoBehaviour:
   timerText: {fileID: 448251669}
   gameEnd: {fileID: 403189052}
   scoreText: {fileID: 1737160564}
-  remainingTime: 5
+  remainingTime: 160
 --- !u!1 &971165363
 GameObject:
   m_ObjectHideFlags: 0

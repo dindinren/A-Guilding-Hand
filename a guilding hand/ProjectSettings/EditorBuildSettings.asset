@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start/cutscene 8.unity
     guid: 5c1557f7c7ff0c140a38bf31c8d166d5
   - enabled: 1
+    path: Assets/Scenes/Tutorial/Tutorial.unity
+    guid: d15157e9e678b7b45bde3c6cd0af0d4c
+  - enabled: 1
     path: Assets/Scenes/Main Area Scenes/MainArea.unity
     guid: 1f60b72ffaefc0441b4da5ca6ae77ade
   m_configObjects:
