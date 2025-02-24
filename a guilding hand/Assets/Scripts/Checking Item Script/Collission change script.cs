@@ -4,6 +4,7 @@ using System.Collections;
 public class Collissionchangescript : MonoBehaviour
 {
     public Sprite newSprite;
+    public Sprite clearSprite;
     /*
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -16,6 +17,11 @@ public class Collissionchangescript : MonoBehaviour
         Debug.Log("Triggered with: " + other.gameObject.name); // Debugging line
         GetComponent<SpriteRenderer>().sprite = newSprite;
 
+    }
+
+    public void Clear()
+    {
+        GetComponent<SpriteRenderer>().sprite = clearSprite;
     }
 }
 

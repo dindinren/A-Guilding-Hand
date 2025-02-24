@@ -18,7 +18,9 @@ public class CameraControl : MonoBehaviour
     void OnMouseDown()
     {
         //Debug.LogWarning("string");
-        mainCamera.transform.position = newCameraLocation.transform.position;
+        Debug.Log($"Moving to new location: {newCameraLocation.transform.position.x}, {newCameraLocation.transform.position.y}, {transform.position.z}");
+        Vector3 oldPos = mainCamera.transform.position;
+        mainCamera.transform.position = new Vector3(newCameraLocation.transform.position.x,newCameraLocation.transform.position.y, oldPos.z);
     }
 
 }

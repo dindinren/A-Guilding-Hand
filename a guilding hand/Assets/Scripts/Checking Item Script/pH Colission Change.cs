@@ -8,6 +8,8 @@ public class pHColissionChange : MonoBehaviour
     [SerializeField] private Sprite bluePH;
     [SerializeField] private SpawnManager spawnManagerObject;
 
+    public Sprite clearSprite;
+
         
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,6 +25,11 @@ public class pHColissionChange : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = redPH;
         }
 
+    }
+
+    public void Clear()
+    {
+        GetComponent<SpriteRenderer>().sprite = clearSprite;
     }
 
 

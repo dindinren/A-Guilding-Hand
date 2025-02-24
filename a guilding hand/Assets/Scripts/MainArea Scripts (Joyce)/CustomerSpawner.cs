@@ -28,6 +28,9 @@ public class CustomerSpawner : MonoBehaviour
     //animation curve
     public AnimationCurve curve;
 
+    public Collissionchangescript ccs;
+    public pHColissionChange phccs;
+
 
     void Start()
     {
@@ -110,6 +113,15 @@ public class CustomerSpawner : MonoBehaviour
         itemspawn.itemSpawner();
         StartCoroutine(SpawnObjectAfterDelay());
 
+        if (ccs != null)
+        {
+            ccs.Clear();
+        }
+
+        if (phccs != null)
+        {
+            phccs.Clear();
+        }
     }
 
     //Customer Spawning
