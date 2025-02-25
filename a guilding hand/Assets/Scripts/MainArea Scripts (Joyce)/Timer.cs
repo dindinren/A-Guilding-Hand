@@ -1,17 +1,17 @@
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
+
 
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public GameObject gameEnd;
     public GameObject scoreText;
-
+    public GameObject blackScreen;
     
 
     public float remainingTime;
@@ -53,8 +53,10 @@ public class Timer : MonoBehaviour
             timerText.enabled = false;
             scoreText.SetActive(false);
 
-            //it will stay at the stop ending screen and then return to the main menu
-            StartCoroutine(WaitandthenGotoMenu(3f));
+            //it will stay until the user clicks on it and it will go back to main menu
+            
+            
+            StartCoroutine(WaitandthenGotoMenu(1f));
 
         }
 
@@ -65,9 +67,9 @@ public class Timer : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         //TODO: find a way to fade to black after the screen 
-
-        SceneManager.LoadScene("Menu");
-        //gameEnd.SetActive(false);
-
+        if (Input.GetMouseButton(0))
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 }
