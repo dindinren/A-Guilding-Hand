@@ -5064,6 +5064,10 @@ MonoBehaviour:
   CustomersToSpawn:
   - {fileID: 6221538330857139336, guid: 80c251420cc78a24888003bd831df451, type: 3}
   - {fileID: 2726667169504721545, guid: 6e6c91aa15b5bf245833a40bd6110389, type: 3}
+  - {fileID: 6221538330857139336, guid: 80c251420cc78a24888003bd831df451, type: 3}
+  - {fileID: 2726667169504721545, guid: 6e6c91aa15b5bf245833a40bd6110389, type: 3}
+  - {fileID: 6221538330857139336, guid: 80c251420cc78a24888003bd831df451, type: 3}
+  - {fileID: 2726667169504721545, guid: 6e6c91aa15b5bf245833a40bd6110389, type: 3}
   index: 0
   itemstimetospawn: 0
   currenttimetospawn: 0
