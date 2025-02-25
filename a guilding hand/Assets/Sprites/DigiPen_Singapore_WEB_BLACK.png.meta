@@ -1,0 +1,1209 @@
+fileFormatVersion: 2
+guid: 8179a3f7fe69ac8498d2dc161f4456e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6238010943686048204
+    second: DigiPen_Singapore_WEB_BLACK_0
+  - first:
+      213: 8271530336213790047
+    second: DigiPen_Singapore_WEB_BLACK_1
+  - first:
+      213: 783462123413069327
+    second: DigiPen_Singapore_WEB_BLACK_2
+  - first:
+      213: 3140661624311842959
+    second: DigiPen_Singapore_WEB_BLACK_3
+  - first:
+      213: 5394989971509551774
+    second: DigiPen_Singapore_WEB_BLACK_4
+  - first:
+      213: -3501710930571313926
+    second: DigiPen_Singapore_WEB_BLACK_5
+  - first:
+      213: 5977829625361133188
+    second: DigiPen_Singapore_WEB_BLACK_6
+  - first:
+      213: -5202944885655378714
+    second: DigiPen_Singapore_WEB_BLACK_7
+  - first:
+      213: 2816128860395743258
+    second: DigiPen_Singapore_WEB_BLACK_8
+  - first:
+      213: 5716859870696630560
+    second: DigiPen_Singapore_WEB_BLACK_9
+  - first:
+      213: -4553826979923844616
+    second: DigiPen_Singapore_WEB_BLACK_10
+  - first:
+      213: -329988447053178240
+    second: DigiPen_Singapore_WEB_BLACK_11
+  - first:
+      213: 4236475256801230585
+    second: DigiPen_Singapore_WEB_BLACK_12
+  - first:
+      213: 8293588599285347574
+    second: DigiPen_Singapore_WEB_BLACK_13
+  - first:
+      213: 6516023673919915844
+    second: DigiPen_Singapore_WEB_BLACK_14
+  - first:
+      213: 5369708601316480479
+    second: DigiPen_Singapore_WEB_BLACK_15
+  - first:
+      213: 8040872414470484569
+    second: DigiPen_Singapore_WEB_BLACK_16
+  - first:
+      213: 3167426216945158191
+    second: DigiPen_Singapore_WEB_BLACK_17
+  - first:
+      213: -2959308750067209035
+    second: DigiPen_Singapore_WEB_BLACK_18
+  - first:
+      213: -1231460153906839356
+    second: DigiPen_Singapore_WEB_BLACK_19
+  - first:
+      213: 8944672359567007242
+    second: DigiPen_Singapore_WEB_BLACK_20
+  - first:
+      213: 2901312639460349515
+    second: DigiPen_Singapore_WEB_BLACK_21
+  - first:
+      213: -328764890829390330
+    second: DigiPen_Singapore_WEB_BLACK_22
+  - first:
+      213: 1207772032452609857
+    second: DigiPen_Singapore_WEB_BLACK_23
+  - first:
+      213: 6406521952896820241
+    second: DigiPen_Singapore_WEB_BLACK_24
+  - first:
+      213: -7046658373499045002
+    second: DigiPen_Singapore_WEB_BLACK_25
+  - first:
+      213: -3390255886391629438
+    second: DigiPen_Singapore_WEB_BLACK_26
+  - first:
+      213: -6695330372115756985
+    second: DigiPen_Singapore_WEB_BLACK_27
+  - first:
+      213: 1109800478359075725
+    second: DigiPen_Singapore_WEB_BLACK_28
+  - first:
+      213: -3069807851874031035
+    second: DigiPen_Singapore_WEB_BLACK_29
+  - first:
+      213: 3371485805780509367
+    second: DigiPen_Singapore_WEB_BLACK_30
+  - first:
+      213: -4056244219700351264
+    second: DigiPen_Singapore_WEB_BLACK_31
+  - first:
+      213: -7724098369749938912
+    second: DigiPen_Singapore_WEB_BLACK_32
+  - first:
+      213: 5310607680653777198
+    second: DigiPen_Singapore_WEB_BLACK_33
+  - first:
+      213: 791100674145265288
+    second: DigiPen_Singapore_WEB_BLACK_34
+  - first:
+      213: 5382609431638680164
+    second: DigiPen_Singapore_WEB_BLACK_35
+  - first:
+      213: 646209539216661314
+    second: DigiPen_Singapore_WEB_BLACK_36
+  - first:
+      213: 3014233147498055424
+    second: DigiPen_Singapore_WEB_BLACK_37
+  - first:
+      213: 8585159503728407085
+    second: DigiPen_Singapore_WEB_BLACK_38
+  - first:
+      213: 291128313380965374
+    second: DigiPen_Singapore_WEB_BLACK_39
+  - first:
+      213: -5408659169603034933
+    second: DigiPen_Singapore_WEB_BLACK_40
+  - first:
+      213: -3084882208027507397
+    second: DigiPen_Singapore_WEB_BLACK_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_0
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 76
+        width: 28
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436089cd8122e69a0800000000000000
+      internalID: -6238010943686048204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_1
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 259
+        width: 166
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5de3ee24016ac270800000000000000
+      internalID: 8271530336213790047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_2
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 215
+        width: 210
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e520976aa6fda00800000000000000
+      internalID: 783462123413069327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_3
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 384
+        width: 69
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f880fcc7b1fd59b20800000000000000
+      internalID: 3140661624311842959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_4
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 384
+        width: 70
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e922f929bcadeda40800000000000000
+      internalID: 5394989971509551774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_5
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 215
+        width: 199
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcb135267c676fc0800000000000000
+      internalID: -3501710930571313926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_6
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 215
+        width: 170
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ee4735f5485f250800000000000000
+      internalID: 5977829625361133188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_7
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 215
+        width: 169
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e46390613d6bc7b0800000000000000
+      internalID: -5202944885655378714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 165
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a182d9d2746e41720800000000000000
+      internalID: 2816128860395743258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_9
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 215
+        width: 69
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029ee8f53cd565f40800000000000000
+      internalID: 5716859870696630560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_10
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 145
+        width: 162
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1ac0d2d7e8dc0c0800000000000000
+      internalID: -4553826979923844616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_11
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 215
+        width: 69
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a99697145ab6bf0800000000000000
+      internalID: -329988447053178240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_12
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 75
+        width: 11
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe7e5ddccbfaca30800000000000000
+      internalID: 4236475256801230585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_13
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 75
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4f1a5c3eeb81370800000000000000
+      internalID: 8293588599285347574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_14
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 75
+        width: 33
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 447480012019d6a50800000000000000
+      internalID: 6516023673919915844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_15
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 75
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd514d0e589058a40800000000000000
+      internalID: 5369708601316480479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_16
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 75
+        width: 11
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95230cccbdae69f60800000000000000
+      internalID: 8040872414470484569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_17
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 75
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f288641dc55f4fb20800000000000000
+      internalID: 3167426216945158191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_18
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 75
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bce983fe5c6ee6d0800000000000000
+      internalID: -2959308750067209035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_19
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 75
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c0c55bb389f8eee0800000000000000
+      internalID: -1231460153906839356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_20
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 75
+        width: 33
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e1f30ce1cd12c70800000000000000
+      internalID: 8944672359567007242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_21
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 75
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4692694978834820800000000000000
+      internalID: 2901312639460349515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_22
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 75
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e7e7bd21eff6bf0800000000000000
+      internalID: -328764890829390330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_23
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 75
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1474df3b34ed2c010800000000000000
+      internalID: 1207772032452609857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_24
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 75
+        width: 33
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1142820e5c988e850800000000000000
+      internalID: 6406521952896820241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_25
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 75
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67bbe0a4b8d353e90800000000000000
+      internalID: -7046658373499045002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_26
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 75
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28923f1db3463f0d0800000000000000
+      internalID: -3390255886391629438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_27
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 75
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748082cff786513a0800000000000000
+      internalID: -6695330372115756985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_28
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 75
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8bb624b7adc66f00800000000000000
+      internalID: 1109800478359075725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_29
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 75
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ae754f50ad565d0800000000000000
+      internalID: -3069807851874031035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_30
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 75
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b2a1da3a7ce9ce20800000000000000
+      internalID: 3371485805780509367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_31
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 75
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee67828f5355b7c0800000000000000
+      internalID: -4056244219700351264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_32
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 75
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d81ece47d7ec490800000000000000
+      internalID: -7724098369749938912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_33
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 0
+        width: 33
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2954da7c8113b940800000000000000
+      internalID: 5310607680653777198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_34
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 0
+        width: 11
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88620082fdd8afa00800000000000000
+      internalID: 791100674145265288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_35
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 0
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462ad7182ced2ba40800000000000000
+      internalID: 5382609431638680164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_36
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 0
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b5a73f62cc7f800800000000000000
+      internalID: 646209539216661314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_37
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 0
+        width: 54
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00744dad315b4d920800000000000000
+      internalID: 3014233147498055424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_38
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 0
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22fccf151d942770800000000000000
+      internalID: 8585159503728407085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_39
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 0
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb812798ab4a0400800000000000000
+      internalID: 291128313380965374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_40
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 0
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0e6ac342590f4b0800000000000000
+      internalID: -5408659169603034933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DigiPen_Singapore_WEB_BLACK_41
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 0
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b350998e9fb4035d0800000000000000
+      internalID: -3084882208027507397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DigiPen_Singapore_WEB_BLACK_0: -6238010943686048204
+      DigiPen_Singapore_WEB_BLACK_1: 8271530336213790047
+      DigiPen_Singapore_WEB_BLACK_10: -4553826979923844616
+      DigiPen_Singapore_WEB_BLACK_11: -329988447053178240
+      DigiPen_Singapore_WEB_BLACK_12: 4236475256801230585
+      DigiPen_Singapore_WEB_BLACK_13: 8293588599285347574
+      DigiPen_Singapore_WEB_BLACK_14: 6516023673919915844
+      DigiPen_Singapore_WEB_BLACK_15: 5369708601316480479
+      DigiPen_Singapore_WEB_BLACK_16: 8040872414470484569
+      DigiPen_Singapore_WEB_BLACK_17: 3167426216945158191
+      DigiPen_Singapore_WEB_BLACK_18: -2959308750067209035
+      DigiPen_Singapore_WEB_BLACK_19: -1231460153906839356
+      DigiPen_Singapore_WEB_BLACK_2: 783462123413069327
+      DigiPen_Singapore_WEB_BLACK_20: 8944672359567007242
+      DigiPen_Singapore_WEB_BLACK_21: 2901312639460349515
+      DigiPen_Singapore_WEB_BLACK_22: -328764890829390330
+      DigiPen_Singapore_WEB_BLACK_23: 1207772032452609857
+      DigiPen_Singapore_WEB_BLACK_24: 6406521952896820241
+      DigiPen_Singapore_WEB_BLACK_25: -7046658373499045002
+      DigiPen_Singapore_WEB_BLACK_26: -3390255886391629438
+      DigiPen_Singapore_WEB_BLACK_27: -6695330372115756985
+      DigiPen_Singapore_WEB_BLACK_28: 1109800478359075725
+      DigiPen_Singapore_WEB_BLACK_29: -3069807851874031035
+      DigiPen_Singapore_WEB_BLACK_3: 3140661624311842959
+      DigiPen_Singapore_WEB_BLACK_30: 3371485805780509367
+      DigiPen_Singapore_WEB_BLACK_31: -4056244219700351264
+      DigiPen_Singapore_WEB_BLACK_32: -7724098369749938912
+      DigiPen_Singapore_WEB_BLACK_33: 5310607680653777198
+      DigiPen_Singapore_WEB_BLACK_34: 791100674145265288
+      DigiPen_Singapore_WEB_BLACK_35: 5382609431638680164
+      DigiPen_Singapore_WEB_BLACK_36: 646209539216661314
+      DigiPen_Singapore_WEB_BLACK_37: 3014233147498055424
+      DigiPen_Singapore_WEB_BLACK_38: 8585159503728407085
+      DigiPen_Singapore_WEB_BLACK_39: 291128313380965374
+      DigiPen_Singapore_WEB_BLACK_4: 5394989971509551774
+      DigiPen_Singapore_WEB_BLACK_40: -5408659169603034933
+      DigiPen_Singapore_WEB_BLACK_41: -3084882208027507397
+      DigiPen_Singapore_WEB_BLACK_5: -3501710930571313926
+      DigiPen_Singapore_WEB_BLACK_6: 5977829625361133188
+      DigiPen_Singapore_WEB_BLACK_7: -5202944885655378714
+      DigiPen_Singapore_WEB_BLACK_8: 2816128860395743258
+      DigiPen_Singapore_WEB_BLACK_9: 5716859870696630560
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
