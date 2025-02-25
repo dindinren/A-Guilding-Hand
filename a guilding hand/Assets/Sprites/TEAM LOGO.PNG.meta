@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 11100274e12106e439686d3c99bcd208
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4594928873028886641
+    second: TEAM LOGO_0
+  - first:
+      213: 6439391538531192268
+    second: TEAM LOGO_1
+  - first:
+      213: -803498685745097190
+    second: TEAM LOGO_2
+  - first:
+      213: -3776303768541695756
+    second: TEAM LOGO_3
+  - first:
+      213: -6276579748256682046
+    second: TEAM LOGO_4
+  - first:
+      213: -1187472186089760878
+    second: TEAM LOGO_5
+  - first:
+      213: -8577891026779288877
+    second: TEAM LOGO_6
+  - first:
+      213: -1119563587492469277
+    second: TEAM LOGO_7
+  - first:
+      213: -941858533311570800
+    second: TEAM LOGO_8
+  - first:
+      213: 3180177910973444123
+    second: TEAM LOGO_9
+  - first:
+      213: 3626555012561784381
+    second: TEAM LOGO_10
+  - first:
+      213: 4659334226833904518
+    second: TEAM LOGO_11
+  - first:
+      213: -8444232127317859043
+    second: TEAM LOGO_12
+  - first:
+      213: 2203231914545785499
+    second: TEAM LOGO_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TEAM LOGO_0
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 601
+        width: 678
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170a21d077774cf30800000000000000
+      internalID: 4594928873028886641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_1
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 354
+        width: 173
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccdcec7ac705d5950800000000000000
+      internalID: 6439391538531192268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_2
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 354
+        width: 199
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a169ba2d33669d4f0800000000000000
+      internalID: -803498685745097190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_3
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 572
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f07a10fabfd79bc0800000000000000
+      internalID: -3776303768541695756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_4
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 341
+        width: 222
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cfefb449fb15e8a0800000000000000
+      internalID: -6276579748256682046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_5
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 492
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29796779650458fe0800000000000000
+      internalID: -1187472186089760878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_6
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 137
+        width: 132
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da4fca0f8535f880800000000000000
+      internalID: -8577891026779288877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_7
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 147
+        width: 132
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e5ac0059d28670f0800000000000000
+      internalID: -1119563587492469277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_8
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 289
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c1b4577a8dde2f0800000000000000
+      internalID: -941858533311570800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_9
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 90
+        width: 451
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b10bd12f5f2422c20800000000000000
+      internalID: 3180177910973444123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_10
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 135
+        width: 115
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e4822d19c145230800000000000000
+      internalID: 3626555012561784381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_11
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 147
+        width: 34
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68311480bc749a040800000000000000
+      internalID: 4659334226833904518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_12
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d152742ae9f00da80800000000000000
+      internalID: -8444232127317859043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEAM LOGO_13
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 150
+        width: 100
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a2e48c0c3739e10800000000000000
+      internalID: 2203231914545785499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TEAM LOGO_0: 4594928873028886641
+      TEAM LOGO_1: 6439391538531192268
+      TEAM LOGO_10: 3626555012561784381
+      TEAM LOGO_11: 4659334226833904518
+      TEAM LOGO_12: -8444232127317859043
+      TEAM LOGO_13: 2203231914545785499
+      TEAM LOGO_2: -803498685745097190
+      TEAM LOGO_3: -3776303768541695756
+      TEAM LOGO_4: -6276579748256682046
+      TEAM LOGO_5: -1187472186089760878
+      TEAM LOGO_6: -8577891026779288877
+      TEAM LOGO_7: -1119563587492469277
+      TEAM LOGO_8: -941858533311570800
+      TEAM LOGO_9: 3180177910973444123
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
