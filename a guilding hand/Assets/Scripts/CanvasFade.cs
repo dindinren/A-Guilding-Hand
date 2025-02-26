@@ -3,26 +3,59 @@ using UnityEngine;
 using UnityEngine.UI;
 public class CanvasFade : MonoBehaviour
 {
-    [SerializeField] CanvasGroup Fade;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] CanvasGroup canvasGroup;
+
+    public bool fadeIn;
+    public bool fadeOut;
+    public float fadeDuration;    
+
+    private void Start()
     {
-        Fade.alpha = 0f;  
+        if(fadeOut == true)
+        {
+            FadeOut();
+        }
+        if(fadeIn == true)
+        {
+            FadeIn();
+        }
+    }
+
+    private void Update()
+    {
+        if (fadeIn)
+        {
+            if (canvasGroup.alpha < 1)
+            {
+                canvasGroup.alpha += Time.deltaTime;
+                if(canvasGroup.alpha >= 1)
+                {
+                    fadeIn = false;
+                }
+            }
+        }
+        if (fadeOut)
+        {
+            if(canvasGroup.alpha >= 0)
+            {
+                canvasGroup.alpha -= Time.deltaTime;
+                if(canvasGroup.alpha == 0)
+                {
+                    fadeOut = false;
+                }
+            }
+        }
+
     }
 
     public void FadeIn()
     {
-        Fade.alpha += Time.deltaTime;
+        canvasGroup.alpha = 0;
+        fadeIn = true;
     }
-
     public void FadeOut()
     {
-        Fade.alpha -= Time.deltaTime;
-    }
-
-    // Update is called once per frame
-    public void Update()
-    {
-        FadeIn();
+        canvasGroup.alpha = 1f;
+        fadeOut = true;
     }
 }

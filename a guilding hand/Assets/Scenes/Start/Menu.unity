@@ -447,7 +447,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c96fbd948b9e043b90c411ed91365a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fade: {fileID: 259023959}
+  canvasGroup: {fileID: 259023959}
+  fadeIn: 1
+  fadeOut: 0
+  fadeDuration: 0.8
 --- !u!225 &259023959
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1142,7 +1145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8ce852892081c4887690200aaa183d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fade: {fileID: 259023959}
+  fadeOutTime: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
