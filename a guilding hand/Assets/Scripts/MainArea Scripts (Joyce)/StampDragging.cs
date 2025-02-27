@@ -23,7 +23,7 @@ public class DragDrop2D : MonoBehaviour
     public CusName cusname;
     public SpawnManager spawnManager;
 
-
+    public Animation anim;
 
     //dun let the tick/cross be seen at first
     private void Start()
