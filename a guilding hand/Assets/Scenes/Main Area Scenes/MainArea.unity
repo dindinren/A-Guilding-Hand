@@ -2351,6 +2351,7 @@ MonoBehaviour:
   scoremanager: {fileID: 935916003}
   cusname: {fileID: 935916004}
   spawnManager: {fileID: 479936337}
+  anim: {fileID: 0}
 --- !u!61 &881149918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2487,6 +2488,7 @@ GameObject:
   - component: {fileID: 935916003}
   - component: {fileID: 935916004}
   - component: {fileID: 935916005}
+  - component: {fileID: 935916006}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2644,6 +2646,28 @@ MonoBehaviour:
   gameEnd: {fileID: 403189052}
   scoreText: {fileID: 1737160564}
   remainingTime: 250
+--- !u!95 &935916006
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935915998}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c40f240a1b64bd49beb7b994dbf8b5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &971165363
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +2800,7 @@ MonoBehaviour:
   scoremanager: {fileID: 935916003}
   cusname: {fileID: 935916004}
   spawnManager: {fileID: 479936337}
+  anim: {fileID: 0}
 --- !u!61 &971165367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3086,7 +3111,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120743560}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
