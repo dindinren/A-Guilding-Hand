@@ -14,27 +14,103 @@ public class ScoreManager : MonoBehaviour
     public GameObject health3;
 
     public GameObject gameOverScreen;
-   
+
+    private Animator anim;
+
+    public GameObject playerNeutral;
+    public GameObject playerSad;
+    public GameObject playerHappy;
+
 
     int score = 0;
     public int healthscore = 0;
+    int playerstate = 0;
 
+    bool playerchange = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        anim = GetComponent<Animator>();
+
+        PlayerState();
+        Debug.Log("playerstate: " + playerstate);
+
         scoreText.text = "SCORE: " + score.ToString();
+    }
+
+    private void Update()
+    {
+        if(playerchange == true)
+        {
+            PlayerState();
+        }
+        if(playerchange == false)
+        {
+            PlayerState();
+
+        }
+    }
+
+    public void PlayerState()
+    {
+        switch (playerstate)
+        {
+            case 1:
+                //Debug.Log("player is sad :(");
+                playerSad.SetActive(true);
+                playerHappy.SetActive(false);
+                playerNeutral.SetActive(false);
+                break;
+            case 2:
+                //Debug.Log("player is happy :D");
+
+                playerSad.SetActive(false);
+                playerHappy.SetActive(true);
+                playerNeutral.SetActive(false);
+                break;
+            default:
+                //Debug.Log("player is neutral :|");
+
+                playerSad.SetActive(false);
+                playerHappy.SetActive(false);
+                playerNeutral.SetActive(true);
+                break;
+        }
+    }
+
+    IEnumerator Wait(float dealy)
+    {
+        yield return new WaitForSeconds(dealy);
+        playerstate = 0;
+        playerchange = false;
+        anim.Play("PlayerIdle");
+
+        Debug.Log("playerstate: " + playerstate);
+        Debug.Log("playerstate: " + playerstate);
     }
 
     //this one very self explantory right??
     public void AddPoints()
     {
+        playerchange = true;
         score += 1;
         scoreText.text = "SCORE: " + score.ToString();
+
+        playerstate = 2;
+        Debug.Log("playerstate: " + playerstate);
+
+
+        PlayerState();
+        anim.Play("PlayerHappy");
+        StartCoroutine(Wait(1f));
+
+        Debug.Log("playerstate: " + playerstate);
     }
 
     public void MinusPoints()
     {
+        playerchange = true;
         if (score <= 0)
         {
             score = 0;
@@ -44,8 +120,19 @@ public class ScoreManager : MonoBehaviour
             score -= 1;
         }
 
+
         healthscore++;
         Debug.Log("healthscore is : "+healthscore);
+
+        playerstate = 1;
+
+        PlayerState();
+        anim.Play("PlayerSad");
+
+        StartCoroutine(Wait(1f));
+
+
+
         //change the tick to red to indicate that the player did wrong
         switch (healthscore)
         {
