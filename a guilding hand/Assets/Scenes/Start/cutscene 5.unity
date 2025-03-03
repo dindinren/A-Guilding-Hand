@@ -420,7 +420,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1559127822}
+      - m_Target: {fileID: 1545593628}
         m_TargetAssemblyTypeName: Cutscene, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
@@ -482,6 +482,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d12d3817012158408f91cd405e170aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 1559127822}
+  fadeIn: 0
+  fadeOut: 0
+  play: {fileID: 1545593625}
+  nextScene: 0
 --- !u!1 &1559127817
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,18 +590,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1559127822
-MonoBehaviour:
+--- !u!225 &1559127822
+CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559127817}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d12d3817012158408f91cd405e170aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1685158590
 GameObject:
   m_ObjectHideFlags: 0

@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 1271369387}
   - component: {fileID: 1271369386}
   - component: {fileID: 1271369389}
+  - component: {fileID: 1271369390}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -505,6 +506,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d12d3817012158408f91cd405e170aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 1271369390}
+  fadeIn: 0
+  fadeOut: 0
+  play: {fileID: 1067395742}
+  nextScene: 0
+--- !u!225 &1271369390
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271369384}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1369508700
 GameObject:
   m_ObjectHideFlags: 0
