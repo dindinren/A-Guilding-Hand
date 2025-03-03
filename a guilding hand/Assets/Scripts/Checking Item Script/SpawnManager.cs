@@ -15,7 +15,8 @@ public class SpawnManager : MonoBehaviour
     private int initialTargetID;
     private int targetID;
     private int damagedTargetID;
-    private int targetpHID;
+    public int targetpHID;
+    public pHColissionChange pHColissionChange;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -41,7 +42,7 @@ public class SpawnManager : MonoBehaviour
 
     public bool ResultpH()
     {
-        if (targetpHID % 2 != 0)
+        if (pHColissionChange.TrueFalse() == false)
         {
             return false;
         }
@@ -74,13 +75,10 @@ public class SpawnManager : MonoBehaviour
                 damagedTargetID = Random.Range(0, 2);
                 damagedTarget.UseSprite(damagedTargetID);
             }
+            targetpHID = targetID;
+            targetpH.UseSprite(targetpHID);
 
-            if (targetID == 0)
-            {
-                targetpHID = Random.Range(0, 2);
-                targetpH.UseSprite(targetpHID);
 
-            }
         }
 
         else if (initialTargetID == 1)
@@ -93,11 +91,8 @@ public class SpawnManager : MonoBehaviour
                 damagedTarget.UseSprite(damagedTargetID);
             }
 
-            if (targetID == 1)
-            {
-                targetpHID = Random.Range(2, 4);
-                targetpH.UseSprite(targetpHID);
-            }
+            targetpHID = targetID;
+            targetpH.UseSprite(targetpHID);
         }
 
 
@@ -110,12 +105,8 @@ public class SpawnManager : MonoBehaviour
                 damagedTargetID = Random.Range(4, 6);
                 damagedTarget.UseSprite(damagedTargetID);
             }
-
-            if (targetID == 2)
-            {
-                targetpHID = Random.Range(4, 6);
-                targetpH.UseSprite(targetpHID);
-            }
+            targetpHID = targetID;
+            targetpH.UseSprite(targetpHID);
         }
 
         else
@@ -127,12 +118,8 @@ public class SpawnManager : MonoBehaviour
                 damagedTargetID = Random.Range(6, 8);
                 damagedTarget.UseSprite(damagedTargetID);
             }
-
-            if (targetID == 3)
-            {
-                targetpHID = Random.Range(6, 8);
-                targetpH.UseSprite(targetpHID);
-            }
+            targetpHID = targetID;
+            targetpH.UseSprite(targetpHID);
         }
     }
 }
