@@ -303,6 +303,7 @@ MonoBehaviour:
   redPH: {fileID: -6254001464607975256, guid: 49ebf47423155b34eb53f0d36a49ba68, type: 3}
   bluePH: {fileID: -591834123805252658, guid: ab0eca482d8da2d4b8096bdb1bf488ac, type: 3}
   spawnManagerObject: {fileID: 479936337}
+  clearSprite: {fileID: 0}
 --- !u!61 &65837733
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -698,6 +699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newSprite: {fileID: -6567518636356972544, guid: f9dad2d4482995b408765bd86cc089a3, type: 3}
+  clearSprite: {fileID: 0}
 --- !u!61 &403825264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1004,10 +1006,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3266ef09aae9344a5fd234eedad206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superInitialTarget: {fileID: 0}
   initialTarget: {fileID: 2013707891}
   Target: {fileID: 2024182086}
   damagedTarget: {fileID: 1711883816}
   targetpH: {fileID: 1452549575}
+  superInitialTargetID: 0
 --- !u!4 &479936338
 Transform:
   m_ObjectHideFlags: 0
@@ -2233,7 +2237,7 @@ Transform:
   m_GameObject: {fileID: 1337559164}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1845, y: 16.1497, z: 0}
+  m_LocalPosition: {x: -1.24, y: 16.1497, z: 0}
   m_LocalScale: {x: 1.3866, y: 1.3798405, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2736,7 +2740,7 @@ Transform:
   m_GameObject: {fileID: 1742273212}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.53, y: 3.05, z: 0}
+  m_LocalPosition: {x: -4.62, y: 2.97, z: 0}
   m_LocalScale: {x: 1.2509967, y: 1.1229581, z: 1.8370001}
   m_ConstrainProportionsScale: 0
   m_Children: []
