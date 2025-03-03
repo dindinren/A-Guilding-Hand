@@ -27,6 +27,7 @@ TagManager:
   - QuestItemInitial
   - InitialItemCam
   - SpawnManager
+  - player
   layers:
   - Default
   - TransparentFX

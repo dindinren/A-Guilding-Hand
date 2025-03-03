@@ -269,8 +269,8 @@ GameObject:
   - component: {fileID: 589515296}
   - component: {fileID: 589515295}
   - component: {fileID: 589515294}
-  - component: {fileID: 589515298}
   - component: {fileID: 589515297}
+  - component: {fileID: 589515298}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -363,23 +363,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &589515297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589515292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38c96fbd948b9e043b90c411ed91365a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 589515298}
-  fadeIn: 1
-  fadeOut: 0
-  fadeDuration: 0.8
---- !u!225 &589515298
+--- !u!225 &589515297
 CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -391,6 +375,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &589515298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589515292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c96fbd948b9e043b90c411ed91365a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 589515297}
+  fadeIn: 1
+  fadeOut: 0
+  nextScene: 0
+  sceneName: 
 --- !u!1 &760102520
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +613,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d12d3817012158408f91cd405e170aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 589515297}
+  fadeIn: 1
+  fadeOut: 0
+  play: {fileID: 1294403569}
+  nextScene: 0
 --- !u!1 &1369508700
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +871,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
