@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Monster_Tab_Gemstone_0: 7646738130454559018
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

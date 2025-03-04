@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
@@ -9,7 +10,8 @@ public class ItemSpawner : MonoBehaviour
 
     public void UseSprite(int id) 
     {
-        GetComponent<SpriteRenderer>().sprite = Sprite_Pic[id];
+        Console.WriteLine("????????????????????????");
+        this.GetComponent<SpriteRenderer>().sprite = Sprite_Pic[id];
         this.transform.localScale = Sprite_Scale[id];
     }
 

@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: -1307942431
   m_SortingLayer: 4
   m_SortingOrder: 3
-  m_Sprite: {fileID: -2712907883566426606, guid: b1d7fed07e9b22949babd58b159cc684, type: 3}
+  m_Sprite: {fileID: 8037615818263706666, guid: 531de0977bb412a4691244828c43b477, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,12 +103,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sprite_Pic:
-  - {fileID: -2712907883566426606, guid: b1d7fed07e9b22949babd58b159cc684, type: 3}
+  - {fileID: 8037615818263706666, guid: 531de0977bb412a4691244828c43b477, type: 3}
   - {fileID: -3013526210534293396, guid: 21f242fc189464748844186ba50975c3, type: 3}
-  - {fileID: 8087007736587333983, guid: 692409437e2bf3b4b97f3fd0279dc723, type: 3}
+  - {fileID: 2039137632690743073, guid: 1725cb94282832843b3ad7f77b950b2e, type: 3}
+  - {fileID: -6884161205712442305, guid: 51d5583631f7d3d4eb399279c70cd79c, type: 3}
   Sprite_Scale:
   - {x: 0.1, y: 0.1, z: 0.1}
   - {x: 0.1, y: 0.1, z: 0.1}
+  - {x: 0.15, y: 0.15, z: 0.15}
   - {x: 0.15, y: 0.15, z: 0.15}
 --- !u!61 &5913139692365167977
 BoxCollider2D:
@@ -148,7 +150,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 15.05, y: 16.5}
+    oldSize: {x: 8.26, y: 10.59}
     newSize: {x: 15.304373, y: 15.33}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

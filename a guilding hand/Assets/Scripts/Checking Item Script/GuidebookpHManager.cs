@@ -66,4 +66,25 @@ public class GuidebookpHManager : MonoBehaviour
         guidebook.sprite = spriteList[currentindex];
     }
 
+    public void SkipToInstructions()
+    {
+        Debug.Log("Skipped to instructions page");
+        currentindex = 0;
+        guidebook.sprite = spriteList[currentindex];
+    }
+
+    public void SkipToGemstone()
+    {
+        Debug.Log("Skipped to gemstone page");
+        currentindex = 1;
+        guidebook.sprite = spriteList[currentindex];
+    }
+
+    public void SkipToMonsters()
+    {
+        Debug.Log("Skipped to monsters page");
+        currentindex = 2;
+        guidebook.sprite = spriteList[currentindex];
+    }
+
 }
