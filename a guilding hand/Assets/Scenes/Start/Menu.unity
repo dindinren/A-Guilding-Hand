@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 11313302}
   - component: {fileID: 11313304}
   - component: {fileID: 11313303}
+  - component: {fileID: 11313305}
   m_Layer: 5
   m_Name: Game Logo
   m_TagString: Untagged
@@ -194,6 +195,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11313301}
   m_CullTransparentMesh: 1
+--- !u!95 &11313305
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11313301}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6306c518738e231459695183fdcf1c66, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &238265095
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +473,8 @@ MonoBehaviour:
   canvasGroup: {fileID: 259023959}
   fadeIn: 1
   fadeOut: 0
-  fadeDuration: 0.8
+  nextScene: 0
+  sceneName: cutscene1
 --- !u!225 &259023959
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -962,6 +986,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b009420b77ad84c8f365e9c4962bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 259023959}
+  fadeIn: 0
+  fadeOut: 0
+  play: {fileID: 2055252326}
+  nextScene: 0
+  sceneName: 
 --- !u!1 &2055252324
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,8 +1005,6 @@ GameObject:
   - component: {fileID: 2055252327}
   - component: {fileID: 2055252326}
   - component: {fileID: 2055252329}
-  - component: {fileID: 2055252331}
-  - component: {fileID: 2055252330}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -1047,21 +1075,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 259023958}
-        m_TargetAssemblyTypeName: CanvasFade, Assembly-CSharp
-        m_MethodName: FadeOut
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2055252329}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: TotheNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1069,7 +1085,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &2055252327
 MonoBehaviour:
@@ -1121,31 +1137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b009420b77ad84c8f365e9c4962bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!225 &2055252330
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2055252324}
-  m_Enabled: 0
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
---- !u!114 &2055252331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2055252324}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8ce852892081c4887690200aaa183d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeOutTime: 1
+  canvasGroup: {fileID: 259023959}
+  fadeIn: 0
+  fadeOut: 0
+  play: {fileID: 2055252326}
+  nextScene: 0
+  sceneName: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
