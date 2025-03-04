@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 109d5358cf1ccdf469137a254a58b079
+guid: 7bf5d9423e532f341b4ed4211289de78
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1413058444440499354
-    second: Untitled_Artwork (4)_0
+      213: -7749366362797356072
+    second: Elf Mage_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_Artwork (4)_0
+      name: Elf Mage_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 34
-        width: 2362
-        height: 787
+        x: 12
+        y: 0
+        width: 459
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a94fdb32b213c9310800000000000000
-      internalID: 1413058444440499354
+      spriteID: 8db4a17d958b47490800000000000000
+      internalID: -7749366362797356072
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Untitled_Artwork (4)_0: 1413058444440499354
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

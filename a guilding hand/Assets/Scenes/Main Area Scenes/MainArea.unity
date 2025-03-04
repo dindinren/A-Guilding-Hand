@@ -1317,13 +1317,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423554756}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.89, y: 0.14, z: 0}
-  m_LocalScale: {x: 0.42, y: 0.42, z: 0.42}
+  m_LocalRotation: {x: 0, y: 0, z: 0.015532804, w: 0.99987936}
+  m_LocalPosition: {x: -0.98, y: 0.13, z: 0}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 877675348}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.78}
 --- !u!1 &440037921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,8 +2952,22 @@ MonoBehaviour:
   - Joycelyn
   - Ameera
   - Gerard
+  - Avery
+  - Hedley
+  - Radish
+  - Mika
+  - Brooklyn
+  - Carmen
+  - Luce
+  - Freddie
   - Ichiban
-  - Kiryu
+  - Luca
+  - Jessie
+  - Jesse
+  - Wendy
+  - Wemby
+  - Gerard
+  - Gerald
   isNameRandomise: 0
   areTheNameSame: 0
 --- !u!114 &935916005
@@ -3390,7 +3404,7 @@ GameObject:
   - component: {fileID: 1096940445}
   - component: {fileID: 1096940444}
   m_Layer: 0
-  m_Name: Untitled_Artwork (4)_0 (1)
+  m_Name: Score Box 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3477,7 +3491,7 @@ GameObject:
   - component: {fileID: 1103533651}
   - component: {fileID: 1103533650}
   m_Layer: 0
-  m_Name: Untitled_Artwork (4)_0
+  m_Name: Score Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5787,7 +5801,7 @@ Transform:
   m_GameObject: {fileID: 1765766996}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5565357, y: -4.515845, z: -6.4370117}
+  m_LocalPosition: {x: -4.33, y: -4.515845, z: -6.4370117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -7188,12 +7202,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomersToSpawn:
-  - {fileID: 6221538330857139336, guid: 80c251420cc78a24888003bd831df451, type: 3}
+  - {fileID: 7246048724244299947, guid: 631143d1afed47444971873010d0f5da, type: 3}
+  - {fileID: 24134617371635390, guid: 187daff5aab7a004e801f6061f36514b, type: 3}
   - {fileID: 2726667169504721545, guid: 6e6c91aa15b5bf245833a40bd6110389, type: 3}
   - {fileID: 6221538330857139336, guid: 80c251420cc78a24888003bd831df451, type: 3}
-  - {fileID: 2726667169504721545, guid: 6e6c91aa15b5bf245833a40bd6110389, type: 3}
-  - {fileID: 6221538330857139336, guid: 80c251420cc78a24888003bd831df451, type: 3}
-  - {fileID: 2726667169504721545, guid: 6e6c91aa15b5bf245833a40bd6110389, type: 3}
   index: 0
   itemstimetospawn: 0
   currenttimetospawn: 0

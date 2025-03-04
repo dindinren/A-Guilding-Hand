@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 109d5358cf1ccdf469137a254a58b079
+guid: a76a66958efc4aa4c85ba1ec06f48ece
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1413058444440499354
-    second: Untitled_Artwork (4)_0
+      213: -5711848221618334454
+    second: Knight_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_Artwork (4)_0
+      name: Knight_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 34
-        width: 2362
-        height: 787
+        x: 49
+        y: 0
+        width: 410
+        height: 498
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a94fdb32b213c9310800000000000000
-      internalID: 1413058444440499354
+      spriteID: a051e7b1e407bb0b0800000000000000
+      internalID: -5711848221618334454
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Untitled_Artwork (4)_0: 1413058444440499354
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
