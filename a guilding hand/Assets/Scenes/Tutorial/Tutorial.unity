@@ -514,7 +514,7 @@ RectTransform:
   m_GameObject: {fileID: 1143399410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1522433289}
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1955448553306655712, guid: 3d54bc8a710bc06439ebbe2793bb9063, type: 3}
+  m_Sprite: {fileID: -9113241120156020049, guid: 2a5324c1f0e726b42a6d2351175a019d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -615,14 +615,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.66946507, b: 1, a: 0.7529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1413058444440499354, guid: 109d5358cf1ccdf469137a254a58b079, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -654,8 +654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1268637511}
   lines:
-  - Alright let's recap what I have learnt during the training
-  - Click on the guidebook
+  - Let me recap what I have learnt during my training.
+  - I should pick up the guidebook.
   textSpeed: 0.05
   index: 0
   guidebook: {fileID: 1445607783}
@@ -716,7 +716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 140, y: -70}
   m_SizeDelta: {x: 1414.3, y: 237.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1268637511
@@ -741,15 +741,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: heave ho! Off we go, on our ship to waters unknown
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e25922a94f25794c97e88ff5efbcc07, type: 2}
+  m_sharedMaterial: {fileID: 4438935847294071369, guid: 2e25922a94f25794c97e88ff5efbcc07, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -804,7 +804,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 263.18994, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1055,7 +1055,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1522433289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1140,15 +1140,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -85163176217314151, guid: 2729245b3465302499beb841786fba23, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1445607785
 CanvasRenderer:
@@ -1186,14 +1186,14 @@ RectTransform:
   m_GameObject: {fileID: 1509150462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1844334693}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 69, y: -68}
   m_SizeDelta: {x: 1414.3, y: 237.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1509150464
@@ -1240,15 +1240,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: heave ho! Off we go, on our ship to waters unknown
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e25922a94f25794c97e88ff5efbcc07, type: 2}
+  m_sharedMaterial: {fileID: 4438935847294071369, guid: 2e25922a94f25794c97e88ff5efbcc07, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1303,7 +1303,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 137.8982, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2067898546876541913, guid: e0169a62a058cae4b81263d3ef3816e7, type: 3}
+  m_Sprite: {fileID: -1011043719562981484, guid: a98d50eba99ae554dafa0738db2b82a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1853,14 +1853,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1509150465}
   lines:
-  - There should be more information regarding checking the items' geniuty in the
-    guidebook...
-  - But I'm sure I can manage tomorrow
-  - Also, remember if I get all 3 "X"s, I will be fired
-  - 'And with the job market... '
-  - There's no telling how long I can survive...
-  - That's should be everything...
-  - Good luck to me I guess...
+  - There should be more information regarding the authencity of the items.
+  - but I'm sure I can manage it on my first day.
+  - My manager told me that if I get all 3 "X"s, I will be fired. :(
+  - 'and with the job market... '
+  - there's no telling how long it'll take to get another job....
+  - That should be everything i suppose.
+  - Good luck to me I guess...ugh I just want to go home already.
   - 
   textSpeed: 0.05
   index: 0
@@ -1878,14 +1877,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.66946507, b: 1, a: 0.7529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 8188981445652890305, guid: 8e7aebf8e556d4948becc0d03aaae043, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
