@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0f0d6852ee1e0984dbdf3b57d698692a
+guid: f354ce81078d75b4a9b2140e46248381
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 552975265600491296
-    second: Main character happy_0
+      213: 5001075555084047254
+    second: Main character angry_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Main character happy_0
+      name: Main character angry_0
       rect:
         serializedVersion: 2
         x: 110
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02fc1b303109ca700800000000000000
-      internalID: 552975265600491296
+      spriteID: 6939ca378b3676540800000000000000
+      internalID: 5001075555084047254
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Main character happy_0: 552975265600491296
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
