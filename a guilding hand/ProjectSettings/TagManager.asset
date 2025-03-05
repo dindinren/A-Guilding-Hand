@@ -28,6 +28,7 @@ TagManager:
   - InitialItemCam
   - SpawnManager
   - pHMeter
+  - PipetteTip
   layers:
   - Default
   - TransparentFX
