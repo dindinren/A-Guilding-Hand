@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GAMEPLAY INSPECTION FAKE BASILISK TAIL_0: 8602100366766546581
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

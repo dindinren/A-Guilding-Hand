@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GAMEPLAY INSPECTION REAL GEM_0: -2827842720508559068
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

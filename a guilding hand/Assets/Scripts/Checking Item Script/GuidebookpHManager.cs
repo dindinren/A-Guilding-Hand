@@ -71,6 +71,8 @@ public class GuidebookpHManager : MonoBehaviour
         Debug.Log("Skipped to instructions page");
         currentindex = 0;
         guidebook.sprite = spriteList[currentindex];
+        arrowForward.SetActive(true);
+        arrowBackward.SetActive(false);
     }
 
     public void SkipToGemstone()
@@ -78,6 +80,8 @@ public class GuidebookpHManager : MonoBehaviour
         Debug.Log("Skipped to gemstone page");
         currentindex = 1;
         guidebook.sprite = spriteList[currentindex];
+        arrowForward.SetActive(true);
+        arrowBackward.SetActive(true);
     }
 
     public void SkipToMonsters()
@@ -85,6 +89,8 @@ public class GuidebookpHManager : MonoBehaviour
         Debug.Log("Skipped to monsters page");
         currentindex = 2;
         guidebook.sprite = spriteList[currentindex];
+        arrowForward.SetActive(true);
+        arrowBackward.SetActive(true);
     }
 
 }
