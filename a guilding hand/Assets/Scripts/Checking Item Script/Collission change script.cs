@@ -35,8 +35,9 @@ public class Collissionchangescript : MonoBehaviour
         if (other.tag == "Target")
         {
             TouchedObject();
+            GetComponent<SpriteRenderer>().sprite = newSprite;
         }
-        GetComponent<SpriteRenderer>().sprite = newSprite;
+
 
     }
 

@@ -18,6 +18,7 @@ public class pHColissionChange : MonoBehaviour
     public Sprite clearSprite;
     public Collissionchangescript Collissionchangescript;
     public int trueorfalseID;
+    public Collider2D Collider2D;
 
     public bool TrueFalse()
     {
