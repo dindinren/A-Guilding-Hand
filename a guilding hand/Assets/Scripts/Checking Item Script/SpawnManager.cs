@@ -46,7 +46,10 @@ public class SpawnManager : MonoBehaviour
         {
             return false;
         }
-        return true;
+        else
+        {
+            return true;
+        }
     }
 
     public bool finalResult()

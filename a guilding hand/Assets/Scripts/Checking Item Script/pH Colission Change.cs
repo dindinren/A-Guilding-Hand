@@ -18,16 +18,26 @@ public class pHColissionChange : MonoBehaviour
     public Sprite clearSprite;
     public Collissionchangescript Collissionchangescript;
     public int trueorfalseID;
-    public Collider2D Collider2D;
+    public BoxCollider2D BoxCollider2D;
 
     public bool TrueFalse()
     {
+        
         trueorfalseID = Random.Range(0, 2);
+        Debug.Log(trueorfalseID);
         if (trueorfalseID == 0)
         {
+
+            Debug.Log("Results are true");
             return true;
+ 
         }
-        return false;
+        else
+        {
+            Debug.Log("Results are false");
+            return false;
+
+        }
     }
         
     private void OnTriggerEnter2D(Collider2D other)
@@ -39,27 +49,31 @@ public class pHColissionChange : MonoBehaviour
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {
-                Debug.Log("Results are true");
+                // Debug.Log("Results are true");
                 GetComponent<SpriteRenderer>().sprite = threePH;
+                BoxCollider2D.enabled = false;
 
             }
 
             if (spawnManagerObject.superInitialTargetID == 1)
             {
-                Debug.Log("Results are true");
+                // Debug.Log("Results are true");
                 GetComponent<SpriteRenderer>().sprite = sixPH;
+                BoxCollider2D.enabled = false;
 
             }
             if (spawnManagerObject.superInitialTargetID == 2)
             {
-                Debug.Log("Results are true");
+                // Debug.Log("Results are true");
                 GetComponent<SpriteRenderer>().sprite = onePH;
+                BoxCollider2D.enabled = false;
 
             }
             if (spawnManagerObject.superInitialTargetID == 3)
             {
-                Debug.Log("Results are true");
+                // Debug.Log("Results are true");
                 GetComponent<SpriteRenderer>().sprite = fourPH;
+                BoxCollider2D.enabled = false;
 
             }
         }
@@ -69,31 +83,33 @@ public class pHColissionChange : MonoBehaviour
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {
-                Debug.Log("Results are false");
+                // Debug.Log("Results are false");
                 GetComponent<SpriteRenderer>().sprite = sixPH;
+                BoxCollider2D.enabled = false;
             }
 
             if (spawnManagerObject.superInitialTargetID == 1)
             {
-                Debug.Log("Results are false");
+                // Debug.Log("Results are false");
                 GetComponent<SpriteRenderer>().sprite = threePH;
+                BoxCollider2D.enabled = false;
 
             }
             if (spawnManagerObject.superInitialTargetID == 2)
             {
-                Debug.Log("Results are false");
+                // Debug.Log("Results are false");
                 GetComponent<SpriteRenderer>().sprite = fivePH;
+                BoxCollider2D.enabled = false;
 
             }
             if (spawnManagerObject.superInitialTargetID == 3)
             {
-                Debug.Log("Results are false");
+                // Debug.Log("Results are false");
                 GetComponent<SpriteRenderer>().sprite = sevenPH;
+                BoxCollider2D.enabled = false;
 
             }
         }
-
-
 
         if (Collissionchangescript.hasTouchedObject == false)
         {
@@ -105,6 +121,7 @@ public class pHColissionChange : MonoBehaviour
     public void Clear()
     {
         GetComponent<SpriteRenderer>().sprite = clearSprite;
+        BoxCollider2D.enabled = true;
     }
 
 
