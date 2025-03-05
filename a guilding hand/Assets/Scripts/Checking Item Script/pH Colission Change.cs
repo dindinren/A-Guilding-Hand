@@ -39,13 +39,13 @@ public class pHColissionChange : MonoBehaviour
 
         }
     }
+
         
     private void OnTriggerEnter2D(Collider2D other)
     {
 
         Debug.Log("Collided with: " + other.gameObject.name); // Debugging line
-
-        if (TrueFalse() == true)
+        if (other.CompareTag("PipetteTip") && TrueFalse() == true)
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {
@@ -79,7 +79,7 @@ public class pHColissionChange : MonoBehaviour
         }
         
 
-        if (TrueFalse() == false)
+        if (other.CompareTag("PipetteTip") && TrueFalse() == false)
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {
