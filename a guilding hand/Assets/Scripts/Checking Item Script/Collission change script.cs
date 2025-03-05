@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using UnityEditor.Purchasing;
+// using UnityEditor.Purchasing;
 
 public class Collissionchangescript : MonoBehaviour
 {
