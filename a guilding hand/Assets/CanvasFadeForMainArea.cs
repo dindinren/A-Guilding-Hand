@@ -69,7 +69,7 @@ public class CanvasFadeForMainArea : MonoBehaviour
                 }
             }
         }
-
+        Time.timeScale = 1f;
         yield return new WaitForSeconds(delay);
 
         sceneName = "MainArea";
@@ -97,7 +97,8 @@ public class CanvasFadeForMainArea : MonoBehaviour
                 }
             }
         }
-        
+
+        Time.timeScale = 1f;
         yield return new WaitForSeconds(delay = 2f);
 
         sceneName = "Menu";

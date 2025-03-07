@@ -25,13 +25,27 @@ public class DragDrop2D : MonoBehaviour
 
     public Animation anim;
 
+    public Timer timerScript;
+
     //dun let the tick/cross be seen at first
     private void Start()
     {
         tick.SetActive(false);
     }
 
-    
+    private void Update()
+    {
+        if(timerScript.remainingTime == 0)
+        {
+            GameObject.FindGameObjectWithTag("correct").GetComponent<Collider2D>().enabled = false;
+            GameObject.FindGameObjectWithTag("incorrect").GetComponent<Collider2D>().enabled = false;
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("correct").GetComponent<Collider2D>().enabled = true;
+            GameObject.FindGameObjectWithTag("incorrect").GetComponent<Collider2D>().enabled = true;
+        }
+    }
     void Awake()
     {
         collider2d = GetComponent<Collider2D>();

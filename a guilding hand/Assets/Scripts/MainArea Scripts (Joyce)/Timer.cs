@@ -12,12 +12,16 @@ public class Timer : MonoBehaviour
     public GameObject gameEnd;
     public GameObject scoreText;
 
+    public Animator anim;
+
     public float remainingTime;
 
     private bool go = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        anim = GetComponent<Animator>();
+
         scoreText.SetActive(true);
         gameEnd.SetActive(false);
         timerText.enabled = true;
@@ -60,11 +64,15 @@ public class Timer : MonoBehaviour
             if (remainingTime == 0)
             {
                 // will pop up a screen to say your time is up
-
+                
                 //stops everything in the scene from moving
-                Time.timeScale = 1f;
+                Time.timeScale = 0f;
+
 
                 gameEnd.SetActive(true);
+                anim.Play("GameFinish");
+
+
                 timerText.enabled = false;
                 scoreText.SetActive(false);
 
@@ -86,4 +94,5 @@ public class Timer : MonoBehaviour
         go = true;
 
     }
+
 }

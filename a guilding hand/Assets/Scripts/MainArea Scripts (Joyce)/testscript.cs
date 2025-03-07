@@ -21,6 +21,8 @@ public class testscript : MonoBehaviour
     public TextMeshPro testText1;
     public TextMeshPro testText2;
 
+
+
     private void OnMouseDown()
     {
         Debug.Log("item clicked!");
@@ -76,5 +78,7 @@ public class testscript : MonoBehaviour
         //finding the text
         testText1 = questFormInstance.GetComponentInChildren<TextMeshPro>();
         testText2 = advenInfo.GetComponentInChildren<TextMeshPro>();
+
+        
     }
 }
