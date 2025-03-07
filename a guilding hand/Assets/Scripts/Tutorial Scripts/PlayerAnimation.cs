@@ -22,7 +22,7 @@ public class PlayerAnimation : MonoBehaviour
         anim2 = textBox.GetComponent<Animator>();
         anim = player.GetComponent<Animator>();
 
-        StartCoroutine(WaitandThenAnimationPlays(1.5f));
+        StartCoroutine(WaitandThenAnimationPlays(2f));
     }
 
     // Update is called once per frame
@@ -56,7 +56,7 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
-    IEnumerator WaitandThenAnimationPlays(float delay)
+    IEnumerator WaitandThenAnimationPlays(float delay = 3f)
     {
         yield return new WaitForSeconds(delay);
 

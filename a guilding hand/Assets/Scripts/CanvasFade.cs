@@ -30,16 +30,7 @@ public class CanvasFade : MonoBehaviour
     {
         if (nextScene == false)
         {
-            if(sceneName == "MainArea")
-            {
-                StartCoroutine(FadeInTimer(0.3f));
-                Debug.Log("time for mainArea");
-            }
-            else
-            {
-                StartCoroutine(FadeInTimer(0.5f));
-                Debug.Log("time for everywhwere else");
-            }
+            StartCoroutine(FadeInTimer(0.5f));
         }
         if (nextScene == true)
         {
