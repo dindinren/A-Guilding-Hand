@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1712707802678009037}
   - component: {fileID: 3222811677988683982}
   - component: {fileID: 7155763787067950425}
+  - component: {fileID: 2096425703224306955}
   m_Layer: 9
   m_Name: Item
   m_TagString: Item
@@ -150,8 +151,24 @@ MonoBehaviour:
   QuestForm: {fileID: 8590324833485800243, guid: ad1942ae444d9ff4eaab655a054ce1a1, type: 3}
   Item: {fileID: 5391150184112932518, guid: 5d74b5e49a121ea4abfb18ad7e0a4806, type: 3}
   questItem: {fileID: 5939376325091342011, guid: 02f4600333f311e47a9f596c2b32b7a1, type: 3}
+  questItemSpawnManager: {fileID: 0}
   AdvenInfo: {fileID: 8243235805929510046, guid: 8a381d49d7d16aa47b41a8111d08afae, type: 3}
   spawner: {fileID: 0}
   AdvenName: {fileID: 0}
   testText1: {fileID: 0}
   testText2: {fileID: 0}
+--- !u!114 &2096425703224306955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731179100680845481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b7b6c880c65c14eb01301a087f0b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 52f50673d851fd2459a349b3b1dbd1a5, type: 3}
+  cursorItemChange: {fileID: 2800000, guid: 7390af43bdab4cf459322fc2e4bd4f28, type: 3}
+  cursorHotspot: {x: 0, y: 0}

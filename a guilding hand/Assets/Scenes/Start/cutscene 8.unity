@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 435135134}
   - component: {fileID: 435135139}
   - component: {fileID: 435135138}
+  - component: {fileID: 435135140}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -254,6 +255,21 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &435135140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435135133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b7b6c880c65c14eb01301a087f0b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 52f50673d851fd2459a349b3b1dbd1a5, type: 3}
+  cursorItemChange: {fileID: 2800000, guid: 7390af43bdab4cf459322fc2e4bd4f28, type: 3}
+  cursorHotspot: {x: 0, y: 0}
 --- !u!1 &863419968
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +706,6 @@ MonoBehaviour:
   fadeOut: 0
   play: {fileID: 1833446149}
   nextScene: 0
-  sceneName: 
 --- !u!114 &1833446149
 MonoBehaviour:
   m_ObjectHideFlags: 0

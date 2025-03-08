@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8784642399862578900}
   - component: {fileID: 5913139692365167977}
   - component: {fileID: 2695363240743531152}
+  - component: {fileID: -9032540864835906246}
   m_Layer: 9
   m_Name: SuperInitialSpawn
   m_TagString: QuestItemInitial
@@ -172,3 +173,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   newCameraLocation: {fileID: 0}
+--- !u!114 &-9032540864835906246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5939376325091342011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b7b6c880c65c14eb01301a087f0b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 52f50673d851fd2459a349b3b1dbd1a5, type: 3}
+  cursorItemChange: {fileID: 2800000, guid: 7390af43bdab4cf459322fc2e4bd4f28, type: 3}
+  cursorHotspot: {x: 0, y: 0}
