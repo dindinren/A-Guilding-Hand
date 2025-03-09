@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject gameOverScreen;
 
     private Animator anim;
-    private Animator anim2;
+    public Animator anim2;
 
     public GameObject playerNeutral;
     public GameObject playerSad;
@@ -33,7 +33,6 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        anim2 = GameObject.Find("Game Over Screen").GetComponent<Animator>();
 
         gameOverScreen.SetActive(false);
 

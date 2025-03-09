@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class testscript : MonoBehaviour
@@ -20,6 +19,7 @@ public class testscript : MonoBehaviour
 
     public TextMeshPro testText1;
     public TextMeshPro testText2;
+
 
 
 

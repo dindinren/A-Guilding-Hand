@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
-using System.Reflection;
 
 public class DragDrop2D : MonoBehaviour
 {
@@ -27,6 +25,9 @@ public class DragDrop2D : MonoBehaviour
 
     public Timer timerScript;
 
+    public PauseMenu pauseMenu;
+
+
     //dun let the tick/cross be seen at first
     private void Start()
     {
@@ -35,7 +36,8 @@ public class DragDrop2D : MonoBehaviour
 
     private void Update()
     {
-        if(timerScript.remainingTime == 0)
+
+        if( (pauseMenu.isPause == true) || (timerScript.remainingTime == 0) )
         {
             GameObject.FindGameObjectWithTag("correct").GetComponent<Collider2D>().enabled = false;
             GameObject.FindGameObjectWithTag("incorrect").GetComponent<Collider2D>().enabled = false;
