@@ -28,19 +28,20 @@ public class CursorManagerForPrefabItem : MonoBehaviour
 
         Cursor.SetCursor(cursorItemChange, cursorHotspot, CursorMode.Auto);
 
-        if(Input.GetMouseButtonDown(0))
-        {
-            Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
-            Cursor.SetCursor(cursorItemChange, cursorHotspot, CursorMode.Auto);
-        }
+        //if(Input.GetMouseButtonDown(0))
+        //{
+        //    Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
+        //    Cursor.SetCursor(cursorItemChange, cursorHotspot, CursorMode.Auto);
+        //}
 
     }
 
-    //private void OnMouseDown()
-    //{
-    //    Cursor.SetCursor(cursorItemChange, cursorHotspot, CursorMode.Auto);
-    //    Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
-    //}
+    public void OnMouseDown()
+    {
+        Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
+       // Cursor.SetCursor(cursorItemChange, cursorHotspot, CursorMode.Auto);
+
+    }
 
     public void OnMouseExit()
     {
