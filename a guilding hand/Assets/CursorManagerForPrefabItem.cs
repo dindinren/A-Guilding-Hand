@@ -46,7 +46,6 @@ public class CursorManagerForPrefabItem : MonoBehaviour
     public void OnMouseExit()
     {
         Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
-
     }
 
 }
