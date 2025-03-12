@@ -12,17 +12,28 @@ public class DragSingle : MonoBehaviour
 
     private void OnMouseDown()
     {
-        mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
-        startPos = this.transform.position;
+        if (!PauseMenu.instance.isPause)
+        {
+            mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
+            startPos = this.transform.position;
+        }
+
     }
 
     private void OnMouseDrag()
     {
-        transform.position = GetMouseWorldPosition() + mousePositionOffset;
+        if (!PauseMenu.instance.isPause)
+        {
+            transform.position = GetMouseWorldPosition() + mousePositionOffset;
+        }
+
     }
 
     private void OnMouseUp()
     {
-        this.transform.position = startPos;
+        if (!PauseMenu.instance.isPause)
+        {
+            this.transform.position = startPos;
+        }
     }
 }

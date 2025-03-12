@@ -20,37 +20,6 @@ public class testscript : MonoBehaviour
     public TextMeshPro testText1;
     public TextMeshPro testText2;
 
-    //public PauseMenu pauseMenu;
-
-    //private Collider2D itemCollider;
-
-    //public static testscript instance;
-
-    private void Awake()
-    {
-        //instance = this;
-        ////pauseMenu = GameObject.FindGameObjectWithTag("pause").GetComponent<PauseMenu>();
-        ////pauseMenu = FindAnyObjectByType<PauseMenu>();
-        //itemCollider = GameObject.FindGameObjectWithTag("Item").GetComponent<Collider2D>();
-        ////Debug.Log($"Pause menu gameobj is {pauseMenu.gameObject.name}");
-    }
-
-    private void Update()
-    {
-        //if(pauseMenu == null)
-        //{
-        //    Debug.Log("Pause menu is null");
-        //}
-
-        //if (pauseMenu.isPause == true)
-        //{
-        //    itemCollider.enabled = false;
-        //}
-        //else
-        //{
-        //    itemCollider.enabled = true;
-        //}
-    }
 
     private void OnMouseDown()
     {

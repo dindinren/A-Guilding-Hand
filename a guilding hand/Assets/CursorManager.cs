@@ -20,21 +20,33 @@ public class CursorManager : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        Cursor.SetCursor(cursorStampDetect, cursorHotspot, CursorMode.Auto);
+        if (!PauseMenu.instance.isPause)
+        {
+            Cursor.SetCursor(cursorStampDetect, cursorHotspot, CursorMode.Auto);
+        }
     }
 
     private void OnMouseDrag()
     {
-        Cursor.SetCursor(cursorStampDrag, cursorHotspot, CursorMode.Auto);
+        if (!PauseMenu.instance.isPause)
+        {
+            Cursor.SetCursor(cursorStampDrag, cursorHotspot, CursorMode.Auto);
+        }
     }
     private void OnMouseUp()
     {
-        Cursor.SetCursor(cursorStampDetect, cursorHotspot, CursorMode.Auto);
+        if(!PauseMenu.instance.isPause)
+        {
+            Cursor.SetCursor(cursorStampDetect, cursorHotspot, CursorMode.Auto);
+        }
     }
 
     private void OnMouseExit()
     {
-        Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
+        if (!PauseMenu.instance.isPause)
+        {
+            Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
+        }
 
     }
 
