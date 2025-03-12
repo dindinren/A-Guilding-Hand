@@ -22,14 +22,9 @@ public class CameraControl : MonoBehaviour
         mainlocation = mainCamera.transform.position;
 
     }
-    void OnMouseDown()
-    {
-        //Debug.LogWarning("string");
-        Debug.Log($"Moving to new location: {newCameraLocation.transform.position.x}, {newCameraLocation.transform.position.y}, {transform.position.z}");
-        guidebook.gameObject.SetActive(false);
-        Vector3 oldPos = mainCamera.transform.position;
-        mainCamera.transform.position = new Vector3(newCameraLocation.transform.position.x, newCameraLocation.transform.position.y, oldPos.z);
 
+    private void Update()
+    {
         if (mainCamera.transform.position != mainlocation)
         {
             guidebook.gameObject.SetActive(false);
@@ -38,6 +33,16 @@ public class CameraControl : MonoBehaviour
         {
             guidebook.gameObject.SetActive(true);
         }
+
+    }
+    void OnMouseDown()
+    {
+        //Debug.LogWarning("string");
+        Debug.Log($"Moving to new location: {newCameraLocation.transform.position.x}, {newCameraLocation.transform.position.y}, {transform.position.z}");
+        guidebook.gameObject.SetActive(false);
+        Vector3 oldPos = mainCamera.transform.position;
+        mainCamera.transform.position = new Vector3(newCameraLocation.transform.position.x, newCameraLocation.transform.position.y, oldPos.z);
+
     }
 
 }
