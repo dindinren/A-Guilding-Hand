@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 435135139}
-  fadeIn: 0
+  fadeIn: 1
   fadeOut: 0
   nextScene: 0
   sceneName: Tutorial
