@@ -139,6 +139,11 @@ MonoBehaviour:
   cursorTexture: {fileID: 2800000, guid: 52f50673d851fd2459a349b3b1dbd1a5, type: 3}
   cursorItemChange: {fileID: 2800000, guid: 7390af43bdab4cf459322fc2e4bd4f28, type: 3}
   cursorHotspot: {x: 0, y: 0}
+--- !u!61 &8845602 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7399725115134303084, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+  m_PrefabInstance: {fileID: 277472991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &24656862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 691677254098862859, guid: c6684894fd69e1b4c8f89c702bc20fb4, type: 3}
@@ -530,6 +535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   newCameraLocation: {fileID: 1044760085}
+  guidebook: {fileID: 603951594}
 --- !u!61 &94931563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1043,18 +1049,70 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3175911225204594634, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: Collider
+      value: 
+      objectReference: {fileID: 8845602}
+    - target: {fileID: 3175911225204594634, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 999334175}
+    - target: {fileID: 3175911225204594634, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: gemstoneTab
+      value: 
+      objectReference: {fileID: 8845594}
+    - target: {fileID: 3175911225204594634, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: BoxCollider2D
+      value: 
+      objectReference: {fileID: 8845602}
     - target: {fileID: 3563544402085666802, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
       propertyPath: m_Name
       value: Guidebook  1
       objectReference: {fileID: 0}
+    - target: {fileID: 4839166079874526979, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 999334175}
+    - target: {fileID: 4839166079874526979, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: monstersTab
+      value: 
+      objectReference: {fileID: 1344899672}
+    - target: {fileID: 4839166079874526979, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: BoxCollider2D
+      value: 
+      objectReference: {fileID: 1344899680}
     - target: {fileID: 5010572349321394569, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.15
       objectReference: {fileID: 0}
+    - target: {fileID: 7725706455167654337, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: flipleft
+      value: 
+      objectReference: {fileID: 167362848}
+    - target: {fileID: 7725706455167654337, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 999334175}
     - target: {fileID: 7894243876180874766, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.32
       objectReference: {fileID: 0}
+    - target: {fileID: 8038978647100221267, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 999334175}
+    - target: {fileID: 8038978647100221267, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: instructionsTab
+      value: 
+      objectReference: {fileID: 403250897}
+    - target: {fileID: 8995199199925401105, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: flipright
+      value: 
+      objectReference: {fileID: 2083806682}
+    - target: {fileID: 8995199199925401105, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 999334175}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1318,7 +1376,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camera Location Initial Item Spawn
   m_TagString: InitialItemCam
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2090,6 +2148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   newCameraLocation: {fileID: 1044760085}
+  guidebook: {fileID: 603951594}
 --- !u!1 &479936336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,6 +2636,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587457959}
   m_CullTransparentMesh: 1
+--- !u!1 &603951594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7458757262100653299, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
+  m_PrefabInstance: {fileID: 1434774418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &616261321
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,7 +3303,7 @@ GameObject:
   m_Layer: 0
   m_Name: MainCameraLocation
   m_TagString: MainCamLocation
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5535,6 +5599,10 @@ PrefabInstance:
       value: Back Button (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4425008336905631998, guid: c6684894fd69e1b4c8f89c702bc20fb4, type: 3}
+      propertyPath: guidebook
+      value: 
+      objectReference: {fileID: 603951594}
+    - target: {fileID: 4425008336905631998, guid: c6684894fd69e1b4c8f89c702bc20fb4, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1285630177}
@@ -6743,6 +6811,11 @@ MonoBehaviour:
   cursorTexture: {fileID: 2800000, guid: 52f50673d851fd2459a349b3b1dbd1a5, type: 3}
   cursorItemChange: {fileID: 2800000, guid: 7390af43bdab4cf459322fc2e4bd4f28, type: 3}
   cursorHotspot: {x: 0, y: 0}
+--- !u!61 &1344899680 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 167076009824195008, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+  m_PrefabInstance: {fileID: 277472991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1346014337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6959,6 +7032,10 @@ PrefabInstance:
     - target: {fileID: 7458757262100653299, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
       propertyPath: m_Name
       value: guidebook prompt
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458757262100653299, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7591850300107157086, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
       propertyPath: m_Pivot.x
@@ -8177,6 +8254,10 @@ PrefabInstance:
       value: Back Button
       objectReference: {fileID: 0}
     - target: {fileID: 4425008336905631998, guid: c6684894fd69e1b4c8f89c702bc20fb4, type: 3}
+      propertyPath: guidebook
+      value: 
+      objectReference: {fileID: 603951594}
+    - target: {fileID: 4425008336905631998, guid: c6684894fd69e1b4c8f89c702bc20fb4, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1285630177}
@@ -8750,6 +8831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   newCameraLocation: {fileID: 846064140}
+  guidebook: {fileID: 603951594}
 --- !u!61 &1825346941
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9825,7 +9907,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1003706836733109619, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
   m_PrefabInstance: {fileID: 1434774418}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 603951594}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -10580,6 +10662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Back Button_0 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4425008336905631998, guid: c6684894fd69e1b4c8f89c702bc20fb4, type: 3}
+      propertyPath: guidebook
+      value: 
+      objectReference: {fileID: 603951594}
     - target: {fileID: 4425008336905631998, guid: c6684894fd69e1b4c8f89c702bc20fb4, type: 3}
       propertyPath: mainCamera
       value: 
