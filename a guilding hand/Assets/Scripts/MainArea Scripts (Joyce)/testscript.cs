@@ -20,55 +20,92 @@ public class testscript : MonoBehaviour
     public TextMeshPro testText1;
     public TextMeshPro testText2;
 
+    //public PauseMenu pauseMenu;
 
+    //private Collider2D itemCollider;
 
+    //public static testscript instance;
+
+    private void Awake()
+    {
+        //instance = this;
+        ////pauseMenu = GameObject.FindGameObjectWithTag("pause").GetComponent<PauseMenu>();
+        ////pauseMenu = FindAnyObjectByType<PauseMenu>();
+        //itemCollider = GameObject.FindGameObjectWithTag("Item").GetComponent<Collider2D>();
+        ////Debug.Log($"Pause menu gameobj is {pauseMenu.gameObject.name}");
+    }
+
+    private void Update()
+    {
+        //if(pauseMenu == null)
+        //{
+        //    Debug.Log("Pause menu is null");
+        //}
+
+        //if (pauseMenu.isPause == true)
+        //{
+        //    itemCollider.enabled = false;
+        //}
+        //else
+        //{
+        //    itemCollider.enabled = true;
+        //}
+    }
 
     private void OnMouseDown()
     {
-        Debug.Log("item clicked!");
-
-        if (GameObject.FindGameObjectWithTag("Item"))
+        //if the instance who has the address reference to the PauseMenu Script where isPause = false, 
+        //it will run the code where the item spawn and buisiness as usual
+        if(!PauseMenu.instance.isPause)
         {
-            Destroy(gameObject);
+            Debug.Log("item clicked!");
+
+            if (GameObject.FindGameObjectWithTag("Item"))
+            {
+                Destroy(gameObject);
+            }
+
+            //finding the canvas
+            AdvenName = GameObject.Find("Canvas").GetComponent<CusName>();
+
+            //find tags
+            var obj = GameObject.FindGameObjectsWithTag("QuestForm")[0];
+            var obj2 = GameObject.FindGameObjectWithTag("QuestItem");
+            var obj3 = GameObject.FindGameObjectWithTag("AdventureInfo");
+            questItemSpawnManager = GameObject.FindGameObjectWithTag("SpawnManager");
+
+            //pls be noted the DragDrop2D class is the StampDragging Script : Im so sorry for messing it up :((
+            var correctStamp = GameObject.FindGameObjectWithTag("correct").GetComponent<DragDrop2D>();
+            var incorrectStamp = GameObject.FindGameObjectWithTag("incorrect").GetComponent<DragDrop2D>();
+
+
+            //spawn the 3 items on the righr
+            questFormInstance = Instantiate(QuestForm, obj.transform);
+            Instantiate(Item, obj2.transform);
+            questItemSpawnManager.GetComponent<SpawnManager>().SetUpQuestItem();
+            Instantiate(questItem, obj2.transform);
+
+            advenInfo = Instantiate(AdvenInfo, obj3.transform);
+
+
+            //spawn the text
+            Initialise();
+            AdvenName.setText(testText1);
+            AdvenName.setText2(testText2);
+            AdvenName.ChooseName();
+            Debug.Log("Choose Name");
+
+            //this is refering to the customerspawner class because the code is so spagethhi i cant spell sorry
+            advenInfo.customerPic = spawner;
+
+            //refering to the stampDragging class so that the stamps can call to this class
+            correctStamp.adveninfovar = advenInfo;
+            incorrectStamp.adveninfovar = advenInfo;
+
         }
 
-        //finding the canvas
-        AdvenName = GameObject.Find("Canvas").GetComponent<CusName>();
 
-        //find tags
-        var obj = GameObject.FindGameObjectsWithTag("QuestForm")[0];
-        var obj2 = GameObject.FindGameObjectWithTag("QuestItem");
-        var obj3 = GameObject.FindGameObjectWithTag("AdventureInfo");
-        questItemSpawnManager = GameObject.FindGameObjectWithTag("SpawnManager");
-
-        //pls be noted the DragDrop2D class is the StampDragging Script : Im so sorry for messing it up :((
-        var correctStamp = GameObject.FindGameObjectWithTag("correct").GetComponent<DragDrop2D>();
-        var incorrectStamp = GameObject.FindGameObjectWithTag("incorrect").GetComponent<DragDrop2D>();
-
-
-        //spawn the 3 items on the righr
-        questFormInstance = Instantiate(QuestForm, obj.transform);
-        Instantiate(Item, obj2.transform);
-        questItemSpawnManager.GetComponent<SpawnManager>().SetUpQuestItem();
-        Instantiate(questItem, obj2.transform);
-
-        advenInfo = Instantiate(AdvenInfo, obj3.transform);
-
-
-        //spawn the text
-        Initialise();
-        AdvenName.setText(testText1);
-        AdvenName.setText2(testText2);
-        AdvenName.ChooseName();
-        Debug.Log("Choose Name");
-
-        //this is refering to the customerspawner class because the code is so spagethhi i cant spell sorry
-        advenInfo.customerPic = spawner;
         
-        //refering to the stampDragging class so that the stamps can call to this class
-        correctStamp.adveninfovar = advenInfo;
-        incorrectStamp.adveninfovar = advenInfo;
-
     }
 
     //since the item is a prefab = does not exist in the scene, the script can't call from said classes
@@ -78,7 +115,5 @@ public class testscript : MonoBehaviour
         //finding the text
         testText1 = questFormInstance.GetComponentInChildren<TextMeshPro>();
         testText2 = advenInfo.GetComponentInChildren<TextMeshPro>();
-
-        
     }
 }

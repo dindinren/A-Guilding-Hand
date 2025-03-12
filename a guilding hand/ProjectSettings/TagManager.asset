@@ -29,6 +29,7 @@ TagManager:
   - SpawnManager
   - pHMeter
   - PipetteTip
+  - pause
   layers:
   - Default
   - TransparentFX
