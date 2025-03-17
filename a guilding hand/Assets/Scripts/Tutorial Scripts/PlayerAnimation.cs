@@ -16,6 +16,7 @@ public class PlayerAnimation : MonoBehaviour
     public CanvasFade fade;
 
     bool changeAnimation = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,7 +44,6 @@ public class PlayerAnimation : MonoBehaviour
         if (dialogue.index == 7)
         {
             fade.nextScene = true;
-
         }
 
 

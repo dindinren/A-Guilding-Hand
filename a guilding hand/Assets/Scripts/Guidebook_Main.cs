@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Guidebook_Tutorial : MonoBehaviour
+public class Guidebook_Main : MonoBehaviour
 {
     public GameObject guidebook;
     public List<GameObject> guidebookList;
@@ -17,37 +17,25 @@ public class Guidebook_Tutorial : MonoBehaviour
 
     private Animator anim;
 
-    public bool moveToSecondPhase = false;
-
-    public GameObject dialogue2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         anim = GetComponent<Animator>();
 
-        GuidebookPages();
-
         guidebook.SetActive(false);
-        guidebookButton.GetComponent<Button>().interactable = false;
+
+        arrowForward.SetActive(true);
+        arrowBackward.SetActive(false);
+
 
         guidebookButton.onClick.AddListener(GuidebookAppear);
 
-
-        if(moveToSecondPhase == false)
-        {
-            dialogue2.SetActive(false);
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(moveToSecondPhase == true)
-        {
-            dialogue2.SetActive(true);
-        }
-        
     }
 
     public void GuidebookPages()
@@ -67,8 +55,6 @@ public class Guidebook_Tutorial : MonoBehaviour
 
             arrowForward.SetActive(false);
             arrowBackward.SetActive(true);
-
-            guidebookButton.GetComponent<Button>().interactable = true;
         }
     }
 
@@ -96,9 +82,6 @@ public class Guidebook_Tutorial : MonoBehaviour
 
     public void GuidebookGoByeBye()
     {
-        dialogue2.SetActive(true);
-        moveToSecondPhase = true;
-
         StartCoroutine(GuidebookGoByeByeTiming(1f));
     }
 
@@ -109,6 +92,6 @@ public class Guidebook_Tutorial : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         guidebook.SetActive(false);
-    }
 
+    }
 }

@@ -16,7 +16,6 @@ public class Dialogue : MonoBehaviour
     private Animator anim;
 
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -67,8 +66,9 @@ public class Dialogue : MonoBehaviour
     {
         foreach (char c in lines[index].ToCharArray())
         {
-            textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
+
+            textComponent.text += c;
         }
     }
 
