@@ -24,11 +24,19 @@ public class ScoreManager : MonoBehaviour
 
 
     int score = 0;
-    public int healthscore = 0;
+    int healthscore = 0; 
     int playerstate = 0;
 
     bool playerchange = false;
 
+
+    AudioManager_MainArea audioManager;
+
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -114,6 +122,7 @@ public class ScoreManager : MonoBehaviour
     public void MinusPoints()
     {
         playerchange = true;
+
         if (score <= 0)
         {
             score = 0;
@@ -156,10 +165,13 @@ public class ScoreManager : MonoBehaviour
                 health1.GetComponent<Image>().color = Color.white;
                 health2.GetComponent<Image>().color = Color.white;
                 health3.GetComponent<Image>().color = Color.white;
+
                 Time.timeScale = 0f;
+
                 gameOverScreen.SetActive(true);
                 anim2.Play("GameOver");
 
+                audioManager.GameOver(audioManager.LostBGM);
                 break;
             default:
                 //set the health to black to indicate you have no strikes

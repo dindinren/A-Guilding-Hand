@@ -10,8 +10,12 @@ public class ItemSpawn : MonoBehaviour
     private GameObject lastSpawnedItem; // Reference to the last spawned item
     private bool canSpawn = true; // Flag to control if the item can be spawned
 
+    AudioManager_MainArea audioManager;
 
-
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+    }
     void Start()
     {
         // Start the coroutine to spawn the item after 2 seconds
@@ -50,6 +54,9 @@ public class ItemSpawn : MonoBehaviour
             canSpawn = false;
 
             Debug.Log("Item object spawned!");
+
+            //SFX for spawning the item
+            audioManager.PlaySFX(audioManager.ItemSFX);
         }
     }
 }

@@ -5,6 +5,16 @@ public class GemstoneTab : MonoBehaviour
     public GuidebookpHManager GuidebookpHManager;
     public PauseMenu pauseMenu;
     public GameObject gemstoneTab;
+
+    //for audio -joyce
+    AudioManager_MainArea audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+    }
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,7 +35,9 @@ public class GemstoneTab : MonoBehaviour
 
     private void OnMouseDown()
     {
-
         GuidebookpHManager.SkipToGemstone();
+
+        //audio sfx - joyce
+        audioManager.PlaySFX(audioManager.GuidebookFlipSFX);
     }
 }

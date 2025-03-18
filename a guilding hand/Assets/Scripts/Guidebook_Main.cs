@@ -13,10 +13,19 @@ public class Guidebook_Main : MonoBehaviour
     public GameObject arrowForward;
     public GameObject arrowBackward;
 
+
     public Button guidebookButton;
+
 
     private Animator anim;
 
+
+    AudioManager_MainArea audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -64,12 +73,16 @@ public class Guidebook_Main : MonoBehaviour
         Debug.Log("go foward");
         currentindex++;
         GuidebookPages();
+
+        audioManager.PlaySFX(audioManager.GuidebookFlipSFX);
     }
 
     public void Backward()
     {
         currentindex--;
         GuidebookPages();
+
+        audioManager.PlaySFX(audioManager.GuidebookFlipSFX);
     }
 
 

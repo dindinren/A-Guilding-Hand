@@ -5,6 +5,16 @@ public class MonstersTab : MonoBehaviour
     public GuidebookpHManager GuidebookpHManager;
     public PauseMenu pauseMenu;
     public GameObject monstersTab;
+
+    //for audio -joyce
+    AudioManager_MainArea audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+    }
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,7 +36,9 @@ public class MonstersTab : MonoBehaviour
     // Update is called once per frame
     private void OnMouseDown()
     {
-
         GuidebookpHManager.SkipToMonsters();
+
+        //audio sfx - joyce
+        audioManager.PlaySFX(audioManager.GuidebookFlipSFX);
     }
 }

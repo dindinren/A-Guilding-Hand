@@ -27,6 +27,7 @@ public class DragDrop2D : MonoBehaviour
 
     public PauseMenu pauseMenu;
 
+    AudioManager_MainArea audioManager;
 
     //dun let the tick/cross be seen at first
     private void Start()
@@ -48,8 +49,11 @@ public class DragDrop2D : MonoBehaviour
             GameObject.FindGameObjectWithTag("incorrect").GetComponent<Collider2D>().enabled = true;
         }
     }
+    //called before the scene is loaded
     void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+
         collider2d = GetComponent<Collider2D>();
         originalPosition = transform.position; // Store the initial position
     }
@@ -57,6 +61,9 @@ public class DragDrop2D : MonoBehaviour
     //if clicked
     void OnMouseDown()
     {
+        //play audio
+        audioManager.PlaySFX(audioManager.ClickSFX);
+
         offset = transform.position - MouseWorldPosition();
     }
 

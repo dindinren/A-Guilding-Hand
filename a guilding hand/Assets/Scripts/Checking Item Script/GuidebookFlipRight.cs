@@ -5,6 +5,14 @@ public class GuidebookFlipRight : MonoBehaviour
     public GuidebookpHManager guidebookpHManager;
     public PauseMenu pauseMenu;
     public GameObject flipright;
+
+    //for audio -joyce
+    AudioManager_MainArea audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,5 +33,8 @@ public class GuidebookFlipRight : MonoBehaviour
     private void OnMouseDown()
     {
         guidebookpHManager.Forward();
+
+        //audio sfx - joyce
+        audioManager.PlaySFX(audioManager.GuidebookFlipSFX);
     }
 }

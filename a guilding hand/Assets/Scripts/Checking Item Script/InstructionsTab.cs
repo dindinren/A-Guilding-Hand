@@ -6,6 +6,15 @@ public class InstructionsTab : MonoBehaviour
     public PauseMenu pauseMenu;
     public GameObject instructionsTab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    //for audio -joyce
+    AudioManager_MainArea audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+    }
+
     void Start()
     {
         
@@ -27,5 +36,8 @@ public class InstructionsTab : MonoBehaviour
     private void OnMouseDown()
     {
         GuidebookpHManager.SkipToInstructions();
+
+        //audio sfx - joyce
+        audioManager.PlaySFX(audioManager.GuidebookFlipSFX);
     }
 }
