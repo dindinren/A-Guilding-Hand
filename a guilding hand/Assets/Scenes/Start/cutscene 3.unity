@@ -404,6 +404,10 @@ PrefabInstance:
       propertyPath: 'lines.Array.data[0]'
       value: No one is willing to take you in...
       objectReference: {fileID: 0}
+    - target: {fileID: 6417110448362544563, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
+      propertyPath: canvasGroup
+      value: 
+      objectReference: {fileID: 140922015}
     - target: {fileID: 7048643120127967754, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

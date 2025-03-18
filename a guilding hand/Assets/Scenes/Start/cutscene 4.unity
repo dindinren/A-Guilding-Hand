@@ -413,6 +413,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2055798404}
     m_Modifications:
+    - target: {fileID: 1965583351945409559, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1818291678}
+    - target: {fileID: 1965583351945409559, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeScene
+      objectReference: {fileID: 0}
     - target: {fileID: 3324671223638717940, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
       propertyPath: line
       value: Until one fateful day...
@@ -525,6 +533,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7048643120127967754, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
   m_PrefabInstance: {fileID: 1547559731}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1818291678 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6417110448362544563, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
+  m_PrefabInstance: {fileID: 1547559731}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d12d3817012158408f91cd405e170aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2055798403
 GameObject:
   m_ObjectHideFlags: 0
