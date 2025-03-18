@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class animationPlayforC6 : MonoBehaviour
 {
@@ -8,8 +9,15 @@ public class animationPlayforC6 : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        anim.Play("Cutscene6_PanUp");
-        
+        if(SceneManager.GetActiveScene().name == "cutscene 6")
+        {
+            anim.Play("Cutscene6_PanUp");
+        }
+
+        if(SceneManager.GetActiveScene().name == "cutscene 7")
+        {
+            anim.Play("Cutscene7_PanUp");
+        }
     }
 
     // Update is called once per frame

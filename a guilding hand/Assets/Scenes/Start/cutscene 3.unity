@@ -496,11 +496,19 @@ PrefabInstance:
     - {fileID: 3873274845403297872, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 432330891129667629, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2128944470}
   m_SourcePrefab: {fileID: 100100000, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
 --- !u!224 &1250107689 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7048643120127967754, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
+  m_PrefabInstance: {fileID: 1250107688}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1250107690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 432330891129667629, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
   m_PrefabInstance: {fileID: 1250107688}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1369508700
@@ -582,6 +590,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1514333501
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1169111513398140628, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_Name
+      value: AudioManager2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265381574165200916, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 732.1902
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265381574165200916, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 511.1222
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265381574165200916, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.9534926
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265381574165200916, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265381574165200916, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265381574165200916, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265381574165200916, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265381574165200916, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265381574165200916, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265381574165200916, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+--- !u!114 &1514333502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6058830103011504456, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+  m_PrefabInstance: {fileID: 1514333501}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbdac251265b18a49a40835e9f34e637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2096705012
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,12 +801,85 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1965583351945409559, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
   m_PrefabInstance: {fileID: 1250107688}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1250107690}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2128944470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250107690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 140922016}
+          m_TargetAssemblyTypeName: CursorManagerForPrefabItem, Assembly-CSharp
+          m_MethodName: OnMouseEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1514333502}
+          m_TargetAssemblyTypeName: AudioManager_Cutscenes, Assembly-CSharp
+          m_MethodName: PlayClickSFX
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: e10f9ad1c1c52a14da3f4a24b9e3fb8f, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 140922016}
+          m_TargetAssemblyTypeName: CursorManagerForPrefabItem, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 140922016}
+          m_TargetAssemblyTypeName: CursorManagerForPrefabItem, Assembly-CSharp
+          m_MethodName: OnMouseEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1697080533362538638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -835,3 +984,4 @@ SceneRoots:
   - {fileID: 2096705015}
   - {fileID: 1369508703}
   - {fileID: 140922010}
+  - {fileID: 1514333501}
