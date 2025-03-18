@@ -21,7 +21,7 @@ public class CutsceneFadetoFinal : MonoBehaviour
 
     public void TotheNextScene()
     {
-        sceneName = "cutscene 8";
+        sceneName = "tutorial";
         fadeOut = true;
         StartCoroutine(FadeOutandThenLoadNextScene());
     }
