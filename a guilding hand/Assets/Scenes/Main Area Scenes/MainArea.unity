@@ -1490,7 +1490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &403189053
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3581,7 +3581,9 @@ MonoBehaviour:
   health2: {fileID: 1511148932}
   health3: {fileID: 2103535955}
   gameOverScreen: {fileID: 616261321}
+  winScreen: {fileID: 403189052}
   anim2: {fileID: 616261326}
+  anim3: {fileID: 403189057}
   playerNeutral: {fileID: 1871249661}
   playerSad: {fileID: 515591610}
   playerHappy: {fileID: 1120743560}
@@ -3637,7 +3639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 448251669}
-  gameEnd: {fileID: 403189052}
+  gameEnd: {fileID: 616261321}
   scoreText: {fileID: 1737160564}
   anim: {fileID: 935916006}
   remainingTime: 350

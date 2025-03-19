@@ -15,6 +15,8 @@ public class ScoreManager : MonoBehaviour
 
     public GameObject gameOverScreen;
 
+    public GameObject winScreen;
+
     private Animator anim;
     public Animator anim2;
 
@@ -24,7 +26,7 @@ public class ScoreManager : MonoBehaviour
 
 
     int score = 0;
-    int healthscore = 2; //remember to change to 0
+    int healthscore = 0; //remember to change to 0
     int playerstate = 0;
 
     bool playerchange = false;
@@ -43,6 +45,7 @@ public class ScoreManager : MonoBehaviour
         anim = GetComponent<Animator>();
 
         gameOverScreen.SetActive(false);
+        winScreen.SetActive(false);
 
         PlayerState();
         Debug.Log("playerstate: " + playerstate);
@@ -98,25 +101,31 @@ public class ScoreManager : MonoBehaviour
         anim.Play("PlayerIdle");
 
         Debug.Log("playerstate: " + playerstate);
-        Debug.Log("playerstate: " + playerstate);
     }
 
     //this one very self explantory right??
     public void AddPoints()
     {
         playerchange = true;
+
         score += 1;
         scoreText.text = "SCORE: " + score.ToString();
 
         playerstate = 2;
         Debug.Log("playerstate: " + playerstate);
-
-
         PlayerState();
         anim.Play("PlayerHappy");
-        StartCoroutine(Wait(1f));
 
-        Debug.Log("playerstate: " + playerstate);
+        //if score reaches 8, the winScreen will play
+        if (score == 8) 
+        {
+            winScreen.SetActive(true);
+            Time.timeScale = 0f;
+        }
+
+        StartCoroutine(Wait(1f)); //change the player state
+
+        Debug.Log("playerstate: " + playerstate); 
     }
 
     public void MinusPoints()
@@ -141,7 +150,7 @@ public class ScoreManager : MonoBehaviour
         PlayerState();
         anim.Play("PlayerSad");
 
-        StartCoroutine(Wait(1f));
+        StartCoroutine(Wait(1f));//change the player state
 
 
 
@@ -169,7 +178,7 @@ public class ScoreManager : MonoBehaviour
                 Time.timeScale = 0f;
 
                 gameOverScreen.SetActive(true);
-                //anim2.Play("GameOver");
+                anim2.Play("GameOver");
 
                 audioManager.GameOver(audioManager.LostBGM);
                 break;

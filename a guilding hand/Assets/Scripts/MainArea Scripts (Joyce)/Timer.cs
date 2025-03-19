@@ -21,7 +21,9 @@ public class Timer : MonoBehaviour
         anim = GetComponent<Animator>();
 
         scoreText.SetActive(true);
-        gameEnd.SetActive(false);
+
+        gameEnd.SetActive(false); //plays the lost screeen
+
         timerText.enabled = true;
 
         StartCoroutine(WaitforaWhileThenGo(1f));
@@ -31,7 +33,6 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if(go == true)
         {
             if (remainingTime > 0)
