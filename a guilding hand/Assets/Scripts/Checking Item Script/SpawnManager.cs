@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -11,6 +12,10 @@ public class SpawnManager : MonoBehaviour
     public ItemSpawner targetpH;
 
 
+    private bool predeterminedTrueFalse;
+    public bool hasChanged = false;
+    private int realorfakeID;
+
     public int superInitialTargetID;
     private int initialTargetID;
     private int targetID;
@@ -18,12 +23,14 @@ public class SpawnManager : MonoBehaviour
     public int targetpHID;
     public pHColissionChange pHColissionChange;
     private bool storedpHresult;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
     void Start()
     {
-        //SetUpQuestItem();
+
     }
 
     // Update is called once per frame
@@ -32,18 +39,59 @@ public class SpawnManager : MonoBehaviour
         
     }
 
+    public bool StartTrueFalse()
+    {
+        if (!hasChanged)
+        {
+            realorfakeID = Random.Range(0, 2);
+            if (realorfakeID == 0)
+            {
+                Debug.Log("Customer Will Be True");
+                predeterminedTrueFalse = true;
+
+            }
+            else
+            {
+                Debug.Log("Customer Might Be False");
+                predeterminedTrueFalse = false;
+            }
+            hasChanged = true;
+            return predeterminedTrueFalse;
+        }
+        else
+        {
+            return predeterminedTrueFalse;
+        }
+    }
+
     public bool Result()
     {
-        if (damagedTargetID % 2 != 0)
+        if (predeterminedTrueFalse == true)
         {
-            return false;
+            return true;
         }
-        return true;
+        else
+        {
+            if (damagedTargetID % 2 != 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
     }
 
     public bool ResultpH()
     {
-        return pHColissionChange.TrueFalse();
+        if (predeterminedTrueFalse == true)
+        {
+            return true;
+        }
+        else
+        {
+            return pHColissionChange.TrueFalse();
+        }
+
     }
 
     public bool finalResult()
@@ -70,7 +118,14 @@ public class SpawnManager : MonoBehaviour
             if (targetID == 0)
             {
                 damagedTargetID = Random.Range(0, 2);
-                damagedTarget.UseSprite(damagedTargetID);
+                if (predeterminedTrueFalse == true)
+                {
+                    damagedTarget.UseSprite(damagedTargetID = 0);
+                }
+                else
+                {
+                    damagedTarget.UseSprite(damagedTargetID);
+                }
                 targetpHID = Random.Range(0, 2);
                 targetpH.UseSprite(targetpHID);
             }
@@ -86,7 +141,14 @@ public class SpawnManager : MonoBehaviour
             if (targetID == 1)
             {
                 damagedTargetID = Random.Range(2, 4);
-                damagedTarget.UseSprite(damagedTargetID);
+                if (predeterminedTrueFalse == true)
+                {
+                    damagedTarget.UseSprite(damagedTargetID = 2);
+                }
+                else
+                {
+                    damagedTarget.UseSprite(damagedTargetID);
+                }
                 targetpHID = Random.Range(2, 4);
                 targetpH.UseSprite(targetpHID);
             }
@@ -101,7 +163,14 @@ public class SpawnManager : MonoBehaviour
             if (targetID == 2)
             {
                 damagedTargetID = Random.Range(4, 6);
-                damagedTarget.UseSprite(damagedTargetID);
+                if (predeterminedTrueFalse == true)
+                {
+                    damagedTarget.UseSprite(damagedTargetID = 4);
+                }
+                else
+                {
+                    damagedTarget.UseSprite(damagedTargetID);
+                }
                 targetpHID = Random.Range(4, 6);
                 targetpH.UseSprite(targetpHID);
             }
@@ -115,7 +184,14 @@ public class SpawnManager : MonoBehaviour
             if (targetID == 3)
             {
                 damagedTargetID = Random.Range(6, 8);
-                damagedTarget.UseSprite(damagedTargetID);
+                if (predeterminedTrueFalse == true)
+                {
+                    damagedTarget.UseSprite(damagedTargetID = 6);
+                }
+                else
+                {
+                    damagedTarget.UseSprite(damagedTargetID);
+                }
                 targetpHID = Random.Range(6, 8);
                 targetpH.UseSprite(targetpHID);
             }

@@ -26,6 +26,7 @@ public class DragDrop2D : MonoBehaviour
     public Timer timerScript;
 
     public PauseMenu pauseMenu;
+    public SpawnManager hasChanged;
 
     AudioManager_MainArea audioManager;
 
@@ -33,6 +34,7 @@ public class DragDrop2D : MonoBehaviour
     private void Start()
     {
         tick.SetActive(false);
+        hasChanged = FindAnyObjectByType<SpawnManager>();
     }
 
     private void Update()
@@ -170,6 +172,8 @@ public class DragDrop2D : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
+
+        hasChanged.hasChanged = false;
         
         // the items will get ready to destroy
         yield return new WaitForSeconds(delay);
@@ -207,6 +211,7 @@ public class DragDrop2D : MonoBehaviour
         //along with the adven info profile pic
         adveninfovar.PicIsDestroyed();
         Debug.Log("the pic will be destroyed");
+
     }
 
     private void FixedUpdate()
