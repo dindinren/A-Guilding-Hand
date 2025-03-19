@@ -79,7 +79,7 @@ public class pHColissionChange : MonoBehaviour
         }
         
 
-        if (other.CompareTag("PipetteTip") && TrueFalse() == false)
+        else if (other.CompareTag("PipetteTip") && TrueFalse() == false)
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {

@@ -42,13 +42,13 @@ public class SpawnManager : MonoBehaviour
 
     public bool ResultpH()
     {
-        if (pHColissionChange.TrueFalse() == false)
+        if (pHColissionChange.TrueFalse() == true)
         {
-            return false;
+            return true;
         }
         else
         {
-            return true;
+            return false;
         }
     }
 
