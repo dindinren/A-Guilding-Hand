@@ -9,6 +9,7 @@ public class CusName : MonoBehaviour
 {
     public TextMeshPro nameText;
     public TextMeshPro nameText2;
+    private SpawnManager predeterminedTrueFalse;
 
     public string[] names = new string[]
     {
@@ -21,6 +22,8 @@ public class CusName : MonoBehaviour
     string name1;
     string name2;
 
+    
+    
     //Spawning the text
     //this is for the first text
     public void setText(TextMeshPro setText)
@@ -37,17 +40,25 @@ public class CusName : MonoBehaviour
     //this is to check whether to randomise the names or not
     public void ChanceRandomise()
     {
-        int chance = Random.Range(0, 5);
-        if (chance >= 3)
+        if (predeterminedTrueFalse.StartTrueFalse() == true)
         {
-            Debug.Log("is it randomise?");
-            isNameRandomise = true;
+            isNameRandomise = false;
         }
         else
         {
-            Debug.Log("is it randomise 2 ?");
-            isNameRandomise = false;
+            int chance = Random.Range(0, 5);
+            if (chance >= 3)
+            {
+                Debug.Log("is it randomise?");
+                isNameRandomise = true;
+            }
+            else
+            {
+                Debug.Log("is it randomise 2 ?");
+                isNameRandomise = false;
+            }
         }
+
     }
 
     public void ChooseName()
@@ -110,7 +121,7 @@ public class CusName : MonoBehaviour
         nameText2.gameObject.SetActive(false);
         */
         //ChooseName(); (Commented out in ASC)
-
+        predeterminedTrueFalse = Object.FindAnyObjectByType<SpawnManager>();
 
     }
 

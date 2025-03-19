@@ -11,7 +11,7 @@ public class AdvenInfoVariables :MonoBehaviour
     public GameObject rawCustomerPic;
 
     public bool canRandomizeAdven = false;
-    public bool isItTheSame = false; 
+    public bool isItTheSame = false;
 
 
     //i want that once a customer spawn the card would also spawn that customers face

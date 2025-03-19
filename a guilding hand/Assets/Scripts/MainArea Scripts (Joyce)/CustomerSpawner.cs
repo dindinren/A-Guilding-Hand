@@ -30,12 +30,17 @@ public class CustomerSpawner : MonoBehaviour
 
     public Collissionchangescript ccs;
     public pHColissionChange phccs;
+    public SpawnManager spawnManager;
 
 
     void Start()
     {
+
+        spawnManager = Object.FindAnyObjectByType<SpawnManager>();
+
         // Start the coroutine to spawn the object after the delay
         StartCoroutine(SpawnObjectAfterDelay());
+
     }
 
 
@@ -44,6 +49,8 @@ public class CustomerSpawner : MonoBehaviour
     {
         // Wait for the specified delay
         yield return new WaitForSeconds(delay);
+
+                spawnManager.StartTrueFalse();
 
         // Spawn the object if no object has been spawned yet
         if (lastSpawnedObject == null)

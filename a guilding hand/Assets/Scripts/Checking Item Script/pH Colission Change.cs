@@ -22,22 +22,36 @@ public class pHColissionChange : MonoBehaviour
     public BoxCollider2D BoxCollider2D;
     private bool hasChanged = false;
     private bool result;
+    private SpawnManager predeterminedTrueFalse;
+
+    private void Start()
+    {
+        predeterminedTrueFalse = Object.FindAnyObjectByType<SpawnManager>();
+    }
 
     public bool TrueFalse()
     {
         if (!hasChanged)
         {
-            trueorfalseID = Random.Range(0, 2);
-            Debug.Log(trueorfalseID);
-            if (trueorfalseID == 0)
+            if (predeterminedTrueFalse.StartTrueFalse() == true)
             {
-                Debug.Log("Results are true");
                 result = true;
             }
             else
             {
-                Debug.Log("Results are false");
-                result = false;
+                trueorfalseID = Random.Range(0, 2);
+                Debug.Log(trueorfalseID);
+                if (trueorfalseID == 0)
+                {
+                    Debug.Log("Results are true");
+                    result = true;
+                }
+                else
+                {
+                    Debug.Log("Results are false");
+                    result = false;
+
+                }
 
             }
             hasChanged = true;
