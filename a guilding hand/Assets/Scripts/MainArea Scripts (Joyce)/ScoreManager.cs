@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
 
 
     int score = 0;
-    int healthscore = 2; //remember to change to 0
+    int healthscore = 0; //remember to change to 0
     int playerstate = 0;
 
     bool playerchange = false;
