@@ -261,7 +261,6 @@ MonoBehaviour:
   spawnManagerObject: {fileID: 479936337}
   clearSprite: {fileID: -6081636792791996837, guid: ed1bf6d3463de274cb08996725a45b62, type: 3}
   Collissionchangescript: {fileID: 403825263}
-  trueorfalseID: 0
   BoxCollider2D: {fileID: 403825264}
 --- !u!61 &65837733
 BoxCollider2D:
@@ -3354,7 +3353,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.38, y: 1.66}
+  m_Size: {x: 1.68, y: 1.66}
   m_EdgeRadius: 0
 --- !u!114 &881149919
 MonoBehaviour:
@@ -3872,7 +3871,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.38, y: 1.66}
+  m_Size: {x: 1.66, y: 1.66}
   m_EdgeRadius: 0
 --- !u!114 &971165368
 MonoBehaviour:
