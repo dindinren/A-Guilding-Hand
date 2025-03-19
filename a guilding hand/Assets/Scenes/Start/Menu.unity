@@ -953,7 +953,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1505,6 +1505,7 @@ MonoBehaviour:
   musicSource: {fileID: 378082292}
   SFXSource: {fileID: 129063703}
   MenuBGM: {fileID: 8300000, guid: 4e8167a17a3a86945af2488ffe1ce8c7, type: 3}
+  CutsceneBGM: {fileID: 0}
   HoverSFX: {fileID: 8300000, guid: 8298123eb83af3f47ade25f9a96d9b31, type: 3}
   ClickSFX: {fileID: 8300000, guid: e10f9ad1c1c52a14da3f4a24b9e3fb8f, type: 3}
 --- !u!1 &1046971284

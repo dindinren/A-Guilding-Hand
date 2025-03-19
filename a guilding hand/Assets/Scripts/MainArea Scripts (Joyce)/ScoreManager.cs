@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
 
 
     int score = 0;
-    int healthscore = 0; 
+    int healthscore = 2; //remember to change to 0
     int playerstate = 0;
 
     bool playerchange = false;
@@ -169,7 +169,7 @@ public class ScoreManager : MonoBehaviour
                 Time.timeScale = 0f;
 
                 gameOverScreen.SetActive(true);
-                anim2.Play("GameOver");
+                //anim2.Play("GameOver");
 
                 audioManager.GameOver(audioManager.LostBGM);
                 break;

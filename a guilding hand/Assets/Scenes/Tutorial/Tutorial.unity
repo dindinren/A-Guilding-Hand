@@ -2125,6 +2125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: guidebook prompt
       objectReference: {fileID: 0}
+    - target: {fileID: 7458757262100653299, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7591850300107157086, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
