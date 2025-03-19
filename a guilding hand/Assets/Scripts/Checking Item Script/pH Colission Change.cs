@@ -1,3 +1,4 @@
+using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -17,27 +18,37 @@ public class pHColissionChange : MonoBehaviour
 
     public Sprite clearSprite;
     public Collissionchangescript Collissionchangescript;
-    public int trueorfalseID;
+    private int trueorfalseID;
     public BoxCollider2D BoxCollider2D;
+    private bool hasChanged = false;
+    private bool result;
 
     public bool TrueFalse()
     {
-        
-        trueorfalseID = Random.Range(0, 2);
-        Debug.Log(trueorfalseID);
-        if (trueorfalseID == 0)
+        if (!hasChanged)
         {
+            trueorfalseID = Random.Range(0, 2);
+            Debug.Log(trueorfalseID);
+            if (trueorfalseID == 0)
+            {
+                Debug.Log("Results are true");
+                result = true;
+            }
+            else
+            {
+                Debug.Log("Results are false");
+                result = false;
 
-            Debug.Log("Results are true");
-            return true;
- 
+            }
+            hasChanged = true;
+            return result;
         }
+
         else
         {
-            Debug.Log("Results are false");
-            return false;
-
+            return result;
         }
+
     }
 
         
@@ -45,7 +56,8 @@ public class pHColissionChange : MonoBehaviour
     {
 
         Debug.Log("Collided with: " + other.gameObject.name); // Debugging line
-        if (other.CompareTag("PipetteTip") && TrueFalse() == true)
+        bool result = TrueFalse();
+        if (other.CompareTag("PipetteTip") && result == true )
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {
@@ -79,7 +91,7 @@ public class pHColissionChange : MonoBehaviour
         }
         
 
-        else if (other.CompareTag("PipetteTip") && TrueFalse() == false)
+        else if (other.CompareTag("PipetteTip") && result == false)
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {

@@ -17,6 +17,7 @@ public class SpawnManager : MonoBehaviour
     private int damagedTargetID;
     public int targetpHID;
     public pHColissionChange pHColissionChange;
+    private bool storedpHresult;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -42,14 +43,7 @@ public class SpawnManager : MonoBehaviour
 
     public bool ResultpH()
     {
-        if (pHColissionChange.TrueFalse() == true)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return pHColissionChange.TrueFalse();
     }
 
     public bool finalResult()
