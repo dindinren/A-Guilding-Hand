@@ -35,13 +35,13 @@ public class PlayerAnimation : MonoBehaviour
             anim2.Play("TextBox_Tutorial-Move1");
             anim.Play("PlayerTutorial_Move1");
         }
-        if (dialogue.index == 5)
+        if (dialogue.index == 6)
         {
             anim2.Play("TextBox_Tutorial-Move2");
             anim.Play("PlayerTutorial_Move2");
 
         }
-        if (dialogue.index == 7)
+        if (dialogue.index == 8)
         {
             fade.nextScene = true;
         }
