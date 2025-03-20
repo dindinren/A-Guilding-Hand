@@ -71,7 +71,7 @@ public class pHColissionChange : MonoBehaviour
 
         Debug.Log("Collided with: " + other.gameObject.name); // Debugging line
         bool result = TrueFalse();
-        if (other.CompareTag("PipetteTip") && result == true )
+        if (other.CompareTag("PipetteTip") && result == true)
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {
