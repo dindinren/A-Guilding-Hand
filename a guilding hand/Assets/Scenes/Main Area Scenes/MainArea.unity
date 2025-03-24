@@ -1685,6 +1685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newSprite: {fileID: -6567518636356972544, guid: f9dad2d4482995b408765bd86cc089a3, type: 3}
   clearSprite: {fileID: -8836965882835671584, guid: 34e45a3ce5b9a5648ad58a3bafb5c6c0, type: 3}
+  renderInParent: {fileID: 1796916838}
   hasTouchedObject: 0
 --- !u!61 &403825264
 BoxCollider2D:
@@ -1723,10 +1724,10 @@ BoxCollider2D:
   m_Offset: {x: 1.11, y: -0.81}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.87, y: 2.46}
+    newSize: {x: 2.87, y: 2.46}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -1766,7 +1767,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403825261}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1803,15 +1804,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -6567518636356972544, guid: f9dad2d4482995b408765bd86cc089a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.87, y: 2.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &422938442 stripped
@@ -2257,6 +2258,7 @@ MonoBehaviour:
   Target: {fileID: 2024182086}
   damagedTarget: {fileID: 1711883816}
   targetpH: {fileID: 1452549575}
+  hasChanged: 0
   superInitialTargetID: 0
   targetpHID: 0
   pHColissionChange: {fileID: 65837731}
@@ -3309,6 +3311,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   timerScript: {fileID: 935916005}
   pauseMenu: {fileID: 999334175}
+  hasChanged: {fileID: 0}
 --- !u!61 &881149918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3582,7 +3585,6 @@ MonoBehaviour:
   gameOverScreen: {fileID: 616261321}
   winScreen: {fileID: 403189052}
   anim2: {fileID: 616261326}
-  anim3: {fileID: 403189057}
   playerNeutral: {fileID: 1871249661}
   playerSad: {fileID: 515591610}
   playerHappy: {fileID: 1120743560}
@@ -3827,6 +3829,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   timerScript: {fileID: 935916005}
   pauseMenu: {fileID: 999334175}
+  hasChanged: {fileID: 0}
 --- !u!61 &971165367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10728,6 +10731,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ccs: {fileID: 403825263}
   phccs: {fileID: 65837731}
+  spawnManager: {fileID: 0}
 --- !u!4 &2136629424
 Transform:
   m_ObjectHideFlags: 0

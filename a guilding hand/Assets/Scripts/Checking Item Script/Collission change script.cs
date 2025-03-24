@@ -7,8 +7,9 @@ public class Collissionchangescript : MonoBehaviour
     public Sprite newSprite;
     public Sprite clearSprite;
 
+    [SerializeField] private SpriteRenderer renderInParent;
 
-    private void Start()
+    private void Awake()
     {
 
     }
@@ -35,7 +36,7 @@ public class Collissionchangescript : MonoBehaviour
         if (other.tag == "Target")
         {
             TouchedObject();
-            GetComponent<SpriteRenderer>().sprite = newSprite;
+            renderInParent.sprite = newSprite;
         }
 
 
@@ -43,7 +44,7 @@ public class Collissionchangescript : MonoBehaviour
 
     public void Clear()
     {
-        GetComponent<SpriteRenderer>().sprite = clearSprite;
+        renderInParent.sprite = clearSprite;
     }
 }
 

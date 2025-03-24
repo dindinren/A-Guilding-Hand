@@ -13,6 +13,7 @@ public class SpawnManager : MonoBehaviour
 
 
     private bool predeterminedTrueFalse;
+
     public bool hasChanged = false;
     private int realorfakeID;
 
