@@ -17,9 +17,18 @@ public class PlayerAnimation : MonoBehaviour
 
     bool changeAnimation = false;
 
+
+    public GameObject highlight1;
+    public GameObject highlight2;
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        highlight1.SetActive(false);
+        highlight2.SetActive(false);
+
         anim2 = textBox.GetComponent<Animator>();
         anim = player.GetComponent<Animator>();
 
@@ -29,18 +38,29 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialogue.index == 2)
+        if (dialogue.index == 2) //tutorial on the termination
         {
             changeAnimation = true;
             anim2.Play("TextBox_Tutorial-Move1");
             anim.Play("PlayerTutorial_Move1");
+            highlight1.SetActive(true);
         }
-        if (dialogue.index == 6)
+
+
+        if (dialogue.index == 6) //tutorial on the Score and Win conditions
         {
+            highlight1.SetActive(false); //turn the highlight off;
+
             anim2.Play("TextBox_Tutorial-Move2");
             anim.Play("PlayerTutorial_Move2");
-
+            highlight2.SetActive(true);
         }
+        if(dialogue.index == 7)
+        {
+            highlight2.SetActive(false); //turn highlight off
+        }
+
+
         if (dialogue.index == 8)
         {
             fade.nextScene = true;
