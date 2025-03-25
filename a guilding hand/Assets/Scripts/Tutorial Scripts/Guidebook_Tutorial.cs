@@ -21,6 +21,12 @@ public class Guidebook_Tutorial : MonoBehaviour
 
     public GameObject dialogue2;
 
+    AudioManager_Tutorial audioManger;
+    private void Awake()
+    {
+        audioManger = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_Tutorial>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -78,12 +84,17 @@ public class Guidebook_Tutorial : MonoBehaviour
         Debug.Log("go foward");
         currentindex++;
         GuidebookPages();
+
+        audioManger.PlaySFX(audioManger.GuidebookFlipSFX);
     }
 
     public void Backward()
     {
         currentindex--;
         GuidebookPages();
+
+        audioManger.PlaySFX(audioManger.GuidebookFlipSFX);
+
     }
 
 

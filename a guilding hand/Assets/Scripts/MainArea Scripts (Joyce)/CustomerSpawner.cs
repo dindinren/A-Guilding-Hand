@@ -32,7 +32,11 @@ public class CustomerSpawner : MonoBehaviour
     public pHColissionChange phccs;
     public SpawnManager spawnManager;
 
-
+    AudioManager_MainArea audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+    }
     void Start()
     {
 
@@ -47,10 +51,11 @@ public class CustomerSpawner : MonoBehaviour
     //wait a few seconds for the object to spawn
     IEnumerator SpawnObjectAfterDelay()
     {
+
         // Wait for the specified delay
         yield return new WaitForSeconds(delay);
 
-                spawnManager.StartTrueFalse();
+        spawnManager.StartTrueFalse();
 
         // Spawn the object if no object has been spawned yet
         if (lastSpawnedObject == null)
@@ -58,12 +63,16 @@ public class CustomerSpawner : MonoBehaviour
             SpawnObject();
         }
 
+
         //animation for customer to move toward  
         float elapsed = 0f;
         float duration = 1f;
         GameObject respawn = GameObject.FindGameObjectWithTag("Respawn");
         Vector2 endPos = respawn.transform.position;
         Vector2 startPos = lastSpawnedObject.transform.position;
+
+        audioManager.PlaySFX(audioManager.Walk);
+
 
         while (elapsed < duration)
         {
@@ -76,6 +85,7 @@ public class CustomerSpawner : MonoBehaviour
             yield return null;
         }
         Debug.Log("YOU MOVE NOW!");
+
     }
 
     //to allow the StampDragging Script to call it
@@ -97,6 +107,8 @@ public class CustomerSpawner : MonoBehaviour
         GameObject respawn = GameObject.FindGameObjectWithTag("Respawn2");//cannot reuse "Respawn" because the endPos stores the current pos that the char is at rn
         Vector2 endPos = respawn.transform.position;
         Vector2 startPos = lastSpawnedObject.transform.position;
+
+        audioManager.PlaySFX(audioManager.Walk);
 
         while (elapsed < duration)
         {

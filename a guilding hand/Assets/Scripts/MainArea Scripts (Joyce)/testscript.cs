@@ -20,7 +20,11 @@ public class testscript : MonoBehaviour
     public TextMeshPro testText1;
     public TextMeshPro testText2;
 
-
+    AudioManager_MainArea audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+    }
     private void OnMouseDown()
     {
         //if the instance who has the address reference to the PauseMenu Script where isPause = false, 
@@ -32,6 +36,8 @@ public class testscript : MonoBehaviour
             if (GameObject.FindGameObjectWithTag("Item"))
             {
                 Destroy(gameObject);
+
+                audioManager.PlaySFX(audioManager.ItemSFXClick);
             }
 
             //finding the canvas

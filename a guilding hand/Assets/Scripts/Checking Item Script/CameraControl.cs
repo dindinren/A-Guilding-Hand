@@ -9,7 +9,12 @@ public class CameraControl : MonoBehaviour
     public GameObject guidebook;
     private Vector3 mainlocation;
 
+    AudioManager_MainArea audioManager;
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();  
+    }
 
     void Start()
     {
@@ -45,6 +50,7 @@ public class CameraControl : MonoBehaviour
             Vector3 oldPos = mainCamera.transform.position;
             mainCamera.transform.position = new Vector3(newCameraLocation.transform.position.x, newCameraLocation.transform.position.y, oldPos.z);
 
+            audioManager.PlaySFX(audioManager.ClickSFX);
         }
 
 

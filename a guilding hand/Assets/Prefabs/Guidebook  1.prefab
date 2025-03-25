@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList:
-  - {fileID: 21300000, guid: 370c67f487489174e93f4aeb21b33a64, type: 3}
+  - {fileID: 21300000, guid: d953178605b59ea44b5851134c3d2cb9, type: 3}
   - {fileID: 21300000, guid: ad8d771c9eb33b04d8e9d1511e5f15e5, type: 3}
   - {fileID: 21300000, guid: 516f1dc50d304d448ae0d1eb26eaf64b, type: 3}
   - {fileID: 21300000, guid: c77840cf6facf8941a2aef42ab5cf5fc, type: 3}
@@ -261,6 +261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guidebookpHManager: {fileID: 8068744200051139957}
+  pauseMenu: {fileID: 0}
+  flipright: {fileID: 0}
 --- !u!1 &8182620273463354098
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +411,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guidebookpHManager: {fileID: 8068744200051139957}
+  pauseMenu: {fileID: 0}
+  flipleft: {fileID: 0}
 --- !u!1001 &2655430179158865044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -548,6 +552,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GuidebookpHManager: {fileID: 8068744200051139957}
+  pauseMenu: {fileID: 0}
+  monstersTab: {fileID: 0}
 --- !u!4 &7860806146744115090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5318410478865509126, guid: c42002c76e3db904180245d441fe19b2, type: 3}
@@ -692,6 +698,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GuidebookpHManager: {fileID: 8068744200051139957}
+  pauseMenu: {fileID: 0}
+  gemstoneTab: {fileID: 0}
 --- !u!4 &5963825116623373957 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4253745853734422346, guid: 2ebe785ed270432469954fcaf268f5e3, type: 3}
@@ -836,6 +844,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GuidebookpHManager: {fileID: 8068744200051139957}
+  pauseMenu: {fileID: 0}
+  instructionsTab: {fileID: 0}
 --- !u!4 &6722208153140939600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2488536355483056908, guid: b953fd3fced4fb24db1f7e38ff3d0ea5, type: 3}

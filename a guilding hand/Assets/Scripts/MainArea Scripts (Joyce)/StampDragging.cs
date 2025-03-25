@@ -104,10 +104,12 @@ public class DragDrop2D : MonoBehaviour
                     if(adveninfovar.isItTheSame == true && cusname.areTheNameSame == true && spawnManager.finalResult() == true)
                     {
                         scoremanager.AddPoints();
+                        audioManager.PlaySFX(audioManager.Stamp);
                     }
                     else
                     {
                         scoremanager.MinusPoints();
+                        audioManager.PlaySFX(audioManager.Stamp);
                     }
                 }
                 //Check if player dragged 'Red' Stamp
@@ -118,10 +120,12 @@ public class DragDrop2D : MonoBehaviour
                     if (adveninfovar.isItTheSame == false || cusname.areTheNameSame == false || spawnManager.finalResult() == false)
                     {
                         scoremanager.AddPoints();//why add is because the player is right because they stamp with the incorrect and either of the things are not correct
+                        audioManager.PlaySFX(audioManager.Stamp);
                     }
                     else
                     {
                         scoremanager.MinusPoints();
+                        audioManager.PlaySFX(audioManager.Stamp);
                     }
                 }
 

@@ -38,8 +38,15 @@ public class CanvasFade : MonoBehaviour
             StartCoroutine(FadeOutandThenLoadNextScene(1f));
         }
     }
+    public void ToCredits()
+    {
+        sceneName = "Credits";
+        FadeOut();
+        StartCoroutine(FadeOutandThenLoadNextScene());
+    }
 
-    IEnumerator FadeOutandThenLoadNextScene(float delay)
+
+    IEnumerator FadeOutandThenLoadNextScene(float delay = 1f)
     {
         if (fadeOut)
         {

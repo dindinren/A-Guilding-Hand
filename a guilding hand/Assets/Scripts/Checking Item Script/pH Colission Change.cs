@@ -24,6 +24,12 @@ public class pHColissionChange : MonoBehaviour
     private bool result;
     private SpawnManager predeterminedTrueFalse;
 
+    AudioManager_MainArea audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+    }
+
     private void Start()
     {
         predeterminedTrueFalse = Object.FindAnyObjectByType<SpawnManager>();
@@ -68,6 +74,7 @@ public class pHColissionChange : MonoBehaviour
         
     private void OnTriggerEnter2D(Collider2D other)
     {
+        audioManager.PlaySFX(audioManager.pHDrop);
 
         Debug.Log("Collided with: " + other.gameObject.name); // Debugging line
         bool result = TrueFalse();

@@ -13,11 +13,6 @@ public class CursorManagerForPrefabItem : MonoBehaviour
     public Vector2 cursorHotspot;
 
 
-
-    private void Awake()
-    {
-        
-    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -45,6 +40,7 @@ public class CursorManagerForPrefabItem : MonoBehaviour
     public void OnMouseDown()
     {
         Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
+
 
        // Cursor.SetCursor(cursorItemChange, cursorHotspot, CursorMode.Auto);
 

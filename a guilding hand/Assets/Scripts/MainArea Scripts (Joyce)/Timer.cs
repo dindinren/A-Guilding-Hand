@@ -15,6 +15,13 @@ public class Timer : MonoBehaviour
     public float remainingTime;
 
     private bool go = false;
+
+    AudioManager_MainArea audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -56,6 +63,10 @@ public class Timer : MonoBehaviour
             {
                 remainingTime = 0;
                 timerText.text = "0:00";
+
+                //why putting here plays it????
+                audioManager.GameOver(audioManager.LostBGM);
+
             }
 
 
@@ -63,7 +74,7 @@ public class Timer : MonoBehaviour
             if (remainingTime == 0)
             {
                 // will pop up a screen to say your time is up
-                
+
                 //stops everything in the scene from moving
                 Time.timeScale = 0f;
 
@@ -74,6 +85,7 @@ public class Timer : MonoBehaviour
 
                 timerText.enabled = false;
                 scoreText.SetActive(false);
+
 
             }
         }

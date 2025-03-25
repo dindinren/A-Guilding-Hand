@@ -15,7 +15,11 @@ public class Dialogue : MonoBehaviour
 
     private Animator anim;
 
-
+    AudioManager_Tutorial audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_Tutorial>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,6 +40,8 @@ public class Dialogue : MonoBehaviour
             {
                 NextLine();
                 Debug.Log("to the next line");
+
+                audioManager.PlaySFX(audioManager.ClickSFX);
             }
             else
             {

@@ -26,6 +26,8 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(FadeOutandThenLoadNextScene());
     }
 
+
+
     private void Start()
     {
         play.onClick.AddListener(CheckifCanGoNextScene);
@@ -61,8 +63,9 @@ public class MainMenu : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         SceneManager.LoadScene(sceneName);
-
     }
+
+
     public void FadeOut()
     {
         canvasGroup.alpha = 1f;
@@ -72,10 +75,11 @@ public class MainMenu : MonoBehaviour
 
 
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    //public void PlayGame()
+    //{
+    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    //}
+    
     public void QuitGame()
     {
         Debug.Log("QUIT");

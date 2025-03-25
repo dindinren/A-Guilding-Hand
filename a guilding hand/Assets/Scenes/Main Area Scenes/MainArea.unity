@@ -3684,6 +3684,7 @@ MonoBehaviour:
   playerNeutral: {fileID: 1871249661}
   playerSad: {fileID: 515591610}
   playerHappy: {fileID: 1120743560}
+  healthscore: 0
 --- !u!114 &935916004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3739,7 +3740,7 @@ MonoBehaviour:
   gameEnd: {fileID: 616261321}
   scoreText: {fileID: 1737160564}
   anim: {fileID: 935916006}
-  remainingTime: 350
+  remainingTime: 400
 --- !u!95 &935916006
 Animator:
   serializedVersion: 7
@@ -9308,7 +9309,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9993,10 +9994,16 @@ MonoBehaviour:
   SFXSource: {fileID: 1801550250}
   MainBGM: {fileID: 8300000, guid: 57074df0b0dbcb949948b03c95615d04, type: 3}
   LostBGM: {fileID: 8300000, guid: 5bdd81e35ec2f0b43bbdaa4090494351, type: 3}
+  WinBGM: {fileID: 8300000, guid: 1c6204ddf2ab5624aa03511d3645bb09, type: 3}
   HoverSFX: {fileID: 8300000, guid: 8298123eb83af3f47ade25f9a96d9b31, type: 3}
   ClickSFX: {fileID: 8300000, guid: e10f9ad1c1c52a14da3f4a24b9e3fb8f, type: 3}
   ItemSFX: {fileID: 8300000, guid: e0f25f4c6c26db9459db498820b33f8b, type: 3}
+  ItemSFXClick: {fileID: 8300000, guid: fa021ba926b8fb343aaf2642aadc60d8, type: 3}
   GuidebookFlipSFX: {fileID: 8300000, guid: 09047cc443b8bea4fad6aff90b9c4f75, type: 3}
+  Walk: {fileID: 8300000, guid: 2de1152a956acfe48a31c531e7494276, type: 3}
+  Stamp: {fileID: 8300000, guid: c2ad0d5de87010049a2c60405278a42a, type: 3}
+  pHDrop: {fileID: 8300000, guid: 57698200e36baca469923fafc0e560c7, type: 3}
+  pHGet: {fileID: 8300000, guid: a7607d4000a288d4eaf31d1391e74bba, type: 3}
 --- !u!4 &2029511325
 Transform:
   m_ObjectHideFlags: 0
@@ -10614,7 +10621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3653031874901387187, guid: 87a4df02f4c2e314b809684858f4df17, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -9.799988
+      value: -9.800049
       objectReference: {fileID: 0}
     - target: {fileID: 3653031874901387187, guid: 87a4df02f4c2e314b809684858f4df17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
