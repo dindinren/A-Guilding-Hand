@@ -20,6 +20,8 @@ public class AudioManager_MainArea : MonoBehaviour
     public AudioClip Stamp;
     public AudioClip pHDrop;
     public AudioClip pHGet;
+    public AudioClip PlayerHappySound;
+    public AudioClip PlayerSadSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,7 +40,11 @@ public class AudioManager_MainArea : MonoBehaviour
         musicSource.Play();
     }
 
-
+    public void YouWin(AudioClip clip)
+    {
+        musicSource.clip = WinBGM;
+        musicSource.Play();
+    }
 
 
     // Update is called once per frame

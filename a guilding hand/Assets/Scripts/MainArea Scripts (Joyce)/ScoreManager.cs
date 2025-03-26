@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject playerHappy;
 
 
-    int score = 0;
+    public int score = 0;
     public int healthscore = 0; //remember to change to 0
     int playerstate = 0;
 
@@ -33,8 +33,6 @@ public class ScoreManager : MonoBehaviour
 
 
     AudioManager_MainArea audioManager;
-
-
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
@@ -76,6 +74,7 @@ public class ScoreManager : MonoBehaviour
                 playerSad.SetActive(true);
                 playerHappy.SetActive(false);
                 playerNeutral.SetActive(false);
+
                 break;
             case 2:
                 //Debug.Log("player is happy :D");
@@ -83,6 +82,7 @@ public class ScoreManager : MonoBehaviour
                 playerSad.SetActive(false);
                 playerHappy.SetActive(true);
                 playerNeutral.SetActive(false);
+
                 break;
             default:
                 //Debug.Log("player is neutral :|");
@@ -112,17 +112,25 @@ public class ScoreManager : MonoBehaviour
         score += 1;
         scoreText.text = "SCORE: " + score.ToString();
 
+        //if score reaches 8, the winScreen will play
+        if (score == 8)
+        {
+            winScreen.SetActive(true);
+
+            audioManager.YouWin(audioManager.WinBGM);
+
+            Time.timeScale = 0f;
+        }
+
+
         playerstate = 2;
         Debug.Log("playerstate: " + playerstate);
         PlayerState();
-        anim.Play("PlayerHappy");
 
-        //if score reaches 8, the winScreen will play
-        if (score == 8) 
-        {
-            winScreen.SetActive(true);
-            Time.timeScale = 0f;
-        }
+        anim.Play("PlayerHappy");
+        
+        audioManager.PlaySFX(audioManager.PlayerHappySound);
+
 
         StartCoroutine(Wait(1f)); //change the player state
 
@@ -150,6 +158,8 @@ public class ScoreManager : MonoBehaviour
 
         PlayerState();
         anim.Play("PlayerSad");
+
+        audioManager.PlaySFX(audioManager.PlayerSadSound);
 
         StartCoroutine(Wait(1f));//change the player state
 
