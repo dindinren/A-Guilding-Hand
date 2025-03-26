@@ -7663,8 +7663,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sprite_Pic:
-  - {fileID: 8037615818263706666, guid: 531de0977bb412a4691244828c43b477, type: 3}
-  - {fileID: 8037615818263706666, guid: 531de0977bb412a4691244828c43b477, type: 3}
+  - {fileID: -2827842720508559068, guid: 56d5bc43400e7694890266c51b60dccd, type: 3}
+  - {fileID: -2827842720508559068, guid: 56d5bc43400e7694890266c51b60dccd, type: 3}
   - {fileID: -3013526210534293396, guid: 21f242fc189464748844186ba50975c3, type: 3}
   - {fileID: -3013526210534293396, guid: 21f242fc189464748844186ba50975c3, type: 3}
   - {fileID: 2039137632690743073, guid: 1725cb94282832843b3ad7f77b950b2e, type: 3}
@@ -7672,12 +7672,12 @@ MonoBehaviour:
   - {fileID: -6884161205712442305, guid: 51d5583631f7d3d4eb399279c70cd79c, type: 3}
   - {fileID: -6884161205712442305, guid: 51d5583631f7d3d4eb399279c70cd79c, type: 3}
   Sprite_Scale:
+  - {x: 0.25, y: 0.25, z: 0.25}
+  - {x: 0.25, y: 0.25, z: 0.25}
   - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
-  - {x: 0.2, y: 0.2, z: 0.2}
-  - {x: 0.2, y: 0.2, z: 0.2}
-  - {x: 0.2, y: 0.2, z: 0.2}
-  - {x: 0.2, y: 0.2, z: 0.2}
+  - {x: 0.3, y: 0.3, z: 0.3}
+  - {x: 0.3, y: 0.3, z: 0.3}
   - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
 --- !u!1 &1453741650
@@ -8269,8 +8269,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sprite_Pic:
-  - {fileID: 8037615818263706666, guid: 531de0977bb412a4691244828c43b477, type: 3}
   - {fileID: -2827842720508559068, guid: 56d5bc43400e7694890266c51b60dccd, type: 3}
+  - {fileID: 8037615818263706666, guid: 531de0977bb412a4691244828c43b477, type: 3}
   - {fileID: -3013526210534293396, guid: 21f242fc189464748844186ba50975c3, type: 3}
   - {fileID: 30815617794802864, guid: c0a2036bc87802e48874a58e6c58b90b, type: 3}
   - {fileID: 2039137632690743073, guid: 1725cb94282832843b3ad7f77b950b2e, type: 3}
@@ -8280,10 +8280,10 @@ MonoBehaviour:
   Sprite_Scale:
   - {x: 0.3, y: 0.3, z: 0.3}
   - {x: 0.3, y: 0.3, z: 0.3}
-  - {x: 0.3, y: 0.3, z: 0.3}
-  - {x: 0.3, y: 0.3, z: 0.3}
-  - {x: 0.3, y: 0.3, z: 0.3}
-  - {x: 0.3, y: 0.3, z: 0.3}
+  - {x: 0.25, y: 0.25, z: 0.25}
+  - {x: 0.25, y: 0.25, z: 0.25}
+  - {x: 0.35, y: 0.35, z: 0.35}
+  - {x: 0.35, y: 0.35, z: 0.35}
   - {x: 0.3, y: 0.3, z: 0.3}
   - {x: 0.3, y: 0.3, z: 0.3}
 --- !u!212 &1711883817
@@ -10244,14 +10244,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sprite_Pic:
-  - {fileID: 8037615818263706666, guid: 531de0977bb412a4691244828c43b477, type: 3}
+  - {fileID: -2827842720508559068, guid: 56d5bc43400e7694890266c51b60dccd, type: 3}
   - {fileID: -3013526210534293396, guid: 21f242fc189464748844186ba50975c3, type: 3}
   - {fileID: 2039137632690743073, guid: 1725cb94282832843b3ad7f77b950b2e, type: 3}
   - {fileID: -6884161205712442305, guid: 51d5583631f7d3d4eb399279c70cd79c, type: 3}
   Sprite_Scale:
   - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
-  - {x: 0.2, y: 0.2, z: 0.2}
+  - {x: 0.25, y: 0.25, z: 0.25}
   - {x: 0.2, y: 0.2, z: 0.2}
 --- !u!212 &2013707892
 SpriteRenderer:
@@ -10426,14 +10426,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sprite_Pic:
-  - {fileID: 8037615818263706666, guid: 531de0977bb412a4691244828c43b477, type: 3}
+  - {fileID: -2827842720508559068, guid: 56d5bc43400e7694890266c51b60dccd, type: 3}
   - {fileID: -3013526210534293396, guid: 21f242fc189464748844186ba50975c3, type: 3}
   - {fileID: 2039137632690743073, guid: 1725cb94282832843b3ad7f77b950b2e, type: 3}
   - {fileID: -6884161205712442305, guid: 51d5583631f7d3d4eb399279c70cd79c, type: 3}
   Sprite_Scale:
-  - {x: 0.2, y: 0.2, z: 0.2}
-  - {x: 0.2, y: 0.2, z: 0.2}
-  - {x: 0.2, y: 0.2, z: 0.2}
+  - {x: 0.25, y: 0.25, z: 0.25}
+  - {x: 0.15, y: 0.15, z: 0.15}
+  - {x: 0.3, y: 0.3, z: 0.3}
   - {x: 0.2, y: 0.2, z: 0.2}
 --- !u!61 &2024182087
 BoxCollider2D:
