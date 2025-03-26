@@ -38,12 +38,14 @@ public class AudioManager_MainArea : MonoBehaviour
     {
         musicSource.clip = LostBGM;
         musicSource.Play();
+        musicSource.loop = false;
     }
 
     public void YouWin(AudioClip clip)
     {
         musicSource.clip = WinBGM;
         musicSource.Play();
+        musicSource.loop = false;
     }
 
 

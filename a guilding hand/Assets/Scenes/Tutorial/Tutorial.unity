@@ -175,9 +175,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.35
+  m_Volume: 0.45
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -621,7 +621,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -975,7 +975,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -568.5, y: 44.1}
-  m_SizeDelta: {x: 1427.1, y: 144.2}
+  m_SizeDelta: {x: 1548, y: 144.2}
   m_Pivot: {x: -0, y: 1}
 --- !u!114 &1268637511
 MonoBehaviour:
@@ -999,8 +999,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: heave ho! Off we go, on our ship to waters unknown
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c60d115ed9ecb4c4ea9a498310521197, type: 2}
-  m_sharedMaterial: {fileID: 852966055277706042, guid: c60d115ed9ecb4c4ea9a498310521197, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8dc861e473375234595e4cf8b2ba5b0a, type: 2}
+  m_sharedMaterial: {fileID: -1838913040995682400, guid: 8dc861e473375234595e4cf8b2ba5b0a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1035,8 +1035,8 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_wordSpacing: 7
+  m_lineSpacing: -33
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1336,7 +1336,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -568.5, y: 44.1}
-  m_SizeDelta: {x: 1427.1, y: 144.2}
+  m_SizeDelta: {x: 1424, y: 144.2}
   m_Pivot: {x: -0, y: 1}
 --- !u!95 &1509150464
 Animator:
@@ -1382,8 +1382,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: heave ho! Off we go, on our ship to waters unknown
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c60d115ed9ecb4c4ea9a498310521197, type: 2}
-  m_sharedMaterial: {fileID: 852966055277706042, guid: c60d115ed9ecb4c4ea9a498310521197, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8dc861e473375234595e4cf8b2ba5b0a, type: 2}
+  m_sharedMaterial: {fileID: -1838913040995682400, guid: 8dc861e473375234595e4cf8b2ba5b0a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1418,8 +1418,8 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_wordSpacing: 7
+  m_lineSpacing: -33
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2498,10 +2498,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 73276018}
   SFXSource: {fileID: 975464609}
-  tutorialBGM: {fileID: 8300000, guid: 563afa53606306f4c9fe553098fd7af5, type: 3}
-  HoverSFX: {fileID: 8300000, guid: 8298123eb83af3f47ade25f9a96d9b31, type: 3}
-  ClickSFX: {fileID: 8300000, guid: e10f9ad1c1c52a14da3f4a24b9e3fb8f, type: 3}
-  GuidebookFlipSFX: {fileID: 8300000, guid: 09047cc443b8bea4fad6aff90b9c4f75, type: 3}
+  tutorialBGM: {fileID: 8300000, guid: 417ad59eacfdf434d9ddce09de88865f, type: 3}
+  HoverSFX: {fileID: 8300000, guid: 5f501c0630301124f95d5165b79164bb, type: 3}
+  ClickSFX: {fileID: 8300000, guid: 2e10c6bc50a39ce4e8d22fbe0a6140d0, type: 3}
+  GuidebookFlipSFX: {fileID: 8300000, guid: cbf9ec04b81b98b4abe1097095c8f62d, type: 3}
 --- !u!4 &1884962256
 Transform:
   m_ObjectHideFlags: 0
@@ -2637,7 +2637,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 20575077734822359, guid: c65810a3b3d01604b824272afdedbcbc, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 20575077734822359, guid: c65810a3b3d01604b824272afdedbcbc, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
