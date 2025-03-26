@@ -12,7 +12,7 @@ public class SpawnManager : MonoBehaviour
     public ItemSpawner targetpH;
 
 
-    private bool predeterminedTrueFalse;
+    public bool predeterminedTrueFalse;
 
     public bool hasChanged = false;
     private int realorfakeID;

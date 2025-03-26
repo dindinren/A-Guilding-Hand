@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -22,7 +23,7 @@ public class pHColissionChange : MonoBehaviour
     public BoxCollider2D BoxCollider2D;
     private bool hasChanged = false;
     private bool result;
-    private SpawnManager predeterminedTrueFalse;
+    public SpawnManager predeterminedTrueFalse;
 
     AudioManager_MainArea audioManager;
     private void Awake()
@@ -39,7 +40,7 @@ public class pHColissionChange : MonoBehaviour
     {
         if (!hasChanged)
         {
-            if (predeterminedTrueFalse.StartTrueFalse() == true)
+            if (predeterminedTrueFalse.predeterminedTrueFalse == true)
             {
                 result = true;
             }
@@ -77,8 +78,7 @@ public class pHColissionChange : MonoBehaviour
         audioManager.PlaySFX(audioManager.pHDrop);
 
         Debug.Log("Collided with: " + other.gameObject.name); // Debugging line
-        bool result = TrueFalse();
-        if (other.CompareTag("PipetteTip") && result == true)
+        if (other.CompareTag("PipetteTip") && predeterminedTrueFalse.predeterminedTrueFalse == true)
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {
@@ -112,7 +112,7 @@ public class pHColissionChange : MonoBehaviour
         }
         
 
-        else if (other.CompareTag("PipetteTip") && result == false)
+        else if (other.CompareTag("PipetteTip") && predeterminedTrueFalse.predeterminedTrueFalse == false)
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {
