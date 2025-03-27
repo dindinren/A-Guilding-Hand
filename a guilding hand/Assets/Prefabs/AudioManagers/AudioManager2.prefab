@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 4142756067827325230}
   SFXSource: {fileID: 1386072196421171290}
-  CutsceneBGM: {fileID: 8300000, guid: b8689f262a13fec4799d45f3b89ef736, type: 3}
-  ClickSFX: {fileID: 8300000, guid: e10f9ad1c1c52a14da3f4a24b9e3fb8f, type: 3}
+  CutsceneBGM: {fileID: 8300000, guid: 9cb3a04126925774eb2e78653d169c37, type: 3}
+  ClickSFX: {fileID: 8300000, guid: 2e10c6bc50a39ce4e8d22fbe0a6140d0, type: 3}
 --- !u!1 &3573817808136287195
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,9 +95,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.43
+  m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -224,7 +224,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

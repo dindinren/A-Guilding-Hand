@@ -293,8 +293,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Let's get through this long night
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c60d115ed9ecb4c4ea9a498310521197, type: 2}
-  m_sharedMaterial: {fileID: 852966055277706042, guid: c60d115ed9ecb4c4ea9a498310521197, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8dc861e473375234595e4cf8b2ba5b0a, type: 2}
+  m_sharedMaterial: {fileID: -1838913040995682400, guid: 8dc861e473375234595e4cf8b2ba5b0a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -329,8 +329,8 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_wordSpacing: 7
+  m_lineSpacing: -33
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

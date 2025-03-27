@@ -479,18 +479,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 7990562918453482829}
-          m_TargetAssemblyTypeName: AudioManager_Cutscenes, Assembly-CSharp
-          m_MethodName: PlayClickSFX
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: e10f9ad1c1c52a14da3f4a24b9e3fb8f, type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -518,6 +506,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 7990562918453482829}
+          m_TargetAssemblyTypeName: AudioManager_Cutscenes, Assembly-CSharp
+          m_MethodName: PlayClickSFX
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 2e10c6bc50a39ce4e8d22fbe0a6140d0, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -756,6 +756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager2
       objectReference: {fileID: 0}
+    - target: {fileID: 1386072196421171290, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2265381574165200916, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 732.1902
@@ -796,6 +800,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4142756067827325230, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142756067827325230, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058830103011504456, guid: 33f88b87e7608c14880af74485de3c63, type: 3}
+      propertyPath: CutsceneBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: 998b3a56f7ea1e544876d9e1ebde98d0, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
