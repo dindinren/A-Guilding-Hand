@@ -3703,7 +3703,7 @@ MonoBehaviour:
   gameEnd: {fileID: 616261321}
   scoreText: {fileID: 1737160564}
   anim: {fileID: 935916006}
-  remainingTime: 5
+  remainingTime: 350
 --- !u!95 &935916006
 Animator:
   serializedVersion: 7
@@ -9091,7 +9091,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9687,7 +9687,7 @@ AudioSource:
   m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
