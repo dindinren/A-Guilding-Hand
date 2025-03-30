@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 3299618301731376160, guid: 2fe80c76b2d78ff49a9105c5dcc17da0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 035bdfcdb2da8614cbadb59b04202d55, type: 3}
+      objectReference: {fileID: 21300000, guid: faeee41f89f5c754fb994abebad1edef, type: 3}
     - target: {fileID: 4600148992362081569, guid: 2fe80c76b2d78ff49a9105c5dcc17da0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.8
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -708,7 +708,7 @@ PrefabInstance:
     - target: {fileID: 7477600739392209621, guid: 81023b35e09f93c4fa4a75d9ec4d56e9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: cbb4df16173805f4785b9d6de0ab0abc, type: 3}
+      objectReference: {fileID: 21300000, guid: c04ef3e12d4a2384aad9fd2baced70c4, type: 3}
     - target: {fileID: 8528653760362730062, guid: 81023b35e09f93c4fa4a75d9ec4d56e9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -719,27 +719,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8528653760362730062, guid: 81023b35e09f93c4fa4a75d9ec4d56e9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8528653760362730062, guid: 81023b35e09f93c4fa4a75d9ec4d56e9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8528653760362730062, guid: 81023b35e09f93c4fa4a75d9ec4d56e9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8528653760362730062, guid: 81023b35e09f93c4fa4a75d9ec4d56e9, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8528653760362730062, guid: 81023b35e09f93c4fa4a75d9ec4d56e9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 1920
       objectReference: {fileID: 0}
     - target: {fileID: 8528653760362730062, guid: 81023b35e09f93c4fa4a75d9ec4d56e9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 8528653760362730062, guid: 81023b35e09f93c4fa4a75d9ec4d56e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -792,6 +792,10 @@ PrefabInstance:
     - target: {fileID: 8545563386607701296, guid: 81023b35e09f93c4fa4a75d9ec4d56e9, type: 3}
       propertyPath: m_Name
       value: FadeInForC2-4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105369733975449481, guid: 81023b35e09f93c4fa4a75d9ec4d56e9, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -976,7 +980,7 @@ Camera:
   m_GameObject: {fileID: 2096705012}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.18082747, g: 0.21078518, b: 0.2578616, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
