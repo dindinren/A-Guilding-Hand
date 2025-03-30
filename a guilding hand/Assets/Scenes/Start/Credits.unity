@@ -445,10 +445,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "PRODUCED BY\nNPC Studios \n\nART \nUI & Assets Artist  -   Kelly\nCharacter
-    & Cutscene Artist-  Wan Ni\n\nPROGRAMMING\nGame Programmer  -  Ameera\nGame Programmer  
-    -  Gerard\nGame Programmer  -  Joycelyn\n\n\nMUSIC + SFX\nMusics are sourced
-    from Metadigger\nSFXs are sourced from Soundly + Metadigger\n\n\nFONTs\nNorican\nCopyright
-    (c) 2011 by vernon adams \n(vern@newtypography.co.uk),\r\n\nDancing Script\nCopyright
+    & Cutscene Artist-  Wan Ni\n\nPROGRAMMING\nGame Programmer, Cutscene & Main Menu 
+    -  Ameera\nGame Programmer, Item Checking  -  Gerard\nGame Programmer, Gameplay
+    Loop  -  Joycelyn\n\n\nMUSIC + SFX\nMusics are sourced from Metadigger\nSFXs
+    are sourced from Soundly + Metadigger\n\n\nFONTs\nNorican\nCopyright (c) 2011
+    by vernon adams \n(vern@newtypography.co.uk),\r\n\nDancing Script\nCopyright
     2016 The Dancing Script Project \nAuthors (impallari@gmail.com)\n\nQwigley\nCopyright
     (c) 2011 TypeSETit, LLC (typesetit@att.net),\n\n\n\nThank You For Playing :D"
   m_isRightToLeft: 0
