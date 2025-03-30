@@ -474,7 +474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3324671223638717940, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
       propertyPath: line
-      value: No one is willing to take you in...
+      value: Until one fateful day...
       objectReference: {fileID: 0}
     - target: {fileID: 3324671223638717940, guid: 5e6b7604e92af4f479a3c20c3f0cd07e, type: 3}
       propertyPath: lines.Array.size
