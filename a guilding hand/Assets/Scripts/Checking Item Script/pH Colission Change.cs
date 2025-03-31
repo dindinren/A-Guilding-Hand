@@ -78,7 +78,7 @@ public class pHColissionChange : MonoBehaviour
         audioManager.PlaySFX(audioManager.pHDrop);
 
         Debug.Log("Collided with: " + other.gameObject.name); // Debugging line
-        if (other.CompareTag("PipetteTip") && predeterminedTrueFalse.predeterminedTrueFalse == true)
+        if ((other.CompareTag("PipetteTip")) && (predeterminedTrueFalse.predeterminedTrueFalse == true || trueorfalseID == 0))
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {
@@ -109,10 +109,18 @@ public class pHColissionChange : MonoBehaviour
                 BoxCollider2D.enabled = false;
 
             }
+            if (spawnManagerObject.superInitialTargetID == 4)
+            {
+                // Debug.Log("Results are true");
+                GetComponent<SpriteRenderer>().sprite = twoPH;
+                BoxCollider2D.enabled = false;
+
+            }
         }
+
         
 
-        else if (other.CompareTag("PipetteTip") && predeterminedTrueFalse.predeterminedTrueFalse == false)
+        else if ((other.CompareTag("PipetteTip")) && (predeterminedTrueFalse.predeterminedTrueFalse == false || trueorfalseID == 1))
         {
             if (spawnManagerObject.superInitialTargetID == 0)
             {
@@ -139,6 +147,13 @@ public class pHColissionChange : MonoBehaviour
             {
                 // Debug.Log("Results are false");
                 GetComponent<SpriteRenderer>().sprite = sevenPH;
+                BoxCollider2D.enabled = false;
+
+            }
+            if (spawnManagerObject.superInitialTargetID == 4)
+            {
+                // Debug.Log("Results are false");
+                GetComponent<SpriteRenderer>().sprite = onePH;
                 BoxCollider2D.enabled = false;
 
             }

@@ -192,7 +192,7 @@ SpriteRenderer:
   m_GameObject: {fileID: 65837728}
   m_Enabled: 1
   m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -262,6 +262,7 @@ MonoBehaviour:
   clearSprite: {fileID: -6081636792791996837, guid: ed1bf6d3463de274cb08996725a45b62, type: 3}
   Collissionchangescript: {fileID: 403825263}
   BoxCollider2D: {fileID: 403825264}
+  predeterminedTrueFalse: {fileID: 0}
 --- !u!61 &65837733
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2208,6 +2209,7 @@ MonoBehaviour:
   Target: {fileID: 2024182086}
   damagedTarget: {fileID: 1711883816}
   targetpH: {fileID: 1452549575}
+  predeterminedTrueFalse: 0
   hasChanged: 0
   superInitialTargetID: 0
   targetpHID: 0
@@ -7795,6 +7797,8 @@ MonoBehaviour:
   - {fileID: 2039137632690743073, guid: 1725cb94282832843b3ad7f77b950b2e, type: 3}
   - {fileID: -6884161205712442305, guid: 51d5583631f7d3d4eb399279c70cd79c, type: 3}
   - {fileID: -6884161205712442305, guid: 51d5583631f7d3d4eb399279c70cd79c, type: 3}
+  - {fileID: -3018039721113356159, guid: 0f104a7ec1f09ae4aa0cc60aad0d77c4, type: 3}
+  - {fileID: -3018039721113356159, guid: 0f104a7ec1f09ae4aa0cc60aad0d77c4, type: 3}
   Sprite_Scale:
   - {x: 0.25, y: 0.25, z: 0.25}
   - {x: 0.25, y: 0.25, z: 0.25}
@@ -7802,6 +7806,8 @@ MonoBehaviour:
   - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.3, y: 0.3, z: 0.3}
   - {x: 0.3, y: 0.3, z: 0.3}
+  - {x: 0.2, y: 0.2, z: 0.2}
+  - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
 --- !u!1 &1453741650
@@ -8526,6 +8532,8 @@ MonoBehaviour:
   - {fileID: 8602100366766546581, guid: 1f428e06192e78e4a8459d37e01c4e50, type: 3}
   - {fileID: -6884161205712442305, guid: 51d5583631f7d3d4eb399279c70cd79c, type: 3}
   - {fileID: -4003894146798692163, guid: 09e2e7d428ada2c4da3618632910c43b, type: 3}
+  - {fileID: -3018039721113356159, guid: 0f104a7ec1f09ae4aa0cc60aad0d77c4, type: 3}
+  - {fileID: 2309261399856837196, guid: 6349153d395b9b54086349e8b1547bab, type: 3}
   Sprite_Scale:
   - {x: 0.3, y: 0.3, z: 0.3}
   - {x: 0.3, y: 0.3, z: 0.3}
@@ -8533,6 +8541,8 @@ MonoBehaviour:
   - {x: 0.25, y: 0.25, z: 0.25}
   - {x: 0.35, y: 0.35, z: 0.35}
   - {x: 0.35, y: 0.35, z: 0.35}
+  - {x: 0.3, y: 0.3, z: 0.3}
+  - {x: 0.3, y: 0.3, z: 0.3}
   - {x: 0.3, y: 0.3, z: 0.3}
   - {x: 0.3, y: 0.3, z: 0.3}
 --- !u!212 &1711883817
@@ -10103,10 +10113,12 @@ MonoBehaviour:
   - {fileID: -3013526210534293396, guid: 21f242fc189464748844186ba50975c3, type: 3}
   - {fileID: 2039137632690743073, guid: 1725cb94282832843b3ad7f77b950b2e, type: 3}
   - {fileID: -6884161205712442305, guid: 51d5583631f7d3d4eb399279c70cd79c, type: 3}
+  - {fileID: -3018039721113356159, guid: 0f104a7ec1f09ae4aa0cc60aad0d77c4, type: 3}
   Sprite_Scale:
   - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.25, y: 0.25, z: 0.25}
+  - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
 --- !u!212 &2013707892
 SpriteRenderer:
@@ -10285,10 +10297,12 @@ MonoBehaviour:
   - {fileID: -3013526210534293396, guid: 21f242fc189464748844186ba50975c3, type: 3}
   - {fileID: 2039137632690743073, guid: 1725cb94282832843b3ad7f77b950b2e, type: 3}
   - {fileID: -6884161205712442305, guid: 51d5583631f7d3d4eb399279c70cd79c, type: 3}
+  - {fileID: -3018039721113356159, guid: 0f104a7ec1f09ae4aa0cc60aad0d77c4, type: 3}
   Sprite_Scale:
   - {x: 0.25, y: 0.25, z: 0.25}
   - {x: 0.15, y: 0.15, z: 0.15}
   - {x: 0.3, y: 0.3, z: 0.3}
+  - {x: 0.2, y: 0.2, z: 0.2}
   - {x: 0.2, y: 0.2, z: 0.2}
 --- !u!61 &2024182087
 BoxCollider2D:
