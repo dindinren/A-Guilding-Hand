@@ -262,6 +262,7 @@ MonoBehaviour:
   clearSprite: {fileID: -6081636792791996837, guid: ed1bf6d3463de274cb08996725a45b62, type: 3}
   Collissionchangescript: {fileID: 403825263}
   BoxCollider2D: {fileID: 403825264}
+  predeterminedTrueFalse: {fileID: 0}
 --- !u!61 &65837733
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1104,6 +1105,10 @@ PrefabInstance:
       propertyPath: instructionsTab
       value: 
       objectReference: {fileID: 403250897}
+    - target: {fileID: 8068744200051139957, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
+      propertyPath: 'spriteList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 8205b9cbb2fa07d46a912771c78f6f0e, type: 3}
     - target: {fileID: 8995199199925401105, guid: 221c163ca961eea43bb45b5be295be72, type: 3}
       propertyPath: flipright
       value: 
@@ -2208,6 +2213,7 @@ MonoBehaviour:
   Target: {fileID: 2024182086}
   damagedTarget: {fileID: 1711883816}
   targetpH: {fileID: 1452549575}
+  predeterminedTrueFalse: 0
   hasChanged: 0
   superInitialTargetID: 0
   targetpHID: 0
@@ -3677,7 +3683,11 @@ MonoBehaviour:
   - Carmen
   - Luce
   - Freddie
-  - Ichiban
+  - Ishmael
+  - Don
+  - Dan
+  - Krill
+  - Alex
   - Luca
   - Jessie
   - Jesse
@@ -9684,7 +9694,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.365
   m_Pitch: 1
   Loop: 1
   Mute: 0

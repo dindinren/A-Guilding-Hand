@@ -31,7 +31,7 @@ public class CanvasFadeForMainArea : MonoBehaviour
     {
         if(fadeIn == true)
         {
-            StartCoroutine(FadeInTimer(0.3f));
+            StartCoroutine(FadeInTimer(0.5f));
         }
 
         if(fadeOut == true)
