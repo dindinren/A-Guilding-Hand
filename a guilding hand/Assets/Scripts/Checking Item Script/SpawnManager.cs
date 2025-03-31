@@ -106,7 +106,7 @@ public class SpawnManager : MonoBehaviour
 
     public void SetUpQuestItem()
     {
-        superInitialTargetID = Random.Range(0, 4);
+        superInitialTargetID = Random.Range(0, 5);
         superInitialTarget.UseSprite(superInitialTargetID);
         initialTargetID = superInitialTargetID;
         initialTarget.UseSprite(initialTargetID);
@@ -178,7 +178,7 @@ public class SpawnManager : MonoBehaviour
 
         }
 
-        else
+        else if (initialTargetID == 3)
         {
             targetID = 3;
             Target.UseSprite(targetID);
@@ -194,6 +194,27 @@ public class SpawnManager : MonoBehaviour
                     damagedTarget.UseSprite(damagedTargetID);
                 }
                 targetpHID = Random.Range(6, 8);
+                targetpH.UseSprite(targetpHID);
+            }
+
+        }
+
+        else
+        {
+            targetID = 4;
+            Target.UseSprite(targetID);
+            if (targetID == 4)
+            {
+                damagedTargetID = Random.Range(8, 10);
+                if (predeterminedTrueFalse == true)
+                {
+                    damagedTarget.UseSprite(damagedTargetID = 8);
+                }
+                else
+                {
+                    damagedTarget.UseSprite(damagedTargetID);
+                }
+                targetpHID = Random.Range(8, 10);
                 targetpH.UseSprite(targetpHID);
             }
 
