@@ -20,7 +20,7 @@ public class SpawnManager : MonoBehaviour
     public int superInitialTargetID;
     private int initialTargetID;
     private int targetID;
-    private int damagedTargetID;
+    public int damagedTargetID;
     public int targetpHID;
     public pHColissionChange pHColissionChange;
     private bool storedpHresult;

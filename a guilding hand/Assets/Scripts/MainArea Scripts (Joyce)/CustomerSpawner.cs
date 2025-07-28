@@ -6,8 +6,8 @@ public class CustomerSpawner : MonoBehaviour
 {
     // List of customers to spawn
     public List<GameObject> CustomersToSpawn = new List<GameObject>();
-    
-    public int index;
+
+    public int index; // Index is still used to select the customer prefab from the list
 
     // Time for the items to spawn
     public float itemstimetospawn;
@@ -22,7 +22,7 @@ public class CustomerSpawner : MonoBehaviour
     // Reference to the last spawned object
     public GameObject lastSpawnedObject;
 
-    // calling the ItemSpawn class to be used so that it can be respawned after the players stamp the Quest Form    
+    // calling the ItemSpawn class to be used so that it can be respawned after the players stamp the Quest Form     
     public ItemSpawn itemspawn;
 
     //animation curve
@@ -36,6 +36,8 @@ public class CustomerSpawner : MonoBehaviour
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+        // Debug Log for AudioManager reference
+        Debug.Log("CustomerSpawner Awake: AudioManager found? " + (audioManager != null ? "Yes!" : "No, it's null! (Check if AudioManager_MainArea exists and has tag 'AudioManager')"));
     }
     void Start()
     {
@@ -60,7 +62,7 @@ public class CustomerSpawner : MonoBehaviour
         // Spawn the object if no object has been spawned yet
         if (lastSpawnedObject == null)
         {
-            SpawnObject();
+            SpawnObject(); // Ensure SpawnObject is called to set 'lastSpawnedObject' and its tag
         }
 
 
@@ -71,8 +73,18 @@ public class CustomerSpawner : MonoBehaviour
         Vector2 endPos = respawn.transform.position;
         Vector2 startPos = lastSpawnedObject.transform.position;
 
-        audioManager.PlaySFX(audioManager.Walk);
-
+        // --- Debug Log for actual customer tag ---
+        if (lastSpawnedObject != null)
+        {
+            string customerActualTag = lastSpawnedObject.tag;
+            Debug.Log($"CustomerSpawner: Spawning Customer. Its actual Tag is: '{customerActualTag}'");
+            audioManager.PlayCustomerFootstepSFX(customerActualTag);
+        }
+        else
+        {
+            Debug.LogError("CustomerSpawner: lastSpawnedObject is null on arrival animation. Check if customer prefab is assigned to CustomersToSpawn list.");
+        }
+        // ---
 
         while (elapsed < duration)
         {
@@ -92,7 +104,7 @@ public class CustomerSpawner : MonoBehaviour
     public void CustomerDelete()
     {
         //at most 3 seconds to not immediately despawn the customer along with the 3 items
-        StartCoroutine(GetReadytoDelete(3f)); 
+        StartCoroutine(GetReadytoDelete(3f));
     }
 
     //the customer will despawn and then respawn after a while
@@ -101,14 +113,24 @@ public class CustomerSpawner : MonoBehaviour
 
         yield return new WaitForSeconds(delay);
 
-        //animation for customer to go back   
         float elapsed = 0f;
         float duration = 1f;
-        GameObject respawn = GameObject.FindGameObjectWithTag("Respawn2");//cannot reuse "Respawn" because the endPos stores the current pos that the char is at rn
+        GameObject respawn = GameObject.FindGameObjectWithTag("Respawn2");
         Vector2 endPos = respawn.transform.position;
         Vector2 startPos = lastSpawnedObject.transform.position;
 
-        audioManager.PlaySFX(audioManager.Walk);
+        // --- Debug Log for actual customer tag ---
+        if (lastSpawnedObject != null)
+        {
+            string customerActualTag = lastSpawnedObject.tag;
+            Debug.Log($"CustomerSpawner: Returning Customer. Its actual Tag is: '{customerActualTag}'");
+            audioManager.PlayCustomerFootstepSFX(customerActualTag);
+        }
+        else
+        {
+            Debug.LogError("CustomerSpawner: lastSpawnedObject is null on return animation. Check if customer prefab is assigned to CustomersToSpawn list.");
+        }
+        // ---
 
         while (elapsed < duration)
         {
@@ -124,11 +146,9 @@ public class CustomerSpawner : MonoBehaviour
 
         yield return new WaitForSeconds(delay = 1f);
 
-        //destroy the customer
         Destroy(lastSpawnedObject);
         Debug.Log("Customer destroyed!");
 
-        //respawn the customer and item for the next loop
         itemspawn.itemSpawner();
         StartCoroutine(SpawnObjectAfterDelay());
 
@@ -143,20 +163,14 @@ public class CustomerSpawner : MonoBehaviour
         }
     }
 
-    //Customer Spawning
     public void SpawnObject()
     {
-        // check if its randomise if yes select from the range of 0 to the end of the list if no just spawn the last customer from the list
-        index = isRandomize ? Random.Range(0, CustomersToSpawn.Count) : CustomersToSpawn.Count-1;
+        index = isRandomize ? Random.Range(0, CustomersToSpawn.Count) : CustomersToSpawn.Count - 1;
 
-        // Check if there are objects in the list
         if (CustomersToSpawn.Count > 0)
         {
-            // Instantiate the object at the current position and rotation of this object
             lastSpawnedObject = Instantiate(CustomersToSpawn[index], transform.position, CustomersToSpawn[index].transform.rotation);
-            Debug.Log("Customer {0} Spawned!" +CustomersToSpawn[index]);
+            Debug.Log("Customer " + CustomersToSpawn[index].name + " Spawned!");
         }
     }
 }
-
-   

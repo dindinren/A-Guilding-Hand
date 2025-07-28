@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8050800299194632059}
   m_Layer: 0
   m_Name: Nature Lover_0
-  m_TagString: Untagged
+  m_TagString: NatureLover
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

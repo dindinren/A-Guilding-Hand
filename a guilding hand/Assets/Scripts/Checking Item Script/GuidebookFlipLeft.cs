@@ -36,6 +36,6 @@ public class GuidebookFlipLeft : MonoBehaviour
         guidebookpHManager.Backward();
 
         //audio sfx - joyce
-        audioManager.PlaySFX(audioManager.GuidebookFlipSFX);
+        audioManager.PlayRandomGuidebookFlipSFX();
     }
 }

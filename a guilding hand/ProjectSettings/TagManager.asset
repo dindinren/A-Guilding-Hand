@@ -30,6 +30,12 @@ TagManager:
   - pHMeter
   - PipetteTip
   - pause
+  - PauseButton
+  - ElfMage
+  - Knight
+  - CatArcher
+  - NatureLover
+  - MainAreaGuideBook
   layers:
   - Default
   - TransparentFX

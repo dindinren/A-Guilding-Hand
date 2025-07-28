@@ -543,7 +543,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1014,7 +1014,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.35
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1601,10 +1601,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 378082292}
   SFXSource: {fileID: 129063703}
-  MenuBGM: {fileID: 8300000, guid: 19773278d04fee749bc4e4a20e5239da, type: 3}
+  MenuBGM: {fileID: 8300000, guid: f3919287fcbd9cd46aa10c4180431e66, type: 3}
   CutsceneBGM: {fileID: 0}
-  HoverSFX: {fileID: 8300000, guid: 2b441babc1d4c6d458bdfa96a91d4a8a, type: 3}
-  ClickSFX: {fileID: 8300000, guid: 2e10c6bc50a39ce4e8d22fbe0a6140d0, type: 3}
+  HoverSFXs:
+  - {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
+  - {fileID: 8300000, guid: 213a88ac0dc3c5748a13bbed64d294df, type: 3}
+  - {fileID: 8300000, guid: 51ecc2d15c6938846bde77c9ae8d4f1e, type: 3}
+  ClickSFX: {fileID: 8300000, guid: 4beb6e94c925b164588afb4fa81b7735, type: 3}
 --- !u!1 &1046971284
 GameObject:
   m_ObjectHideFlags: 0

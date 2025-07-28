@@ -898,6 +898,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &261845961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7676434564980140853, guid: c65810a3b3d01604b824272afdedbcbc, type: 3}
+  m_PrefabInstance: {fileID: 1346014337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &265894148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,6 +2217,7 @@ MonoBehaviour:
   predeterminedTrueFalse: 0
   hasChanged: 0
   superInitialTargetID: 0
+  damagedTargetID: 0
   targetpHID: 0
   pHColissionChange: {fileID: 65837731}
 --- !u!4 &479936338
@@ -4113,7 +4119,7 @@ GameObject:
   - component: {fileID: 1006094484}
   m_Layer: 5
   m_Name: Pause Button
-  m_TagString: Untagged
+  m_TagString: PauseButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4266,7 +4272,7 @@ MonoBehaviour:
           m_MethodName: PlaySFX
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 5f501c0630301124f95d5165b79164bb, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -4310,7 +4316,7 @@ MonoBehaviour:
           m_MethodName: PlaySFX
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 2e10c6bc50a39ce4e8d22fbe0a6140d0, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: 4beb6e94c925b164588afb4fa81b7735, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -6424,6 +6430,7 @@ GameObject:
   - component: {fileID: 1338911803}
   - component: {fileID: 1338911802}
   - component: {fileID: 1338911804}
+  - component: {fileID: 1338911805}
   m_Layer: 0
   m_Name: Magnifying Glass Frame
   m_TagString: Untagged
@@ -6533,7 +6540,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -6577,6 +6584,33 @@ MonoBehaviour:
   cursorHotspot: {x: 0, y: 0}
   cursorStampDetect: {fileID: 2800000, guid: e3586ff8d435278419ff080b60f644ab, type: 3}
   cursorStampDrag: {fileID: 2800000, guid: 230e114144db4094c96b5304f62c85dc, type: 3}
+--- !u!50 &1338911805
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338911799}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1341411064
 GameObject:
   m_ObjectHideFlags: 0
@@ -7028,6 +7062,7 @@ MonoBehaviour:
   arrowForward: {fileID: 1346014343}
   arrowBackward: {fileID: 1346014341}
   guidebookButton: {fileID: 1346014342}
+  closeGuidebookButton: {fileID: 261845961}
 --- !u!1 &1346014341 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3825745502901726368, guid: c65810a3b3d01604b824272afdedbcbc, type: 3}
@@ -7038,7 +7073,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5492880823514153007, guid: c65810a3b3d01604b824272afdedbcbc, type: 3}
   m_PrefabInstance: {fileID: 1346014337}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 261845961}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -7222,6 +7257,10 @@ PrefabInstance:
       value: Guidebook_Main, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2561626761017480820, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
+      propertyPath: m_Delegates.Array.data[0].eventID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561626761017480820, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -7296,11 +7335,15 @@ PrefabInstance:
     - target: {fileID: 2561626761017480820, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: 5f501c0630301124f95d5165b79164bb, type: 3}
+      objectReference: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
+    - target: {fileID: 2561626761017480820, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
     - target: {fileID: 2561626761017480820, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: 5f501c0630301124f95d5165b79164bb, type: 3}
+      objectReference: {fileID: 8300000, guid: a1be4201003049b4d95972f39e3b5a96, type: 3}
     - target: {fileID: 2561626761017480820, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.AudioClip, UnityEngine
@@ -7316,6 +7359,10 @@ PrefabInstance:
     - target: {fileID: 7458757262100653299, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458757262100653299, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
+      propertyPath: m_TagString
+      value: MainAreaGuideBook
       objectReference: {fileID: 0}
     - target: {fileID: 7591850300107157086, guid: d809eafec182f1547bd21ee68e452c06, type: 3}
       propertyPath: m_Pivot.x
@@ -9104,7 +9151,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9697,7 +9744,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10384,20 +10431,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1937976671}
   SFXSource: {fileID: 1801550250}
-  MainBGM: {fileID: 8300000, guid: 35f8151fa29b37d4e89fb1f565fa8b58, type: 3}
-  LostBGM: {fileID: 8300000, guid: 70b2c7c4cf3ae8044878d66ce69a9671, type: 3}
-  WinBGM: {fileID: 8300000, guid: 3dde0a3f18f22be48b1cb13e320da325, type: 3}
-  HoverSFX: {fileID: 8300000, guid: 2b441babc1d4c6d458bdfa96a91d4a8a, type: 3}
-  ClickSFX: {fileID: 8300000, guid: 2e10c6bc50a39ce4e8d22fbe0a6140d0, type: 3}
+  MainBGM: {fileID: 8300000, guid: 2d70eaa8aefdaa645b770a311915c6b9, type: 3}
+  LostBGM: {fileID: 8300000, guid: cd9ab07da3987e842addb13ac5e0219b, type: 3}
+  WinBGM: {fileID: 8300000, guid: a468cd4ad7009a6438948cfd066ab100, type: 3}
+  GeneralHoverSFXs:
+  - {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
+  ClickSFX: {fileID: 8300000, guid: 4beb6e94c925b164588afb4fa81b7735, type: 3}
   ItemSFX: {fileID: 8300000, guid: 21a4c575d76b46048a33afdd4ef14434, type: 3}
   ItemSFXClick: {fileID: 8300000, guid: bfee5935cf93f434cb926c3e54c86d90, type: 3}
-  GuidebookFlipSFX: {fileID: 8300000, guid: cbf9ec04b81b98b4abe1097095c8f62d, type: 3}
+  GuidebookFlipSFXs:
+  - {fileID: 8300000, guid: a8e9c21d72da3fd4a96702700e469978, type: 3}
+  - {fileID: 8300000, guid: b3efdcf5967e32742b525d14164877a9, type: 3}
+  - {fileID: 8300000, guid: 0751a3605b42be642bee9ee8204f7d04, type: 3}
   Walk: {fileID: 8300000, guid: df139ca82fa7d254ca75aa27f0d8b86f, type: 3}
-  Stamp: {fileID: 8300000, guid: d08beb422668b8740915c56671292079, type: 3}
+  Stamp: {fileID: 8300000, guid: d468691f6145b194589e8c78076b02e5, type: 3}
   pHDrop: {fileID: 8300000, guid: 286918592cd06fe4096bc00e7f027291, type: 3}
   pHGet: {fileID: 8300000, guid: abe35c013f83b3847a3fd278e593c9ec, type: 3}
-  PlayerHappySound: {fileID: 8300000, guid: f9310d5f446c2bb4786d4af6e117e820, type: 3}
-  PlayerSadSound: {fileID: 8300000, guid: b3cc8f443e2fd414fb0d106aeef36c47, type: 3}
+  PlayerHappySound: {fileID: 8300000, guid: 525dc4bd8c5d3a44b9d6e1cc0c74ebca, type: 3}
+  PlayerSadSound: {fileID: 8300000, guid: b969a2f5b979be84cafa2e7f366fe645, type: 3}
+  GuidebookHoverSFX: {fileID: 8300000, guid: a1be4201003049b4d95972f39e3b5a96, type: 3}
+  DamagedItemInspectSFX: {fileID: 8300000, guid: d8a655cd1a2615545837f7d5aa824dd6, type: 3}
+  customerFootstepAudios:
+  - customerTag: NatureLover
+    footstepSound: {fileID: 8300000, guid: 10d3307cd04aca44da0a363cffcc2d49, type: 3}
+  - customerTag: ElfMage
+    footstepSound: {fileID: 8300000, guid: a0292312b1789134daced335c377bc08, type: 3}
+  - customerTag: Knight
+    footstepSound: {fileID: 8300000, guid: 1b159bd86965aa0489d1e88492bc31c0, type: 3}
+  - customerTag: CatArcher
+    footstepSound: {fileID: 8300000, guid: 2e95e09977c738745b1e917297326b34, type: 3}
 --- !u!4 &2029511325
 Transform:
   m_ObjectHideFlags: 0

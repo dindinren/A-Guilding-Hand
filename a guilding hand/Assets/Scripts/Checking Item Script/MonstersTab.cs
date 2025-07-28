@@ -39,6 +39,6 @@ public class MonstersTab : MonoBehaviour
         GuidebookpHManager.SkipToMonsters();
 
         //audio sfx - joyce
-        audioManager.PlaySFX(audioManager.GuidebookFlipSFX);
+        audioManager.PlayRandomGuidebookFlipSFX();
     }
 }

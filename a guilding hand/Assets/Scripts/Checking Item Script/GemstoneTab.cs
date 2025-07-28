@@ -38,6 +38,6 @@ public class GemstoneTab : MonoBehaviour
         GuidebookpHManager.SkipToGemstone();
 
         //audio sfx - joyce
-        audioManager.PlaySFX(audioManager.GuidebookFlipSFX);
+        audioManager.PlayRandomGuidebookFlipSFX();
     }
 }

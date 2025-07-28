@@ -38,6 +38,6 @@ public class InstructionsTab : MonoBehaviour
         GuidebookpHManager.SkipToInstructions();
 
         //audio sfx - joyce
-        audioManager.PlaySFX(audioManager.GuidebookFlipSFX);
+        audioManager.PlayRandomGuidebookFlipSFX();
     }
 }
