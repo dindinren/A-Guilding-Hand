@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 65837731}
   m_Layer: 0
   m_Name: PH Test_0
-  m_TagString: Untagged
+  m_TagString: pH Test 0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2904,7 +2904,7 @@ MonoBehaviour:
           m_MethodName: PlaySFX
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 2e10c6bc50a39ce4e8d22fbe0a6140d0, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: c6be1e5d47ce20c47a9258b95c6149da, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -5185,7 +5185,7 @@ MonoBehaviour:
           m_MethodName: PlaySFX
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 2e10c6bc50a39ce4e8d22fbe0a6140d0, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: c6be1e5d47ce20c47a9258b95c6149da, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -8509,7 +8509,7 @@ MonoBehaviour:
           m_MethodName: PlaySFX
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 2e10c6bc50a39ce4e8d22fbe0a6140d0, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: c6be1e5d47ce20c47a9258b95c6149da, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -9376,7 +9376,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   newCameraLocation: {fileID: 846064140}
   guidebook: {fileID: 603951594}
-  MagnifyingGlassHoverSFX: {fileID: 8300000, guid: adf97ba967a632a41a86c37209918226, type: 3}
+  MagnifyingGlassHoverSFX: {fileID: 8300000, guid: 9ce467682d17be34a8c9834e21512400, type: 3}
   PipetteHoverSFX: {fileID: 8300000, guid: d754baae807e8df408861b014d5e4aca, type: 3}
   BackHoverSFX: {fileID: 0}
 --- !u!61 &1825346941
@@ -9767,7 +9767,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10489,15 +10489,27 @@ MonoBehaviour:
   taggedHoverSFXs:
   - tag: Back button
     audioClip: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
-  customerFootstepAudios:
-  - customerTag: NatureLover
-    footstepSound: {fileID: 8300000, guid: 3bb8c6e76f7bebc4485ad998bcaa40a4, type: 3}
+  customerAudioProfiles:
   - customerTag: ElfMage
     footstepSound: {fileID: 8300000, guid: a0292312b1789134daced335c377bc08, type: 3}
+    itemInteractionSFXClips:
+    - {fileID: 0}
+    - {fileID: 0}
   - customerTag: Knight
     footstepSound: {fileID: 8300000, guid: 1b159bd86965aa0489d1e88492bc31c0, type: 3}
+    itemInteractionSFXClips:
+    - {fileID: 8300000, guid: 7d75be0c494aef84da1742dedabffc7f, type: 3}
+    - {fileID: 8300000, guid: 634f880946d09e641b2fca3f5a815780, type: 3}
   - customerTag: CatArcher
     footstepSound: {fileID: 8300000, guid: 2e95e09977c738745b1e917297326b34, type: 3}
+    itemInteractionSFXClips:
+    - {fileID: 8300000, guid: 385d4b61c042de64a8fd37a2382fdd4c, type: 3}
+    - {fileID: 8300000, guid: 4f3fff73f8db59244b9585b9ec237062, type: 3}
+  - customerTag: NatureLover
+    footstepSound: {fileID: 8300000, guid: 3bb8c6e76f7bebc4485ad998bcaa40a4, type: 3}
+    itemInteractionSFXClips:
+    - {fileID: 8300000, guid: 0b923c3fee5ed2b429ecf2b1cb43f160, type: 3}
+    - {fileID: 8300000, guid: 685a0939cba381949a23219512d8b080, type: 3}
 --- !u!4 &2029511325
 Transform:
   m_ObjectHideFlags: 0

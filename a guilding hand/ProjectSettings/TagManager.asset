@@ -41,6 +41,7 @@ TagManager:
   - Magnifying glass button
   - Pipette button
   - MagGlassFrame
+  - pH Test 0
   layers:
   - Default
   - TransparentFX

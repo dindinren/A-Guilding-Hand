@@ -45,11 +45,12 @@ public class AudioManager_MainArea : MonoBehaviour
     // ***** NEW: Specific SFX for Hover by Tag (for Buttons) *****
     [Header("--------- Tag-Specific Hover SFX -------------")]
     [Tooltip("Assign specific audio clips to play when the mouse hovers over objects with matching tags.")]
-    public List<TagAudioClip> taggedHoverSFXs; // NEW List for hover sounds
+    public List<TagAudioClip> taggedHoverSFXs;
 
-    [Header("--------- Customer Footstep SFX by Tag -------------")]
-    [Tooltip("Assign footstep sounds for each customer type here by their GameObject Tag.")]
-    public List<CustomerFootstepAudio> customerFootstepAudios;
+    // --- CONSOLIDATED CUSTOMER AUDIO PROFILES ---
+    [Header("--------- Customer Audio Profiles -------------")]
+    [Tooltip("Assign all specific audio clips for each customer type here.")]
+    public List<CustomerAudioProfile> customerAudioProfiles; // Single list for all customer-related audio
 
     private Coroutine currentFootstepStopCoroutine;
     private const float FOOTSTEP_MAX_DURATION = 1.0f;
@@ -79,7 +80,6 @@ public class AudioManager_MainArea : MonoBehaviour
             Debug.LogWarning("AudioManager_MainArea: Music source or Main BGM not assigned.", this);
         }
 
-        // Initialize the last Damaged Item Inspect time to allow immediate playback on first call
         lastDamagedItemInspectTime = -damagedItemInspectCooldown;
     }
 
@@ -96,7 +96,6 @@ public class AudioManager_MainArea : MonoBehaviour
         }
     }
 
-    // ***** UPDATED: PlaySFXForTaggedClick - includes fallback to ClickSFX *****
     public void PlaySFXForTaggedClick(string objectTag)
     {
         if (taggedClickSFXs != null && taggedClickSFXs.Count > 0)
@@ -114,12 +113,11 @@ public class AudioManager_MainArea : MonoBehaviour
                     else
                     {
                         Debug.LogWarning($"AudioManager_MainArea: Click sound for tag '{objectTag}' is assigned but the AudioClip is null. Playing general ClickSFX as fallback.", this);
-                        break; // Break to play general click SFX below
+                        break;
                     }
                 }
             }
         }
-        // Fallback to general ClickSFX if no specific sound is found or assigned for the tag
         if (ClickSFX != null)
         {
             PlaySFX(ClickSFX);
@@ -131,8 +129,6 @@ public class AudioManager_MainArea : MonoBehaviour
         }
     }
 
-
-    // ***** NEW METHOD: PlaySFXForTaggedHover *****
     public void PlaySFXForTaggedHover(string objectTag)
     {
         if (taggedHoverSFXs != null && taggedHoverSFXs.Count > 0)
@@ -150,15 +146,14 @@ public class AudioManager_MainArea : MonoBehaviour
                     else
                     {
                         Debug.LogWarning($"AudioManager_MainArea: Hover sound for tag '{objectTag}' is assigned but the AudioClip is null. No hover sound played.", this);
-                        return; // Found entry but clip is null, so don't play general hover
+                        return;
                     }
                 }
             }
         }
-        // Fallback to general hover SFX if no specific sound is found or assigned for the tag
         if (GeneralHoverSFXs != null && GeneralHoverSFXs.Length > 0)
         {
-            PlayGeneralHoverSFX(); // This method already picks a random general hover SFX
+            PlayGeneralHoverSFX();
             Debug.Log($"No specific hover SFX for tag '{objectTag}' found or assigned. Playing general hover SFX.");
         }
         else
@@ -167,6 +162,82 @@ public class AudioManager_MainArea : MonoBehaviour
         }
     }
 
+    // --- MODIFIED: PlayCustomerFootstepSFX using CustomerAudioProfile ---
+    public void PlayCustomerFootstepSFX(string customerTag)
+    {
+        Debug.Log($"AudioManager_MainArea: Attempting to play footstep sound for requested tag: '{customerTag}'");
+
+        if (customerAudioProfiles == null || customerAudioProfiles.Count == 0)
+        {
+            Debug.LogWarning("AudioManager_MainArea: 'customerAudioProfiles' list is empty or not assigned. Cannot play tagged footstep sound.", this);
+            return;
+        }
+
+        foreach (var profile in customerAudioProfiles)
+        {
+            if (profile.customerTag == customerTag) // Found a matching tag
+            {
+                if (profile.footstepSound != null)
+                {
+                    Debug.Log($"AudioManager_MainArea: SUCCESS! Playing footstep sound '{profile.footstepSound.name}' for tag '{customerTag}'.");
+
+                    SFXSource.Stop(); // Stop current footstep before playing a new one
+                    if (currentFootstepStopCoroutine != null)
+                    {
+                        StopCoroutine(currentFootstepStopCoroutine);
+                    }
+                    SFXSource.PlayOneShot(profile.footstepSound);
+                    currentFootstepStopCoroutine = StartCoroutine(StopFootstepAfterDelay(FOOTSTEP_MAX_DURATION));
+                    return;
+                }
+                else
+                {
+                    Debug.LogWarning($"AudioManager_MainArea: Footstep sound for tag '{customerTag}' is assigned but the AudioClip is null. Please assign an audio clip for this entry.", this);
+                    return; // Found profile, but sound is null
+                }
+            }
+        }
+        Debug.LogWarning($"AudioManager_MainArea: No customer audio profile found for customer tag '{customerTag}'. Check if tag is misspelled or missing in AudioManager_MainArea Inspector.", this);
+    }
+
+    // --- NEW/MODIFIED: PlayCustomerItemInteractionSFX using CustomerAudioProfile ---
+    public void PlayCustomerItemInteractionSFX(string customerTag)
+    {
+        if (customerAudioProfiles == null || customerAudioProfiles.Count == 0)
+        {
+            Debug.LogWarning("AudioManager_MainArea: 'customerAudioProfiles' list is empty or not assigned. Cannot play customer item interaction sound.", this);
+            return;
+        }
+
+        foreach (var profile in customerAudioProfiles)
+        {
+            if (profile.customerTag == customerTag)
+            {
+                if (profile.itemInteractionSFXClips != null && profile.itemInteractionSFXClips.Length > 0)
+                {
+                    // Pick a random clip from the assigned array
+                    int randomIndex = Random.Range(0, profile.itemInteractionSFXClips.Length);
+                    AudioClip chosenClip = profile.itemInteractionSFXClips[randomIndex];
+
+                    if (chosenClip != null)
+                    {
+                        PlaySFX(chosenClip);
+                        Debug.Log($"Playing random item interaction SFX '{chosenClip.name}' for customer tag: {customerTag}");
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"AudioManager_MainArea: Customer item interaction SFX for tag '{customerTag}' has a null AudioClip at index {randomIndex}. Please check your assignments.", this);
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"AudioManager_MainArea: Customer item interaction SFX for tag '{customerTag}' has an empty or null AudioClip array. No sound played.", this);
+                }
+                return; // Found the customer tag, so we're done.
+            }
+        }
+        Debug.LogWarning($"AudioManager_MainArea: No customer audio profile found for customer tag '{customerTag}'. Check if tag is misspelled or missing in AudioManager_MainArea Inspector.", this);
+    }
 
     // --- All your other existing methods remain below ---
     public void PlayGeneralHoverSFX()
@@ -221,16 +292,14 @@ public class AudioManager_MainArea : MonoBehaviour
         }
     }
 
-    // ***** MODIFIED: PlayDamagedItemInspectSFX with Cooldown *****
     public void PlayDamagedItemInspectSFX()
     {
         if (DamagedItemInspectSFX != null)
         {
-            // Check if enough time has passed since the last playback
             if (Time.time >= lastDamagedItemInspectTime + damagedItemInspectCooldown)
             {
                 SFXSource.PlayOneShot(DamagedItemInspectSFX);
-                lastDamagedItemInspectTime = Time.time; // Update the last played time
+                lastDamagedItemInspectTime = Time.time;
             }
             else
             {
@@ -241,47 +310,6 @@ public class AudioManager_MainArea : MonoBehaviour
         {
             Debug.LogWarning("DamagedItemInspectSFX is not assigned in AudioManager_MainArea. Cannot play sound.", this);
         }
-    }
-
-    public void PlayCustomerFootstepSFX(string customerTag)
-    {
-        Debug.Log($"AudioManager_MainArea: Attempting to play sound for requested tag: '{customerTag}'");
-
-        if (customerFootstepAudios == null || customerFootstepAudios.Count == 0)
-        {
-            Debug.LogWarning("AudioManager_MainArea: 'customerFootstepAudios' list is empty or not assigned. Cannot play tagged footstep sound.", this);
-            return;
-        }
-
-        foreach (var audioEntry in customerFootstepAudios)
-        {
-            Debug.Log($"AudioManager_MainArea: Comparing requested tag '{customerTag}' with configured entry tag '{audioEntry.customerTag}'. Match? {audioEntry.customerTag == customerTag}");
-            if (audioEntry.customerTag == customerTag) // Found a matching tag
-            {
-                if (audioEntry.footstepSound != null)
-                {
-                    Debug.Log($"AudioManager_MainArea: SUCCESS! Playing sound '{audioEntry.footstepSound.name}' for tag '{customerTag}'.");
-
-                    SFXSource.Stop();
-                    if (currentFootstepStopCoroutine != null)
-                    {
-                        StopCoroutine(currentFootstepStopCoroutine);
-                    }
-
-                    SFXSource.PlayOneShot(audioEntry.footstepSound);
-
-                    currentFootstepStopCoroutine = StartCoroutine(StopFootstepAfterDelay(FOOTSTEP_MAX_DURATION));
-
-                    return;
-                }
-                else
-                {
-                    Debug.LogWarning($"AudioManager_MainArea: Footstep sound for tag '{customerTag}' is assigned but the AudioClip is null. Please assign an audio clip for this entry.", this);
-                }
-            }
-        }
-
-        Debug.LogWarning($"AudioManager_MainArea: No footstep sound configuration found for customer tag '{customerTag}'. Check if tag is misspelled or missing in AudioManager_MainArea Inspector.", this);
     }
 
     private IEnumerator StopFootstepAfterDelay(float delay)
