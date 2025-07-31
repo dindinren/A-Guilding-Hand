@@ -36,6 +36,11 @@ TagManager:
   - CatArcher
   - NatureLover
   - MainAreaGuideBook
+  - Indicator
+  - Back button
+  - Magnifying glass button
+  - Pipette button
+  - MagGlassFrame
   layers:
   - Default
   - TransparentFX

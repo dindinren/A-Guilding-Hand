@@ -4,21 +4,21 @@ using System.Collections;
 
 public class AudioManager_MainArea : MonoBehaviour
 {
-    [Header("--------- Audio Source -------------")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource SFXSource;
+    public static AudioManager_MainArea Instance { get; private set; }
 
-    [Header("--------- Audio Clip -------------")]
+    [Header("--------- Audio Source -------------")]
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource SFXSource;
+
+    [Header("--------- Background Music Clips -------------")]
     public AudioClip MainBGM;
     public AudioClip LostBGM;
     public AudioClip WinBGM;
 
-    // --- NEW: General Hover SFXs (array for randomization) ---
+    [Header("--------- General SFX Clips -------------")]
     [Tooltip("An array of AudioClips for general hover sounds, one will be chosen randomly.")]
     public AudioClip[] GeneralHoverSFXs;
-    // -----------------------------------------------------------
-
-    public AudioClip ClickSFX;
+    public AudioClip ClickSFX; // General click sound (fallback if no specific tag match)
     public AudioClip ItemSFX;
     public AudioClip ItemSFXClick;
     public AudioClip[] GuidebookFlipSFXs;
@@ -28,9 +28,24 @@ public class AudioManager_MainArea : MonoBehaviour
     public AudioClip pHGet;
     public AudioClip PlayerHappySound;
     public AudioClip PlayerSadSound;
+    public AudioClip GuidebookHoverSFX;
+    public AudioClip DamagedItemInspectSFX;
 
-    public AudioClip GuidebookHoverSFX; // Specific hover for MainAreaGuideBook
-    public AudioClip DamagedItemInspectSFX; // Specific for damaged item inspect
+    // ***** NEW: Cooldown variables for DamagedItemInspectSFX *****
+    private float lastDamagedItemInspectTime;
+    [Tooltip("Cooldown duration for DamagedItemInspectSFX in seconds.")]
+    public float damagedItemInspectCooldown = 1.5f; // Default to 1 second, adjustable in Inspector
+    // ************************************************************
+
+    // ***** UPDATED: Specific SFX for Click/Drag Start by Tag (for Stamps, Buttons, etc.) *****
+    [Header("--------- Tag-Specific Click SFX -------------")]
+    [Tooltip("Assign specific audio clips to play when objects with matching tags are clicked.")]
+    public List<TagAudioClip> taggedClickSFXs;
+
+    // ***** NEW: Specific SFX for Hover by Tag (for Buttons) *****
+    [Header("--------- Tag-Specific Hover SFX -------------")]
+    [Tooltip("Assign specific audio clips to play when the mouse hovers over objects with matching tags.")]
+    public List<TagAudioClip> taggedHoverSFXs; // NEW List for hover sounds
 
     [Header("--------- Customer Footstep SFX by Tag -------------")]
     [Tooltip("Assign footstep sounds for each customer type here by their GameObject Tag.")]
@@ -39,32 +54,126 @@ public class AudioManager_MainArea : MonoBehaviour
     private Coroutine currentFootstepStopCoroutine;
     private const float FOOTSTEP_MAX_DURATION = 1.0f;
 
-    void Start()
+    void Awake()
     {
-        musicSource.clip = MainBGM;
-        musicSource.Play();
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            // DontDestroyOnLoad(gameObject); // Uncomment if needed
+        }
     }
 
-    // This method will play any specific AudioClip provided
+    void Start()
+    {
+        if (musicSource != null && MainBGM != null)
+        {
+            musicSource.clip = MainBGM;
+            musicSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager_MainArea: Music source or Main BGM not assigned.", this);
+        }
+
+        // Initialize the last Damaged Item Inspect time to allow immediate playback on first call
+        lastDamagedItemInspectTime = -damagedItemInspectCooldown;
+    }
+
+    // --- Core SFX Playback Method ---
     public void PlaySFX(AudioClip clip)
     {
-        if (clip != null)
+        if (SFXSource != null && clip != null)
         {
             SFXSource.PlayOneShot(clip);
         }
         else
         {
-            Debug.LogWarning("Attempted to play a null AudioClip via PlaySFX.", this);
+            Debug.LogWarning("AudioManager_MainArea: Attempted to play a null AudioClip or SFXSource is not assigned.", this);
         }
     }
 
-    // --- NEW: Method to play a random General Hover SFX ---
+    // ***** UPDATED: PlaySFXForTaggedClick - includes fallback to ClickSFX *****
+    public void PlaySFXForTaggedClick(string objectTag)
+    {
+        if (taggedClickSFXs != null && taggedClickSFXs.Count > 0)
+        {
+            foreach (var entry in taggedClickSFXs)
+            {
+                if (entry.tag == objectTag)
+                {
+                    if (entry.audioClip != null)
+                    {
+                        PlaySFX(entry.audioClip);
+                        Debug.Log($"Playing specific click SFX for tag: {objectTag}");
+                        return;
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"AudioManager_MainArea: Click sound for tag '{objectTag}' is assigned but the AudioClip is null. Playing general ClickSFX as fallback.", this);
+                        break; // Break to play general click SFX below
+                    }
+                }
+            }
+        }
+        // Fallback to general ClickSFX if no specific sound is found or assigned for the tag
+        if (ClickSFX != null)
+        {
+            PlaySFX(ClickSFX);
+            Debug.Log($"No specific click SFX for tag '{objectTag}' found or assigned. Playing general ClickSFX.");
+        }
+        else
+        {
+            Debug.LogWarning($"AudioManager_MainArea: No specific click sound configured for tag '{objectTag}' and general ClickSFX is also null.", this);
+        }
+    }
+
+
+    // ***** NEW METHOD: PlaySFXForTaggedHover *****
+    public void PlaySFXForTaggedHover(string objectTag)
+    {
+        if (taggedHoverSFXs != null && taggedHoverSFXs.Count > 0)
+        {
+            foreach (var entry in taggedHoverSFXs)
+            {
+                if (entry.tag == objectTag)
+                {
+                    if (entry.audioClip != null)
+                    {
+                        PlaySFX(entry.audioClip);
+                        Debug.Log($"Playing specific hover SFX for tag: {objectTag}");
+                        return;
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"AudioManager_MainArea: Hover sound for tag '{objectTag}' is assigned but the AudioClip is null. No hover sound played.", this);
+                        return; // Found entry but clip is null, so don't play general hover
+                    }
+                }
+            }
+        }
+        // Fallback to general hover SFX if no specific sound is found or assigned for the tag
+        if (GeneralHoverSFXs != null && GeneralHoverSFXs.Length > 0)
+        {
+            PlayGeneralHoverSFX(); // This method already picks a random general hover SFX
+            Debug.Log($"No specific hover SFX for tag '{objectTag}' found or assigned. Playing general hover SFX.");
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager_MainArea: No specific hover sound configured for tag '{objectTag}' and general hover SFX array is empty or null.", this);
+        }
+    }
+
+
+    // --- All your other existing methods remain below ---
     public void PlayGeneralHoverSFX()
     {
         if (GeneralHoverSFXs != null && GeneralHoverSFXs.Length > 0)
         {
             int randomIndex = Random.Range(0, GeneralHoverSFXs.Length);
-            // Ensure the chosen clip is not null before playing
             if (GeneralHoverSFXs[randomIndex] != null)
             {
                 SFXSource.PlayOneShot(GeneralHoverSFXs[randomIndex]);
@@ -79,7 +188,6 @@ public class AudioManager_MainArea : MonoBehaviour
             Debug.LogWarning("GeneralHoverSFXs array is empty or null. Please assign audio clips in the Inspector for general hover sounds.", this);
         }
     }
-    // --------------------------------------------------------
 
     public void PlayGuidebookHoverSFX()
     {
@@ -113,11 +221,21 @@ public class AudioManager_MainArea : MonoBehaviour
         }
     }
 
+    // ***** MODIFIED: PlayDamagedItemInspectSFX with Cooldown *****
     public void PlayDamagedItemInspectSFX()
     {
         if (DamagedItemInspectSFX != null)
         {
-            SFXSource.PlayOneShot(DamagedItemInspectSFX);
+            // Check if enough time has passed since the last playback
+            if (Time.time >= lastDamagedItemInspectTime + damagedItemInspectCooldown)
+            {
+                SFXSource.PlayOneShot(DamagedItemInspectSFX);
+                lastDamagedItemInspectTime = Time.time; // Update the last played time
+            }
+            else
+            {
+                Debug.Log($"DamagedItemInspectSFX is on cooldown. Next play available in: {Mathf.Max(0, (lastDamagedItemInspectTime + damagedItemInspectCooldown) - Time.time):F2} seconds.");
+            }
         }
         else
         {
@@ -189,6 +307,14 @@ public class AudioManager_MainArea : MonoBehaviour
 
     void Update()
     {
-
+        // Your Update logic here (if any)
     }
+}
+
+// Custom Struct (outside the class definition) for tag-audio clip pairs
+[System.Serializable]
+public struct TagAudioClip
+{
+    public string tag;
+    public AudioClip audioClip;
 }

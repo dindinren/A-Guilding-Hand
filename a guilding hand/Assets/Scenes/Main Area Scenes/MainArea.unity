@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 94931565}
   m_Layer: 0
   m_Name: Pipette Button
-  m_TagString: Untagged
+  m_TagString: Pipette button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -536,6 +536,9 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   newCameraLocation: {fileID: 1044760085}
   guidebook: {fileID: 603951594}
+  MagnifyingGlassHoverSFX: {fileID: 8300000, guid: 2428195f8a9a4864485109a35e924cf4, type: 3}
+  PipetteHoverSFX: {fileID: 8300000, guid: d754baae807e8df408861b014d5e4aca, type: 3}
+  BackHoverSFX: {fileID: 0}
 --- !u!61 &94931563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1655,6 +1658,7 @@ GameObject:
   - component: {fileID: 403825265}
   - component: {fileID: 403825264}
   - component: {fileID: 403825263}
+  - component: {fileID: 403825267}
   m_Layer: 0
   m_Name: PipetteTip
   m_TagString: PipetteTip
@@ -1723,7 +1727,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1821,6 +1825,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &403825267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403825261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eac5e14ddffe5e4b83f02575d2410bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipHitTargetSFX: {fileID: 8300000, guid: 286918592cd06fe4096bc00e7f027291, type: 3}
 --- !u!1 &422938442 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1558848222036555052, guid: c6684894fd69e1b4c8f89c702bc20fb4, type: 3}
@@ -2044,7 +2061,7 @@ GameObject:
   - component: {fileID: 458816705}
   m_Layer: 0
   m_Name: PH Test_0
-  m_TagString: Untagged
+  m_TagString: Pipette button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2180,6 +2197,9 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   newCameraLocation: {fileID: 1044760085}
   guidebook: {fileID: 603951594}
+  MagnifyingGlassHoverSFX: {fileID: 8300000, guid: 2428195f8a9a4864485109a35e924cf4, type: 3}
+  PipetteHoverSFX: {fileID: 8300000, guid: d754baae807e8df408861b014d5e4aca, type: 3}
+  BackHoverSFX: {fileID: 0}
 --- !u!1 &479936336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,7 +2860,7 @@ MonoBehaviour:
           m_MethodName: PlaySFX
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 5f501c0630301124f95d5165b79164bb, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -2872,7 +2892,7 @@ MonoBehaviour:
           m_MethodName: OnMouseEnter
           m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgument: {fileID: 8300000, guid: 51ecc2d15c6938846bde77c9ae8d4f1e, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -5121,7 +5141,7 @@ MonoBehaviour:
           m_MethodName: PlaySFX
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 5f501c0630301124f95d5165b79164bb, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -5153,7 +5173,7 @@ MonoBehaviour:
           m_MethodName: OnMouseEnter
           m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgument: {fileID: 8300000, guid: 51ecc2d15c6938846bde77c9ae8d4f1e, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -6273,7 +6293,7 @@ MonoBehaviour:
           m_MethodName: PlaySFX
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 5f501c0630301124f95d5165b79164bb, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -6289,7 +6309,7 @@ MonoBehaviour:
           m_MethodName: OnMouseExit
           m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgument: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -6433,7 +6453,7 @@ GameObject:
   - component: {fileID: 1338911805}
   m_Layer: 0
   m_Name: Magnifying Glass Frame
-  m_TagString: Untagged
+  m_TagString: MagGlassFrame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7640,7 +7660,7 @@ MonoBehaviour:
           m_MethodName: PlaySFX
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 5f501c0630301124f95d5165b79164bb, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -8445,7 +8465,7 @@ MonoBehaviour:
           m_MethodName: PlaySFX
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 5f501c0630301124f95d5165b79164bb, type: 3}
+            m_ObjectArgument: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -8461,7 +8481,7 @@ MonoBehaviour:
           m_MethodName: OnMouseExit
           m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgument: {fileID: 8300000, guid: 51ecc2d15c6938846bde77c9ae8d4f1e, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -9151,7 +9171,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9266,7 +9286,7 @@ GameObject:
   - component: {fileID: 1825346943}
   m_Layer: 0
   m_Name: Magnifying glass button
-  m_TagString: Untagged
+  m_TagString: Magnifying glass button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9356,6 +9376,9 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   newCameraLocation: {fileID: 846064140}
   guidebook: {fileID: 603951594}
+  MagnifyingGlassHoverSFX: {fileID: 8300000, guid: adf97ba967a632a41a86c37209918226, type: 3}
+  PipetteHoverSFX: {fileID: 8300000, guid: d754baae807e8df408861b014d5e4aca, type: 3}
+  BackHoverSFX: {fileID: 0}
 --- !u!61 &1825346941
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10436,7 +10459,7 @@ MonoBehaviour:
   WinBGM: {fileID: 8300000, guid: a468cd4ad7009a6438948cfd066ab100, type: 3}
   GeneralHoverSFXs:
   - {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
-  ClickSFX: {fileID: 8300000, guid: 4beb6e94c925b164588afb4fa81b7735, type: 3}
+  ClickSFX: {fileID: 8300000, guid: 29ba9e164b67ef342be6fd7ff3ef7f3e, type: 3}
   ItemSFX: {fileID: 8300000, guid: 21a4c575d76b46048a33afdd4ef14434, type: 3}
   ItemSFXClick: {fileID: 8300000, guid: bfee5935cf93f434cb926c3e54c86d90, type: 3}
   GuidebookFlipSFXs:
@@ -10444,16 +10467,31 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b3efdcf5967e32742b525d14164877a9, type: 3}
   - {fileID: 8300000, guid: 0751a3605b42be642bee9ee8204f7d04, type: 3}
   Walk: {fileID: 8300000, guid: df139ca82fa7d254ca75aa27f0d8b86f, type: 3}
-  Stamp: {fileID: 8300000, guid: d468691f6145b194589e8c78076b02e5, type: 3}
+  Stamp: {fileID: 8300000, guid: 3c022e2284c87414d85093951fad09e4, type: 3}
   pHDrop: {fileID: 8300000, guid: 286918592cd06fe4096bc00e7f027291, type: 3}
   pHGet: {fileID: 8300000, guid: abe35c013f83b3847a3fd278e593c9ec, type: 3}
   PlayerHappySound: {fileID: 8300000, guid: 525dc4bd8c5d3a44b9d6e1cc0c74ebca, type: 3}
-  PlayerSadSound: {fileID: 8300000, guid: b969a2f5b979be84cafa2e7f366fe645, type: 3}
+  PlayerSadSound: {fileID: 8300000, guid: 5b33b7a55fb80e04d91e724318def0e3, type: 3}
   GuidebookHoverSFX: {fileID: 8300000, guid: a1be4201003049b4d95972f39e3b5a96, type: 3}
-  DamagedItemInspectSFX: {fileID: 8300000, guid: d8a655cd1a2615545837f7d5aa824dd6, type: 3}
+  DamagedItemInspectSFX: {fileID: 8300000, guid: 1fa262052433e8e45b948025c2493ae6, type: 3}
+  damagedItemInspectCooldown: 1.5
+  taggedClickSFXs:
+  - tag: correct
+    audioClip: {fileID: 8300000, guid: 080f26a4bcee8414eb612f159336c984, type: 3}
+  - tag: incorrect
+    audioClip: {fileID: 8300000, guid: 080f26a4bcee8414eb612f159336c984, type: 3}
+  - tag: Pipette
+    audioClip: {fileID: 8300000, guid: b65c61e6e0df81248a574c5c301dee5c, type: 3}
+  - tag: Back button
+    audioClip: {fileID: 8300000, guid: 2e10c6bc50a39ce4e8d22fbe0a6140d0, type: 3}
+  - tag: MagGlassFrame
+    audioClip: {fileID: 8300000, guid: d2b263dca7965d2458eafa183b5a38c0, type: 3}
+  taggedHoverSFXs:
+  - tag: Back button
+    audioClip: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}
   customerFootstepAudios:
   - customerTag: NatureLover
-    footstepSound: {fileID: 8300000, guid: 10d3307cd04aca44da0a363cffcc2d49, type: 3}
+    footstepSound: {fileID: 8300000, guid: 3bb8c6e76f7bebc4485ad998bcaa40a4, type: 3}
   - customerTag: ElfMage
     footstepSound: {fileID: 8300000, guid: a0292312b1789134daced335c377bc08, type: 3}
   - customerTag: Knight

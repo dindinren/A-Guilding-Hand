@@ -6,17 +6,18 @@ public class DragSingle : MonoBehaviour
     Vector3 mousePositionOffset;
     Vector3 startPos;
 
-    //for audio -joyce
-    AudioManager_MainArea audioManager;
+    // REMOVED: No longer need to manually find or store AudioManager.
+    // AudioManager_MainArea audioManager;
     SpawnManager spawnManager;
 
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
-        if (audioManager == null)
-        {
-            Debug.LogError("DragSingle Awake: AudioManager_MainArea not found! Make sure it's in the scene and tagged 'AudioManager'.", this);
-        }
+        // REMOVED: No longer need to manually find AudioManager, will use its Instance.
+        // audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+        // if (audioManager == null)
+        // {
+        //     Debug.LogError("DragSingle Awake: AudioManager_MainArea not found! Make sure it's in the scene and tagged 'AudioManager'.", this);
+        // }
 
         spawnManager = FindObjectOfType<SpawnManager>();
         if (spawnManager == null)
@@ -34,10 +35,21 @@ public class DragSingle : MonoBehaviour
     {
         if (!PauseMenu.instance.isPause)
         {
-            audioManager.PlaySFX(audioManager.ClickSFX);
+            // ***** KEY CHANGE: Use AudioManager_MainArea.Instance.PlaySFXForTaggedClick() *****
+            if (AudioManager_MainArea.Instance != null)
+            {
+                // This will play the SFX configured in AudioManager's 'taggedClickSFXs'
+                // list that matches the tag of *this* GameObject (which should be "Pipette").
+                AudioManager_MainArea.Instance.PlaySFXForTaggedClick(gameObject.tag);
+                Debug.Log($"DragSingle: Mouse Down - Specific SFX played for tag: {gameObject.tag}");
+            }
+            else
+            {
+                Debug.LogWarning("DragSingle OnMouseDown: AudioManager_MainArea instance not found. Cannot play click SFX.", this);
+            }
+
             mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
             startPos = this.transform.position;
-            Debug.Log("Magnifying Glass: Mouse Down - Click SFX played.");
         }
     }
 
@@ -46,7 +58,6 @@ public class DragSingle : MonoBehaviour
         if (!PauseMenu.instance.isPause)
         {
             transform.position = GetMouseWorldPosition() + mousePositionOffset;
-            // Debug.Log("Magnifying Glass: Dragging."); // Only uncomment if you need very verbose logs
         }
     }
 
@@ -55,52 +66,49 @@ public class DragSingle : MonoBehaviour
         if (!PauseMenu.instance.isPause)
         {
             this.transform.position = startPos;
-            Debug.Log("Magnifying Glass: Mouse Up - Returned to start position.");
+            Debug.Log("Pipette: Mouse Up - Returned to start position.");
         }
     }
 
-    // --- MODIFIED: Collision Detection with detailed logs ---
-    // Use OnTriggerEnter2D if you are using 2D physics
+    // --- Collision Detection with detailed logs ---
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"Magnifying Glass: OnTriggerEnter2D detected with {other.gameObject.name}.");
+        Debug.Log($"Pipette: OnTriggerEnter2D detected with {other.gameObject.name}.");
 
-        // Check if the collided object has an ItemSpawner component
         ItemSpawner itemSpawner = other.GetComponent<ItemSpawner>();
         if (itemSpawner != null)
         {
-            Debug.Log("Magnifying Glass: Collided object has ItemSpawner component.");
+            Debug.Log("Pipette: Collided object has ItemSpawner component.");
 
             if (spawnManager != null)
             {
-                Debug.Log($"Magnifying Glass: SpawnManager found. DamagedTargetID is: {spawnManager.damagedTargetID}");
+                Debug.Log($"Pipette: SpawnManager found. DamagedTargetID is: {spawnManager.damagedTargetID}");
 
-                // Check if damagedTargetID is an odd number (1, 3, 5, 7, 9)
-                if (spawnManager.damagedTargetID % 2 != 0)
+                if (spawnManager.damagedTargetID % 2 != 0) // Check if damagedTargetID is an odd number
                 {
-                    audioManager.PlayDamagedItemInspectSFX();
-                    Debug.Log($"Magnifying Glass: Playing Damaged Item Inspect SFX because damagedTargetID ({spawnManager.damagedTargetID}) is ODD.");
+                    if (AudioManager_MainArea.Instance != null)
+                    {
+                        AudioManager_MainArea.Instance.PlayDamagedItemInspectSFX();
+                        Debug.Log($"Pipette: Playing Damaged Item Inspect SFX because damagedTargetID ({spawnManager.damagedTargetID}) is ODD.");
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Pipette OnTriggerEnter2D: AudioManager_MainArea instance not found. Cannot play Damaged Item Inspect SFX.", this);
+                    }
                 }
                 else
                 {
-                    Debug.Log($"Magnifying Glass: DamagedTargetID ({spawnManager.damagedTargetID}) is EVEN. No sound played.");
+                    Debug.Log($"Pipette: DamagedTargetID ({spawnManager.damagedTargetID}) is EVEN. No sound played.");
                 }
             }
             else
             {
-                Debug.LogWarning("Magnifying Glass: SpawnManager reference is null in OnTriggerEnter2D. Cannot check damagedTargetID.", this);
+                Debug.LogWarning("Pipette: SpawnManager reference is null in OnTriggerEnter2D. Cannot check damagedTargetID.", this);
             }
         }
         else
         {
-            Debug.Log($"Magnifying Glass: Collided object ({other.gameObject.name}) does NOT have ItemSpawner component. No sound played.");
+            Debug.Log($"Pipette: Collided object ({other.gameObject.name}) does NOT have ItemSpawner component. No sound played.");
         }
     }
-    // OR Use OnTriggerEnter if you are using 3D physics
-    // void OnTriggerEnter(Collider other)
-    // {
-    //    Debug.Log($"Magnifying Glass: OnTriggerEnter detected with {other.gameObject.name}.");
-    //    // ... (rest of the logic identical to OnTriggerEnter2D, just replace Collider2D with Collider) ...
-    // }
-    // --------------------------------------------------------
 }

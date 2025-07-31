@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4425008336905631998}
   m_Layer: 0
   m_Name: Back Button
-  m_TagString: Untagged
+  m_TagString: Back button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,3 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   newCameraLocation: {fileID: 0}
+  guidebook: {fileID: 0}
+  MagnifyingGlassHoverSFX: {fileID: 0}
+  PipetteHoverSFX: {fileID: 0}
+  BackHoverSFX: {fileID: 8300000, guid: 55571ac90c3f0344e8b6a285ce2390d1, type: 3}

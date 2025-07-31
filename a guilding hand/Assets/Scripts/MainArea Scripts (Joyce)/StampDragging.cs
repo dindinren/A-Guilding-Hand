@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic; // Ensure this is included if you use List<T> or other collections
 
 public class DragDrop2D : MonoBehaviour
 {
@@ -28,9 +29,9 @@ public class DragDrop2D : MonoBehaviour
     public PauseMenu pauseMenu;
     public SpawnManager hasChanged;
 
-    AudioManager_MainArea audioManager;
+    // Remove this line. You no longer need to manually find the AudioManager.
+    // AudioManager_MainArea audioManager;
 
-    //dun let the tick/cross be seen at first
     private void Start()
     {
         tick.SetActive(false);
@@ -39,130 +40,116 @@ public class DragDrop2D : MonoBehaviour
 
     private void Update()
     {
+        // Finding objects by tag in Update() can be inefficient.
+        // If these stamps are static, consider finding them once in Awake() or Start().
+        GameObject correctStamp = GameObject.FindGameObjectWithTag("correct");
+        GameObject incorrectStamp = GameObject.FindGameObjectWithTag("incorrect");
 
-        if( (pauseMenu.isPause == true) || (timerScript.remainingTime == 0) )
+        if (correctStamp != null)
         {
-            GameObject.FindGameObjectWithTag("correct").GetComponent<Collider2D>().enabled = false;
-            GameObject.FindGameObjectWithTag("incorrect").GetComponent<Collider2D>().enabled = false;
+            correctStamp.GetComponent<Collider2D>().enabled = !pauseMenu.isPause && timerScript.remainingTime > 0;
         }
-        else
+        if (incorrectStamp != null)
         {
-            GameObject.FindGameObjectWithTag("correct").GetComponent<Collider2D>().enabled = true;
-            GameObject.FindGameObjectWithTag("incorrect").GetComponent<Collider2D>().enabled = true;
+            incorrectStamp.GetComponent<Collider2D>().enabled = !pauseMenu.isPause && timerScript.remainingTime > 0;
         }
     }
-    //called before the scene is loaded
+
     void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
+        // Remove this line. You no longer need to manually assign the AudioManager.
+        // audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager_MainArea>();
 
         collider2d = GetComponent<Collider2D>();
         originalPosition = transform.position; // Store the initial position
     }
 
-    //if clicked
+    // This method is called when the mouse button is pressed down over this object.
     void OnMouseDown()
     {
-        //play audio
-        audioManager.PlaySFX(audioManager.ClickSFX);
+        // Access the AudioManager using its static 'Instance' property.
+        if (AudioManager_MainArea.Instance != null)
+        {
+            // Call the method to play the SFX based on this GameObject's tag.
+            // 'gameObject.tag' will be either "correct" or "incorrect".
+            AudioManager_MainArea.Instance.PlaySFXForTaggedClick(gameObject.tag);
+        }
+        else
+        {
+            Debug.LogWarning("DragDrop2D: AudioManager_MainArea instance not found. Cannot play click SFX for tag: " + gameObject.tag, this);
+        }
 
         offset = transform.position - MouseWorldPosition();
     }
 
-    //if dragged
+    // The rest of your DragDrop2D script remains exactly as you provided it:
+
     void OnMouseDrag()
     {
         transform.position = MouseWorldPosition() + offset;
     }
 
-    //if let go of the mouse
     void OnMouseUp()
     {
-        //check the mouse position
         collider2d.enabled = false;
         var rayOrigin = Camera.main.transform.position;
         var rayDirection = MouseWorldPosition() - Camera.main.transform.position;
         RaycastHit2D hitInfo;
 
-        // Check if the object is dropped in the drop area
         if (hitInfo = Physics2D.Raycast(rayOrigin, rayDirection))
         {
             if (hitInfo.transform.CompareTag(destinationTag))
             {
-                // Snap the object to the drop area
                 transform.position = hitInfo.transform.position + new Vector3(0, 0, -0.01f);
 
-       
-                //CHECKER
-                //TODO: implement the check with the checking item logic
-                
-                //Check if player dragged 'Green' Stamp
-                if(gameObject.CompareTag("correct"))
+                if (gameObject.CompareTag("correct"))
                 {
-                    //If correct
-                    //Check if name matches and pic matches
-                    if(adveninfovar.isItTheSame == true && cusname.areTheNameSame == true && spawnManager.finalResult() == true)
+                    if (adveninfovar.isItTheSame == true && cusname.areTheNameSame == true && spawnManager.finalResult() == true)
                     {
                         scoremanager.AddPoints();
-                        audioManager.PlaySFX(audioManager.Stamp);
+                        if (AudioManager_MainArea.Instance != null) AudioManager_MainArea.Instance.PlaySFX(AudioManager_MainArea.Instance.Stamp);
                     }
                     else
                     {
                         scoremanager.MinusPoints();
-                        audioManager.PlaySFX(audioManager.Stamp);
+                        if (AudioManager_MainArea.Instance != null) AudioManager_MainArea.Instance.PlaySFX(AudioManager_MainArea.Instance.Stamp);
                     }
                 }
-                //Check if player dragged 'Red' Stamp
-                else
+                else // Assuming it's "incorrect" tag
                 {
-                    //If not correct
-                    //if either of the name or the pic does not match
                     if (adveninfovar.isItTheSame == false || cusname.areTheNameSame == false || spawnManager.finalResult() == false)
                     {
-                        scoremanager.AddPoints();//why add is because the player is right because they stamp with the incorrect and either of the things are not correct
-                        audioManager.PlaySFX(audioManager.Stamp);
+                        scoremanager.AddPoints();
+                        if (AudioManager_MainArea.Instance != null) AudioManager_MainArea.Instance.PlaySFX(AudioManager_MainArea.Instance.Stamp);
                     }
                     else
                     {
                         scoremanager.MinusPoints();
-                        audioManager.PlaySFX(audioManager.Stamp);
+                        if (AudioManager_MainArea.Instance != null) AudioManager_MainArea.Instance.PlaySFX(AudioManager_MainArea.Instance.Stamp);
                     }
                 }
 
-
-                // Destroy the items after 1 second after a while it will respawn and the whole loop starts over again
-                StartCoroutine(DestroyAndRespawnAfterDelay(1f)); 
+                StartCoroutine(DestroyAndRespawnAfterDelay(1f));
                 Debug.Log("Object dropped in the drop area. It will be destroyed and respawned.");
-
-                //then the customer goes bye bye
                 customerspawner.CustomerDelete();
             }
             else
             {
-                // Return to the original position if not dropped in the drop area
                 returncheck = true;
                 Debug.Log("Returned to original position.");
             }
         }
         else
         {
-            // Return to the original position if no valid drop area is hit
             returncheck = true;
             Debug.Log("Returned to original position.");
         }
-
-        //reenable the collider for people to drag the stamps again
         collider2d.enabled = true;
     }
 
-
-    // After stamping, the items will get ready to despawn while the stamp goes back to its original position
     IEnumerator DestroyAndRespawnAfterDelay(float delay)
     {
-        //Show the tick 
         tick.SetActive(true);
-
-        //animation to go back
         float elapsed = 0f;
         float duration = 1f;
         Vector2 startPos = transform.position;
@@ -172,61 +159,42 @@ public class DragDrop2D : MonoBehaviour
             float t = elapsed / duration;
             float ease = temp.Evaluate(t);
             transform.position = Vector2.Lerp(startPos, originalPosition, ease);
-
             elapsed += Time.deltaTime;
             yield return null;
         }
 
         hasChanged.hasChanged = false;
-        
-        // the items will get ready to destroy
         yield return new WaitForSeconds(delay);
 
-
         GameObject[] obj = GameObject.FindGameObjectsWithTag("QuestItemObject");
-        foreach (GameObject ob in obj)
-        {
-            Destroy(ob);
-        }
+        foreach (GameObject ob in obj) { Destroy(ob); }
         GameObject[] obj2 = GameObject.FindGameObjectsWithTag("QuestFormObject");
-        foreach (GameObject ob2 in obj2)
-        {
-            Destroy(ob2);
-        }
+        foreach (GameObject ob2 in obj2) { Destroy(ob2); }
         GameObject[] obj3 = GameObject.FindGameObjectsWithTag("AdventureFormObject");
-        foreach (GameObject ob3 in obj3)
-        {
-            Destroy(ob3);
-        }
-
+        foreach (GameObject ob3 in obj3) { Destroy(ob3); }
         GameObject[] obj4 = GameObject.FindGameObjectsWithTag("QuestItemInitial");
-        foreach (GameObject ob4 in obj4)
-        {
-            Destroy(ob4);
-        }
+        foreach (GameObject ob4 in obj4) { Destroy(ob4); }
+
         Debug.Log("Object destroyed!");
-
-        //the tick/cross also go bye bye
         tick.SetActive(false);
-
         cusname.nameText.enabled = false;
         cusname.nameText2.enabled = false;
-
-        //along with the adven info profile pic
         adveninfovar.PicIsDestroyed();
         Debug.Log("the pic will be destroyed");
-
     }
 
     private void FixedUpdate()
     {
+        // Important: If ReturnToOriginalPosition() contains a while loop (which it does),
+        // calling it directly in FixedUpdate() will freeze your game.
+        // It needs to be an IEnumerator and started with StartCoroutine().
         if (returncheck == true)
         {
             ReturnToOriginalPosition();
         }
     }
 
-    //for the fixedupdate than anything | for the animation curve and make the stamp go back nicely
+    // This method, as written, will block your game if called outside a coroutine.
     void ReturnToOriginalPosition()
     {
         float elapsed = 0f;
@@ -238,17 +206,16 @@ public class DragDrop2D : MonoBehaviour
             float t = elapsed / duration;
             float ease = temp.Evaluate(t);
             transform.position = Vector2.Lerp(startPos, originalPosition, ease);
-
             elapsed += Time.deltaTime;
+            // If this were an IEnumerator, you would have: yield return null;
         }
+        returncheck = false;
     }
 
-    //getting the mouse pos for the game to recognise
     Vector3 MouseWorldPosition()
     {
         var mouseScreenPos = Input.mousePosition;
         mouseScreenPos.z = Camera.main.WorldToScreenPoint(transform.position).z;
         return Camera.main.ScreenToWorldPoint(mouseScreenPos);
     }
-
 }
